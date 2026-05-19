@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>PvE-dashboard AV-standaard</title>
-    <link rel="stylesheet" href="styles.css?v=20260519-flow-start">
+    <link rel="stylesheet" href="styles.css?v=20260519-flow-intro">
   </head>
   <body>
     <header class="topbar">
@@ -215,6 +215,47 @@
         <label>Naam <input id="actorNameInput" type="text" placeholder="Voornaam + achternaam"></label>
         <div class="dialog-actions">
           <button id="saveActorBtn" value="default" type="submit">Starten</button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog id="introDialog" class="dialog intro-dialog">
+      <form method="dialog">
+        <div class="dialog-head">
+          <div>
+            <p class="eyebrow">Welkom in de Flow</p>
+            <h2>Rondkijken mag</h2>
+          </div>
+          <button id="closeIntroDialogBtn" class="ghost" type="button">Sluiten</button>
+        </div>
+        <p>
+          Dit dashboard laat zien hoe input uit de praktijk wordt uitgewerkt naar oplossingen en uiteindelijk naar onderdelen van de AV-standaard.
+          De Flow is bedoeld als startpunt: kijk rustig rond en volg de lijnen van links naar rechts.
+        </p>
+        <div class="intro-grid">
+          <article>
+            <strong>Route volgen</strong>
+            <span>Klik op een input, uitwerking, oplossing of standaardonderdeel. De gekoppelde route wordt dan geaccentueerd.</span>
+          </article>
+          <article>
+            <strong>Details bekijken</strong>
+            <span>Dubbelklik op een item om de details te openen. Bij uitwerkingen kan ook de MoSCoW-prioriteit worden bekeken of aangepast.</span>
+          </article>
+          <article>
+            <strong>Meedenken</strong>
+            <span>Je kunt items bekijken, aanpassen en koppelingen leggen. Gebruik daarna eventueel <em>Opslaan & delen</em> om je versie terug te sturen.</span>
+          </article>
+          <article>
+            <strong>Standaard volgt verder</strong>
+            <span>De praktische AV-standaardonderdelen worden later verder aangevuld en aangescherpt.</span>
+          </article>
+        </div>
+        <p class="muted">
+          Voor meer uitleg over de methode en processtappen kun je bovenin op <strong>Documentatie</strong> klikken.
+        </p>
+        <p class="intro-signature">Met vriendelijke groet,<br>Jesse van Leeuwen</p>
+        <div class="dialog-actions">
+          <button id="startIntroDialogBtn" value="default" type="submit">Start met rondkijken</button>
         </div>
       </form>
     </dialog>

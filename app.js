@@ -1,5 +1,6 @@
 const STORAGE_KEY = "emc_av_pve_dashboard_online_clone_v1";
 const PREVIOUS_STORAGE_KEYS = [];
+const INTRO_STORAGE_KEY = "emc_av_pve_dashboard_online_intro_seen_v1";
 const WORKFILE_PATH = "pve_werkbestand_basis.json";
 const MARKDOWN_PATH = "../centrale_eisenlijst_pve.md";
 const APP_BASE_FILE_VERSION = "2026-05-18-wens-uitwerking-standaard";
@@ -201,6 +202,7 @@ async function init() {
   bindEvents();
   await loadState();
   renderAll();
+  window.setTimeout(showIntroIfNeeded, 250);
 }
 
 function cacheElements() {
@@ -212,7 +214,7 @@ function cacheElements() {
     "addWishBtn", "addRequirementBtn", "addInputBtn", "addPointBtn", "workflowSteps", "inputCards", "pointCards", "addOutcomeBtn", "outcomeCards", "addSolutionBtn", "solutionCards", "addStandardPartBtn", "standardPartCards", "flowChart", "analysisGrid",
     "editDialog", "editForm", "dialogTitle", "dialogFields", "deleteDialogBtn", "saveDialogBtn", "closeEditDialogBtn",
     "linkDialog", "linkForm", "linkRequirementLabel", "existingSolutionSelect", "newSolutionName", "newSolutionDescription", "saveLinkBtn", "closeLinkDialogBtn",
-    "actorDialog", "actorForm", "actorNameInput", "saveActorBtn", "toast"
+    "actorDialog", "actorForm", "actorNameInput", "saveActorBtn", "introDialog", "closeIntroDialogBtn", "startIntroDialogBtn", "toast"
   ].forEach((id) => {
     els[id] = document.getElementById(id);
   });
@@ -274,6 +276,8 @@ function bindEvents() {
     saveLink();
   });
   els.closeLinkDialogBtn.addEventListener("click", () => els.linkDialog.close());
+  if (els.closeIntroDialogBtn) els.closeIntroDialogBtn.addEventListener("click", closeIntroDialog);
+  if (els.startIntroDialogBtn) els.startIntroDialogBtn.addEventListener("click", closeIntroDialog);
 
   window.addEventListener("resize", () => {
     if (document.getElementById("flow").classList.contains("active")) updateFlowBoard();
@@ -296,7 +300,23 @@ function bindEvents() {
     autoSave(false);
     els.actorDialog.close();
     renderStats();
+    window.setTimeout(showIntroIfNeeded, 150);
   });
+}
+
+function showIntroIfNeeded() {
+  if (!els.introDialog || localStorage.getItem(INTRO_STORAGE_KEY)) return;
+  if (els.actorDialog?.open || els.editDialog?.open || els.linkDialog?.open || els.introDialog.open) return;
+  try {
+    els.introDialog.showModal();
+  } catch {
+    localStorage.setItem(INTRO_STORAGE_KEY, new Date().toISOString());
+  }
+}
+
+function closeIntroDialog() {
+  localStorage.setItem(INTRO_STORAGE_KEY, new Date().toISOString());
+  if (els.introDialog?.open) els.introDialog.close();
 }
 
 async function loadState() {

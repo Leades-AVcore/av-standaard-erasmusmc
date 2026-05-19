@@ -1372,6 +1372,10 @@ textarea {
   width: min(540px, 94vw);
 }
 
+.dialog.intro-dialog {
+  width: min(700px, 94vw);
+}
+
 .dialog::backdrop {
   background: rgba(36, 49, 58, 0.26);
 }
@@ -1394,6 +1398,43 @@ textarea {
   display: grid;
   grid-template-columns: repeat(2, minmax(180px, 1fr));
   gap: 12px;
+}
+
+.intro-dialog p {
+  margin-bottom: 0;
+  line-height: 1.55;
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(210px, 1fr));
+  gap: 10px;
+}
+
+.intro-grid article {
+  display: grid;
+  gap: 5px;
+  padding: 12px;
+  border: 1px solid #dcece8;
+  border-radius: 10px;
+  background: #f7fcfb;
+}
+
+.intro-grid strong {
+  color: var(--mint-dark);
+}
+
+.intro-grid span {
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.intro-signature {
+  padding: 10px 12px;
+  border-left: 4px solid var(--yellow);
+  border-radius: 8px;
+  background: #fffaf0;
+  font-weight: 750;
 }
 
 .check-field {
@@ -1489,6 +1530,7 @@ textarea {
   .summary-grid,
   .filters,
   .dialog-fields,
+  .intro-grid,
   .workflow-principles,
   .workflow-later > div {
     grid-template-columns: 1fr;
