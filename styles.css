@@ -183,7 +183,7 @@ h3 {
 main {
   max-width: 1940px;
   margin: 0 auto;
-  padding: 18px 28px 44px;
+  padding: 14px 28px 44px;
 }
 
 .summary-grid {
@@ -191,6 +191,10 @@ main {
   grid-template-columns: repeat(5, minmax(130px, 1fr));
   gap: 10px;
   margin-bottom: 14px;
+}
+
+.summary-grid[hidden] {
+  display: none;
 }
 
 .summary-card {
@@ -237,10 +241,10 @@ main {
 
 .tabs {
   display: flex;
-  gap: 8px;
+  gap: 10px;
   overflow-x: auto;
-  padding-bottom: 8px;
-  margin-bottom: 10px;
+  padding: 4px 0 12px;
+  margin-bottom: 8px;
   align-items: center;
 }
 
@@ -256,8 +260,32 @@ main {
   color: #fff;
 }
 
+.flow-tab {
+  min-width: 172px;
+  min-height: 48px;
+  padding: 11px 20px;
+  border-color: rgba(22, 135, 127, 0.28);
+  background: linear-gradient(135deg, #16877f, #22a99b);
+  color: #fff;
+  font-size: 17px;
+  box-shadow: 0 12px 24px rgba(22, 135, 127, 0.2);
+}
+
+.flow-tab::before {
+  content: "Start: ";
+  opacity: 0.88;
+  font-size: 13px;
+}
+
+.flow-tab.active {
+  outline: 3px solid rgba(255, 209, 102, 0.78);
+  outline-offset: 2px;
+  background: linear-gradient(135deg, #126d68, #1aa094);
+}
+
 .tab.layer-requirements {
   border-color: rgba(25, 167, 206, 0.4);
+  background: color-mix(in srgb, var(--layer-requirements) 12%, #ffffff);
 }
 
 .tab.layer-requirements.active {
@@ -275,6 +303,7 @@ main {
 
 .tab.layer-outcomes {
   border-color: rgba(139, 92, 246, 0.42);
+  background: color-mix(in srgb, var(--layer-outcomes) 12%, #ffffff);
 }
 
 .tab.layer-outcomes.active {
@@ -283,6 +312,7 @@ main {
 
 .tab.layer-solutions {
   border-color: rgba(22, 163, 74, 0.42);
+  background: color-mix(in srgb, var(--layer-solutions) 12%, #ffffff);
 }
 
 .tab.layer-solutions.active {
@@ -291,6 +321,7 @@ main {
 
 .tab.layer-standard {
   border-color: rgba(225, 29, 72, 0.42);
+  background: color-mix(in srgb, var(--layer-standard) 12%, #ffffff);
 }
 
 .tab.layer-standard.active {
@@ -299,13 +330,16 @@ main {
 
 .step-tab {
   position: relative;
-  min-width: 132px;
+  min-width: 152px;
+  min-height: 44px;
   padding-right: 24px;
   border-radius: 8px 0 0 8px;
   clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 50%, calc(100% - 16px) 100%, 0 100%, 16px 50%);
+  box-shadow: 0 8px 18px rgba(32, 43, 50, 0.06);
 }
 
-.step-tab:first-child {
+.step-tab:first-child,
+.step-tab.first-step {
   clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 50%, calc(100% - 16px) 100%, 0 100%);
 }
 
@@ -315,7 +349,7 @@ main {
 }
 
 .nav-gap {
-  flex: 0 0 28px;
+  flex: 0 0 10px;
 }
 
 .tab-spacer {
@@ -325,6 +359,7 @@ main {
 .small-tab {
   min-height: 34px;
   padding: 7px 11px;
+  opacity: 0.9;
 }
 
 .input-tab {

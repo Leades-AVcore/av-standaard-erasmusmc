@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>PvE-dashboard AV-standaard</title>
-    <link rel="stylesheet" href="styles.css?v=20260518-wens-uitwerking-standaard">
+    <link rel="stylesheet" href="styles.css?v=20260519-flow-start">
   </head>
   <body>
     <header class="topbar">
@@ -22,6 +22,7 @@
         <div id="fileMenu" class="file-menu" hidden>
           <button id="exportJsonBtn" type="button">Werkbestand exporteren</button>
           <button id="exportCsvBtn" type="button">Uitwerkingen exporteren als CSV</button>
+          <button id="openAnalysisBtn" type="button">Analyse openen</button>
           <label>
             Werkbestand importeren
             <input id="importJsonInput" type="file" accept="application/json">
@@ -32,7 +33,7 @@
     </header>
 
     <main>
-      <section class="summary-grid" aria-label="Samenvatting">
+      <section class="summary-grid" aria-label="Samenvatting" hidden>
         <article class="summary-card coral">
           <strong id="totalItems">0</strong>
           <span>Wensen/input</span>
@@ -56,19 +57,18 @@
       </section>
 
       <nav class="tabs" aria-label="Dashboard navigatie">
-        <button class="tab step-tab layer-requirements active" data-tab="list" type="button">Wensen/input</button>
+        <button class="tab flow-tab active" data-tab="flow" type="button">Flow</button>
+        <span class="nav-gap" aria-hidden="true"></span>
+        <button class="tab step-tab first-step layer-requirements" data-tab="list" type="button">Wensen/input</button>
         <button class="tab step-tab layer-outcomes" data-tab="outcomes" type="button">Uitwerkingen</button>
         <button class="tab step-tab layer-solutions" data-tab="solutions" type="button">Oplossingen</button>
         <button class="tab step-tab layer-standard" data-tab="standard" type="button">AV-standaard</button>
-        <span class="nav-gap" aria-hidden="true"></span>
-        <button class="tab" data-tab="flow" type="button">Flow</button>
-        <button class="tab" data-tab="analysis" type="button">Analyse</button>
         <span class="tab-spacer"></span>
-        <button class="tab small-tab" data-tab="workflow" type="button">Workflow</button>
+        <button class="tab small-tab" data-tab="workflow" type="button">Documentatie</button>
         <button id="inputDrawerButton" class="tab small-tab input-tab" type="button" aria-label="Bronnen">Bronnen</button>
       </nav>
 
-      <section id="list" class="panel active">
+      <section id="list" class="panel">
         <div class="panel-head">
           <div>
             <h2>Wensen/input</h2>
@@ -80,9 +80,9 @@
           </div>
         </div>
         <div class="stage-note layer-requirements">
-          <strong data-process-title="input">Processtap WNS</strong>
+          <strong data-process-title="input">1. Input verzamelen</strong>
           <button class="stage-edit" type="button" onclick="openEditor('processText', 'input')">Bewerk tekst</button>
-          <p data-process-description="input">In deze laag staat de oorspronkelijke input als wens of behoefte. De tekst blijft uitgebreid en herleidbaar, zodat later zichtbaar is wie de wens heeft ingebracht en welke bron de basis vormt voor de uitwerking, oplossing en standaard.</p>
+          <p data-process-description="input">In deze stap wordt alle opgehaalde informatie vastgelegd als input, wens of behoefte. Per inputitem blijft zichtbaar waar de informatie vandaan komt, inclusief bron, stakeholderrol, context en toelichting.</p>
         </div>
         <div class="filters">
           <label>Zoeken <input id="searchInput" type="search" placeholder="Zoek in eis, wens, bron..."></label>
@@ -98,7 +98,7 @@
       <section id="workflow" class="panel">
         <div class="panel-head">
           <div>
-            <h2>Workflow</h2>
+            <h2>Documentatie</h2>
             <p>Navolgbare werkwijze van broninput naar standaardonderdelen, inclusief aanpak en borging.</p>
           </div>
         </div>
@@ -114,9 +114,9 @@
           <button id="addOutcomeBtn" type="button">Uitwerking toevoegen</button>
         </div>
         <div class="stage-note layer-outcomes">
-          <strong data-process-title="outcome">Processtap UIT</strong>
+          <strong data-process-title="outcome">2 en 3. Input uitwerken en MoSCoW prioriteren</strong>
           <button class="stage-edit" type="button" onclick="openEditor('processText', 'outcome')">Bewerk tekst</button>
-          <p data-process-description="outcome">In deze laag worden wensen verwerkt tot duidelijke functionele, technische of organisatorische uitwerkingen. Hier wordt MoSCoW bepaald. Die prioriteit helpt om later onderscheid te maken tussen harde eisen, belangrijke wensen en optionele verbeteringen.</p>
+          <p data-process-description="outcome">Losse input wordt vertaald naar duidelijke functionele, technische of organisatorische uitwerkingen. Op deze uitgewerkte behoefte wordt MoSCoW toegepast, zodat onderscheid ontstaat tussen eis, wens en optie.</p>
         </div>
         <div id="outcomeCards" class="solution-grid"></div>
       </section>
@@ -130,9 +130,9 @@
           <button id="addSolutionBtn" type="button">Oplossing toevoegen</button>
         </div>
         <div class="stage-note layer-solutions">
-          <strong data-process-title="solution">Processtap OPL</strong>
+          <strong data-process-title="solution">4. Oplossingsrichting koppelen</strong>
           <button class="stage-edit" type="button" onclick="openEditor('processText', 'solution')">Bewerk tekst</button>
-          <p data-process-description="solution">Oplossingen maken de uitwerkingen praktisch. Ze beschrijven welke richting, techniek, beheerafspraak of inrichting nodig is om een of meerdere uitwerkingen te realiseren.</p>
+          <p data-process-description="solution">Per uitgewerkte behoefte wordt een mogelijke technische, organisatorische of procesmatige oplossing gekoppeld. Hiermee wordt de stap gemaakt van wat nodig is naar hoe dit uitvoerbaar wordt.</p>
         </div>
         <div id="solutionCards" class="solution-grid"></div>
       </section>
@@ -146,14 +146,14 @@
           <button id="addStandardPartBtn" type="button">Standaardonderdeel toevoegen</button>
         </div>
         <div class="stage-note layer-standard">
-          <strong data-process-title="standard">Processtap STD</strong>
+          <strong data-process-title="standard">5. Vertalen naar AV-standaard</strong>
           <button class="stage-edit" type="button" onclick="openEditor('processText', 'standard')">Bewerk tekst</button>
-          <p data-process-description="standard">Standaardonderdelen zijn de praktische uitwerking van oplossingen in de AV-standaard. De huidige teksten zijn opzetjes die later verder kunnen worden ingevuld met exacte techniek, beheerafspraken, eigenaar en toetscriteria.</p>
+          <p data-process-description="standard">De oplossingsrichting wordt vertaald naar een concreet onderdeel van de AV-standaard. Dit onderdeel moet bruikbaar zijn voor ontwerp, inrichting, beheer en toetsing.</p>
         </div>
         <div id="standardPartCards" class="solution-grid"></div>
       </section>
 
-      <section id="flow" class="panel">
+      <section id="flow" class="panel active">
         <div class="panel-head">
           <div>
             <h2>Flow</h2>
@@ -161,9 +161,9 @@
           </div>
         </div>
         <div class="stage-note">
-          <strong data-process-title="flow">Traceerbaarheid</strong>
+          <strong data-process-title="flow">6. Controleren van koppelingen</strong>
           <button class="stage-edit" type="button" onclick="openEditor('processText', 'flow')">Bewerk tekst</button>
-          <p data-process-description="flow">De Flow toont hoe wensen/input, uitwerkingen, oplossingen en standaardonderdelen met elkaar verbonden zijn. Klik op een item om de route te accentueren; dubbelklik om het item te openen en aan te passen.</p>
+          <p data-process-description="flow">In Flow wordt gecontroleerd of input, uitwerkingen, oplossingen en standaardonderdelen logisch aan elkaar gekoppeld zijn. Zo worden ontbrekende koppelingen en gaten in het proces zichtbaar.</p>
         </div>
         <div id="flowChart" class="flow-chart"></div>
       </section>

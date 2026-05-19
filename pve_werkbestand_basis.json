@@ -124,24 +124,24 @@
     "method": "Traceerketen: WNS wensen/input -> UIT uitwerkingen met MoSCoW -> OPL oplossingen -> STD praktische AV-standaardonderdelen. De input blijft wens/behoefte; het onderscheid tussen wens en eis ontstaat bij de MoSCoW-prioriteit van de uitwerking.",
     "processText": {
       "input": {
-        "title": "Processtap WNS",
-        "description": "In deze laag staat de input als wens of behoefte. Ik leg vast wie iets heeft aangegeven en vanuit welke bron of rol dit komt, zodat de wens dicht bij de praktijk blijft."
+        "title": "1. Input verzamelen",
+        "description": "In deze stap wordt alle opgehaalde informatie vastgelegd als input, wens of behoefte. De input komt uit interviews, online reacties, gesprekken, observaties, inventarisatie en data-analyse. Per inputitem wordt vastgelegd waar de informatie vandaan komt, zoals bron, stakeholderrol, context en korte toelichting. Het resultaat is een overzicht van alle opgehaalde wensen en signalen, met herleidbare koppeling naar bron en stakeholder."
       },
       "outcome": {
-        "title": "Processtap UIT",
-        "description": "Hier werk ik wensen uit tot functionele, technische of organisatorische uitwerkingen. Ik breng losse opmerkingen samen tot een onderliggende behoefte, bijvoorbeeld snel en voorspelbaar kunnen opstarten. De uitwerkingen zijn besproken met Judith (EMC) en Edward (Schaay-AV). De MoSCoW-indeling is afgestemd met Cris Borsje, Erik Magré (projectleider IT), Jos en Koen (AVO)."
+        "title": "2 en 3. Input uitwerken en MoSCoW prioriteren",
+        "description": "In deze stap wordt losse input vertaald naar een duidelijke functionele, technische of organisatorische uitwerking. De oorspronkelijke opmerking blijft behouden, maar wordt inhoudelijk scherper gemaakt. Daarna krijgt de uitgewerkte behoefte een MoSCoW-prioriteit. De prioriteit wordt dus niet gekoppeld aan de losse input, maar aan de onderliggende behoefte. Dit geeft een duidelijk onderscheid tussen eis, wens en optie."
       },
       "solution": {
-        "title": "Processtap OPL",
-        "description": "Hier koppel ik oplossingen aan de uitwerkingen. De technische oplossingen zijn in een brainstormsessie bedacht met Max Broere en Martin Verhoek, zodat de oplossingen ook praktisch uitvoerbaar blijven."
+        "title": "4. Oplossingsrichting koppelen",
+        "description": "In deze stap wordt per uitgewerkte behoefte een mogelijke oplossing gekoppeld. Hiermee wordt de stap gemaakt van wat nodig is naar hoe dit opgelost kan worden. De oplossing kan technisch, organisatorisch of procesmatig zijn, bijvoorbeeld een standaard bedienconcept, vaste pc met standaard startprofiel, netwerkgebonden AV-apparatuur, centrale registratie of monitoring."
       },
       "standard": {
-        "title": "Processtap STD",
-        "description": "Hier worden oplossingen vertaald naar praktische onderdelen van de AV-standaard. De standaard wordt momenteel aangevuld met de laatste input. Daarna wordt het rapport opgesteld op basis van de aangevulde standaard."
+        "title": "5. Vertalen naar AV-standaard",
+        "description": "In deze stap wordt de oplossingsrichting vertaald naar een concreet onderdeel van de AV-standaard. Dit onderdeel moet bruikbaar zijn voor ontwerp, inrichting, beheer en toetsing. Het beschrijft niet alleen techniek, maar ook de bijdrage aan gebruiksgemak, betrouwbaarheid, beheerbaarheid en standaardisatie."
       },
       "flow": {
-        "title": "Traceerbaarheid",
-        "description": "De Flow laat zien hoe een wens via een uitwerking en oplossing uiteindelijk bij een standaardonderdeel terechtkomt. Items kunnen worden toegevoegd, versleept en met lijnen gekoppeld. Dit maakt de keuzes navolgbaar."
+        "title": "6. Controleren van koppelingen",
+        "description": "In deze stap wordt gecontroleerd of alle onderdelen logisch aan elkaar gekoppeld zijn. In Flow is zichtbaar of input nog geen uitwerking heeft, of een uitwerking nog geen oplossing heeft, of een oplossing nog niet is vertaald naar een standaardonderdeel. Klik op een item om de route te accentueren; dubbelklik om details te openen."
       }
     }
   },
@@ -2221,6 +2221,15 @@
       "entityType": "workflow",
       "entityId": "",
       "summary": "Aanpak uitgebreid met persoonlijke toelichting, voorbeelden en uitleg over Flow-koppelingen"
+    },
+    {
+      "id": "LOG-0076",
+      "at": "2026-05-19T12:20:00.000Z",
+      "actor": "Codex",
+      "action": "layout:update",
+      "entityType": "dashboard",
+      "entityId": "",
+      "summary": "Flow ingesteld als startpagina, processtappen per tabblad aangescherpt en analyse verplaatst naar menu"
     }
   ],
   "points": [

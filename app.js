@@ -45,38 +45,53 @@ const typeColors = {
   Standaard: layerColors.standard
 };
 const workflowIntro = {
-  title: "Van wens/input naar AV-standaard",
-  intro: "Ik verzamel eerst wat mensen aangeven over de ruimtes. Dat behandel ik nog niet meteen als harde eis, maar als wens of input. Daarna werk ik die input stap voor stap uit naar uitwerkingen, oplossingen en uiteindelijk onderdelen van de AV-standaard.",
-  approach: "Ik heb hiervoor gekozen omdat de input uit verschillende hoeken komt: gebruikers, beheer, onderwijs, MDO en data. Door eerst rustig te ordenen blijft duidelijk waar een keuze vandaan komt. In het dashboard kan ik daarom eenvoudig items toevoegen, aanpassen en in Flow met lijnen verbinden. Zo blijft zichtbaar hoe een wens uiteindelijk in een oplossing of standaardonderdeel terechtkomt.",
+  title: "Documentatie van het ontwerpproces",
+  intro: "Dit dashboard beschrijft en bewaakt de route van opgehaalde input naar een onderbouwde AV-standaard. Flow is de startpagina, omdat daar direct zichtbaar is hoe wensen, uitwerkingen, oplossingen en standaardonderdelen met elkaar verbonden zijn.",
+  approach: "De vier inhoudelijke tabbladen zijn bedoeld voor detailwerk: input vastleggen, uitwerkingen aanscherpen, oplossingen koppelen en standaardonderdelen invullen. In Flow controleer ik vervolgens of de route van links naar rechts klopt.",
   principle: "Het onderscheid tussen wens en eis ontstaat bij de uitwerking. De MoSCoW-indeling is besproken met Cris Borsje, Erik Magré, Jos en Koen, zodat niet alleen mijn interpretatie leidend is."
 };
 
 const workflow = [
   {
-    title: "Wensen/input vastleggen",
+    title: "Input verzamelen",
     code: "WNS",
-    description: "Alle opgehaalde informatie komt eerst binnen als wens of behoefte. Per item blijft zichtbaar wie dit heeft aangegeven en vanuit welke bron of rol dit komt. Dit voorkomt dat een losse opmerking direct als harde eis wordt behandeld."
+    description: "In deze stap wordt alle opgehaalde informatie vastgelegd als input, wens of behoefte. De input komt uit interviews, online reacties, gesprekken, observaties, inventarisatie en data-analyse. Op dit moment wordt nog niet bepaald of iets een harde eis wordt. Per inputitem wordt vastgelegd waar de informatie vandaan komt, zoals bron, stakeholderrol, context en korte toelichting. Resultaat: overzicht van alle opgehaalde wensen en signalen, herleidbare koppeling naar bron en stakeholder, en basis voor verdere uitwerking."
   },
   {
-    title: "Wensen uitwerken",
+    title: "Input uitwerken",
     code: "UIT",
-    description: "De wensen worden uitgewerkt tot duidelijke functionele, technische of organisatorische uitwerkingen. Bijvoorbeeld: meerdere opmerkingen over traag starten worden samengebracht tot een uitwerking over snel en voorspelbaar opstarten. Deze uitwerkingen zijn besproken met Judith vanuit het Erasmus MC en Edward vanuit Schaay-AV."
+    description: "In deze stap wordt losse input vertaald naar een duidelijke uitwerking. De oorspronkelijke opmerking blijft behouden, maar wordt inhoudelijk scherper gemaakt. Dit kan functioneel, technisch of organisatorisch zijn. Een voorbeeld is input over traag opstartende ruimtes: verschillende opmerkingen worden samengebracht tot de behoefte dat een ruimte snel, voorspelbaar en met zo min mogelijk handelingen moet kunnen opstarten. Resultaat: duidelijke uitwerkingen, minder dubbele input en een betere basis voor prioritering en ontwerp."
   },
   {
-    title: "Oplossingen koppelen",
+    title: "MoSCoW prioriteren",
+    code: "MSC",
+    description: "In deze stap krijgt de uitgewerkte behoefte een MoSCoW-prioriteit. De prioriteit wordt dus niet gekoppeld aan losse input, maar aan de inhoudelijke uitwerking. Dit voorkomt dat een losse opmerking te zwaar of juist te licht wordt beoordeeld. Een Must gaat richting harde eis, een Should is belangrijk maar niet altijd verplicht, en een Could is wenselijk of toekomstgericht. Resultaat: prioritering per uitgewerkte behoefte en een onderbouwd onderscheid tussen eis, wens en optie."
+  },
+  {
+    title: "Oplossingsrichting koppelen",
     code: "OPL",
-    description: "Daarna worden passende oplossingen gekoppeld. In Flow kan ik hiervoor lijnen leggen tussen uitwerking en oplossing, zodat de route zichtbaar blijft. De technische oplossingsrichtingen zijn in een brainstormsessie bedacht met Max Broere en Martin Verhoek."
+    description: "In deze stap wordt per uitgewerkte behoefte een mogelijke oplossing gekoppeld. Hiermee wordt de stap gemaakt van wat nodig is naar hoe dit opgelost kan worden. De oplossing kan technisch, organisatorisch of procesmatig zijn, zoals een standaard bedienconcept, vaste pc met standaard startprofiel, netwerkgebonden AV-apparatuur, centrale registratie of monitoring. Resultaat: oplossing per uitgewerkte behoefte, eerste vertaling naar techniek en beheer, en toetsing op uitvoerbaarheid."
   },
   {
-    title: "Standaardonderdelen vormen",
+    title: "Vertalen naar AV-standaard",
     code: "STD",
-    description: "De oplossingen worden vertaald naar praktische standaardonderdelen. Denk aan een vast startconcept, netwerkgebonden AV-apparatuur of centrale registratie. Deze standaard wordt nu aangevuld met de laatste input; daarna kan het rapport worden opgesteld."
+    description: "In deze stap wordt de oplossingsrichting vertaald naar een concreet onderdeel van de AV-standaard. Dit onderdeel moet bruikbaar zijn voor ontwerp, inrichting, beheer en toetsing. Een standaardonderdeel beschrijft niet alleen techniek, maar ook hoe de oplossing bijdraagt aan gebruiksgemak, betrouwbaarheid, beheerbaarheid en standaardisatie. Resultaat: concept standaardonderdelen, basis voor het Programma van Eisen en basis voor het technische ontwerp."
+  },
+  {
+    title: "Controleren van koppelingen",
+    code: "FLW",
+    description: "In deze stap wordt gecontroleerd of alle onderdelen logisch aan elkaar gekoppeld zijn. In het dashboard is zichtbaar of input nog geen uitwerking heeft, of een uitwerking nog geen oplossing heeft, of een oplossing nog niet is vertaald naar een standaardonderdeel. Resultaat: inzicht in ontbrekende koppelingen, controle op volledigheid en betere onderbouwing van ontwerpkeuzes."
+  },
+  {
+    title: "Borging en documentatie",
+    code: "DOC",
+    description: "In deze stap wordt het dashboard gebruikt als onderbouwing en borging van het ontwerpproces. Het dashboard maakt zichtbaar welke keuzes zijn gemaakt en waarop deze keuzes zijn gebaseerd. Dit helpt mijzelf en anderen die later met de AV-standaard verder werken. Resultaat: herleidbare ontwerpkeuzes, overdraagbaar werkbestand en onderbouwing voor rapportage, PvE en vervolgontwerp."
   }
 ];
 
 const workflowDocumentation = {
-  title: "Documentatie",
-  description: "De aanpak, keuzes en koppelingen worden bijgehouden in het dashboard en in het aanpakdocument. Dat maakt het proces navolgbaar: van ruwe input naar uitwerking, van uitwerking naar oplossing en van oplossing naar AV-standaard. Het hoeft niet ingewikkelder dan nodig; het belangrijkste is dat later te zien is waarom iets is gekozen en wie daarbij betrokken was."
+  title: "Gebruik van dit tabblad",
+  description: "Dit tabblad is de documentatieplek van het dashboard. De inhoudelijke bewerking gebeurt in de vier tabbladen Wensen/input, Uitwerkingen, Oplossingen en AV-standaard. Flow is bedoeld als startpunt en controlebord."
 };
 
 const laterWorkflow = [
@@ -94,37 +109,42 @@ const laterWorkflow = [
 
 const defaultProcessText = {
   input: {
-    title: "Processtap WNS",
-    description: "In deze laag staat de oorspronkelijke input als wens of behoefte. De tekst blijft uitgebreid en herleidbaar, zodat later zichtbaar is wie de wens heeft ingebracht en welke bron de basis vormt voor de uitwerking, oplossing en standaard."
+    title: "1. Input verzamelen",
+    description: "In deze stap wordt alle opgehaalde informatie vastgelegd als input, wens of behoefte. De input komt uit interviews, online reacties, gesprekken, observaties, inventarisatie en data-analyse. Per inputitem wordt vastgelegd waar de informatie vandaan komt, zoals bron, stakeholderrol, context en korte toelichting. Het resultaat is een overzicht van alle opgehaalde wensen en signalen, met herleidbare koppeling naar bron en stakeholder."
   },
   outcome: {
-    title: "Processtap UIT",
-    description: "In deze laag worden wensen verwerkt tot duidelijke functionele, technische of organisatorische uitwerkingen. Hier breng ik losse opmerkingen samen tot een onderliggende behoefte. De uitwerkingen zijn besproken met Judith (EMC) en Edward (Schaay-AV). De MoSCoW-indeling is afgestemd met Cris Borsje, Erik Magré (projectleider IT), Jos en Koen (AVO)."
+    title: "2 en 3. Input uitwerken en MoSCoW prioriteren",
+    description: "In deze stap wordt losse input vertaald naar een duidelijke functionele, technische of organisatorische uitwerking. De oorspronkelijke opmerking blijft behouden, maar wordt inhoudelijk scherper gemaakt. Daarna krijgt de uitgewerkte behoefte een MoSCoW-prioriteit. De prioriteit wordt dus niet gekoppeld aan de losse input, maar aan de onderliggende behoefte. Dit geeft een duidelijk onderscheid tussen eis, wens en optie."
   },
   solution: {
-    title: "Processtap OPL",
-    description: "Oplossingen maken de uitwerkingen praktisch. De technische oplossingen zijn in een brainstormsessie bedacht met Max Broere en Martin Verhoek en beschrijven welke richting, techniek, beheerafspraak of inrichting nodig is."
+    title: "4. Oplossingsrichting koppelen",
+    description: "In deze stap wordt per uitgewerkte behoefte een mogelijke oplossing gekoppeld. Hiermee wordt de stap gemaakt van wat nodig is naar hoe dit opgelost kan worden. De oplossing kan technisch, organisatorisch of procesmatig zijn, bijvoorbeeld een standaard bedienconcept, vaste pc met standaard startprofiel, netwerkgebonden AV-apparatuur, centrale registratie of monitoring."
   },
   standard: {
-    title: "Processtap STD",
-    description: "Standaardonderdelen zijn de praktische uitwerking van oplossingen in de AV-standaard. De standaard wordt nu aangevuld met de laatste input. Daarna worden de definitieve onderdelen gebruikt als basis voor het rapport."
+    title: "5. Vertalen naar AV-standaard",
+    description: "In deze stap wordt de oplossingsrichting vertaald naar een concreet onderdeel van de AV-standaard. Dit onderdeel moet bruikbaar zijn voor ontwerp, inrichting, beheer en toetsing. Het beschrijft niet alleen techniek, maar ook de bijdrage aan gebruiksgemak, betrouwbaarheid, beheerbaarheid en standaardisatie."
   },
   flow: {
-    title: "Traceerbaarheid",
-    description: "De Flow toont hoe wensen/input, uitwerkingen, oplossingen en standaardonderdelen met elkaar verbonden zijn. Ik kan items toevoegen, verslepen en met lijnen koppelen. Klik op een item om de route te accentueren; dubbelklik om het item te openen en aan te passen."
+    title: "6. Controleren van koppelingen",
+    description: "In deze stap wordt gecontroleerd of alle onderdelen logisch aan elkaar gekoppeld zijn. In Flow is zichtbaar of input nog geen uitwerking heeft, of een uitwerking nog geen oplossing heeft, of een oplossing nog niet is vertaald naar een standaardonderdeel. Klik op een item om de route te accentueren; dubbelklik om details te openen."
   }
 };
 
 function migrateProcessText(processText) {
   const migrated = { ...processText };
-  if (migrated.outcome?.description && !migrated.outcome.description.includes("Erik Magré") && /stakeholders|MoSCoW|Erik Margre/.test(migrated.outcome.description)) {
-    migrated.outcome = { ...migrated.outcome, description: defaultProcessText.outcome.description };
+  Object.entries(defaultProcessText).forEach(([key, valueToUse]) => {
+    if (!migrated[key]?.title || !/^\d/.test(migrated[key].title)) {
+      migrated[key] = { ...valueToUse };
+    }
+  });
+  if (migrated.outcome?.description && !migrated.outcome.description.includes("onderliggende behoefte") && /stakeholders|MoSCoW|Erik Margre|Erik Magré/.test(migrated.outcome.description)) {
+    migrated.outcome = { ...defaultProcessText.outcome };
   }
   if (migrated.solution?.description && !migrated.solution.description.includes("Max Broere") && /Schaay-AV|Oplossingen maken/.test(migrated.solution.description)) {
-    migrated.solution = { ...migrated.solution, description: defaultProcessText.solution.description };
+    migrated.solution = { ...defaultProcessText.solution };
   }
   if (migrated.standard?.description && !migrated.standard.description.includes("laatste input") && /bouwstenen|opzetjes|toetscriteria/.test(migrated.standard.description)) {
-    migrated.standard = { ...migrated.standard, description: defaultProcessText.standard.description };
+    migrated.standard = { ...defaultProcessText.standard };
   }
   return migrated;
 }
@@ -185,7 +205,7 @@ async function init() {
 
 function cacheElements() {
   [
-    "saveState", "actorLabel", "shareExportBtn", "fileMenuButton", "fileMenu", "exportJsonBtn", "exportCsvBtn", "importJsonInput", "resetLocalBtn",
+    "saveState", "actorLabel", "shareExportBtn", "fileMenuButton", "fileMenu", "exportJsonBtn", "exportCsvBtn", "openAnalysisBtn", "importJsonInput", "resetLocalBtn", "publishOnlineBtn",
     "inputDrawerButton", "inputDrawer", "drawerShade", "closeDrawerBtn", "addSourceBtn", "sourceList",
     "totalItems", "totalRequirements", "mustRequirements", "linkedRequirements", "totalStandardParts",
     "searchInput", "kindFilter", "categoryFilter", "priorityFilter", "centralList",
@@ -216,8 +236,13 @@ function bindEvents() {
   els.exportJsonBtn.addEventListener("click", exportJson);
   els.shareExportBtn.addEventListener("click", exportSharePackage);
   els.exportCsvBtn.addEventListener("click", exportRequirementsCsv);
+  if (els.openAnalysisBtn) els.openAnalysisBtn.addEventListener("click", () => {
+    els.fileMenu.hidden = true;
+    switchTab("analysis");
+  });
   els.importJsonInput.addEventListener("change", importJson);
   els.resetLocalBtn.addEventListener("click", resetFromWorkfile);
+  if (els.publishOnlineBtn) els.publishOnlineBtn.addEventListener("click", publishOnlineWorkfile);
 
   els.inputDrawerButton.addEventListener("click", openDrawer);
   els.closeDrawerBtn.addEventListener("click", closeDrawer);
@@ -2555,6 +2580,49 @@ async function resetFromWorkfile() {
   autoSave();
   renderAll();
   toast(loadedWorkfile ? "Opnieuw geladen uit centraal werkbestand." : "Opnieuw geladen uit Markdown.");
+}
+
+async function publishOnlineWorkfile() {
+  const confirmed = window.confirm(
+    "Publiceer de huidige lokale versie als nieuwe online standaardopstelling?\n\n" +
+    "Dit overschrijft de basis van de online speelversie op GitHub Pages. Je lokale origineel blijft behouden."
+  );
+  if (!confirmed) return;
+
+  logAction("publish:online", "dashboard", "Publicatie naar online speelversie gestart");
+  autoSave(false);
+  toast("Online publicatie gestart...");
+  els.fileMenu.hidden = true;
+  if (els.publishOnlineBtn) els.publishOnlineBtn.disabled = true;
+
+  try {
+    const response = await fetch("http://127.0.0.1:4174/publish", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(state)
+    });
+
+    const result = await response.json().catch(() => ({}));
+    if (!response.ok || !result.ok) {
+      throw new Error(result.error || `Publiceren mislukt (${response.status}).`);
+    }
+
+    logAction("publish:online:success", "dashboard", "Online speelversie gepubliceerd");
+    autoSave(false);
+    toast("Online speelversie gepubliceerd.");
+    window.alert(`Online speelversie gepubliceerd.\n\n${result.url || "https://leades-avcore.github.io/av-standaard-erasmusmc/"}`);
+  } catch (error) {
+    console.error(error);
+    toast("Publiceren lukte niet. Start de publish-helper.");
+    window.alert(
+      "Publiceren lukte niet.\n\n" +
+      "Start eerst de lokale publish-helper in Terminal:\n\n" +
+      "node pve_dashboard/tools/publish-helper.mjs\n\n" +
+      `Foutmelding: ${error.message}`
+    );
+  } finally {
+    if (els.publishOnlineBtn) els.publishOnlineBtn.disabled = false;
+  }
 }
 
 function autoSave(showToast = true) {
