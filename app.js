@@ -3,7 +3,7 @@ const PREVIOUS_STORAGE_KEYS = [];
 const INTRO_STORAGE_KEY = "emc_av_pve_dashboard_online_intro_seen_v1";
 const WORKFILE_PATH = "pve_werkbestand_basis.json";
 const MARKDOWN_PATH = "../centrale_eisenlijst_pve.md";
-const APP_BASE_FILE_VERSION = "2026-05-18-wens-uitwerking-standaard";
+const APP_BASE_FILE_VERSION = "online-2026-05-19T18-17-27-443Z";
 
 const categories = [
   "Functionele eisen",
