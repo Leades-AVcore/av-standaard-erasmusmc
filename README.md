@@ -8,19 +8,13 @@ Het dashboard gebruikt een eenvoudig drie-stappenmodel:
 
 De centrale gegevens staan in `pve_werkbestand_basis.json`. Het zichtbare dashboard gebruikt 25 samengevatte eisen, 12 uitwerkingen met een passende oplossing en de concrete producten. De 62 oorspronkelijke inputitems blijven in hetzelfde JSON-bestand bewaard onder `sourceItems`.
 
-## Nieuwe input verwerken
+## Online speelversie
 
-1. Plaats nieuwe bronbestanden in de map `Input`.
-2. Analyseer de nieuwe input zonder de oorspronkelijke tekst te wijzigen.
-3. Voeg de oorspronkelijke uitspraak toe aan `sourceItems`.
-4. Koppel de uitspraak aan een bestaande samengevatte eis of voeg een nieuwe eis toe.
-5. Koppel de eis aan een passende uitwerking of maak een nieuwe uitwerking met oplossing.
-6. Koppel een concreet opgeleverd product zodra dit beschikbaar is.
-7. Voer `node tools/generate-simple-outputs.mjs` uit om de leesbare centrale lijsten opnieuw te genereren.
+Deze repository is de deelbare online kopie. Stakeholders kunnen eisen, uitwerkingen, producten en koppelingen aanpassen. Hun wijzigingen blijven in hun eigen browser staan totdat zij via `Opslaan & delen` een JSON-export maken.
 
-## Historie
+De lokale versie blijft het centrale werkbestand. Een bijgewerkt lokaal JSON-bestand kan met het publicatiescript als nieuwe online basis worden ingesteld.
 
-De vorige vijf-stappenopzet en reservebestanden staan in `archief_vijfstappen`. Deze bestanden zijn alleen voor herleidbaarheid en worden niet meer door het dashboard gebruikt.
+Zie `ONLINE_PUBLICEREN.md` voor de werkwijze.
 
 ## Bestanden
 
@@ -29,5 +23,4 @@ De vorige vijf-stappenopzet en reservebestanden staan in `archief_vijfstappen`. 
 - `styles.css`: visuele vormgeving
 - `pve_werkbestand_basis.json`: centraal werkbestand
 - `basisindeling_driestappenmodel.md`: leesbaar overzicht van uitwerkingen en producten
-- `tools/migrate-to-three-step-model.mjs`: reproduceerbare omzetting van het oude model
-- `tools/generate-simple-outputs.mjs`: genereert de centrale Markdown-overzichten
+- `tools/update-online-workbestand.mjs`: vervangt en publiceert de online basis
