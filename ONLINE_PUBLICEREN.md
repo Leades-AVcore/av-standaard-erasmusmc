@@ -23,7 +23,7 @@ De makkelijkste route is een statische host zoals Netlify, Vercel of GitHub Page
 
 Voor Netlify kan de inhoud van deze map als site worden geupload. Gebruik dan deze map als publicatiemap:
 
-`pve_dashboard_online`
+`Producten/Dashboard_online`
 
 Na publiceren opent de app direct op de online URL.
 

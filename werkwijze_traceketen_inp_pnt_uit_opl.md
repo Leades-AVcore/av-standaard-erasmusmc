@@ -65,7 +65,7 @@ Analyse en borging volgen later in het proces. Analyse wordt gebruikt om dekking
 
 Alle werkdata staat in:
 
-`pve_dashboard/pve_werkbestand_basis.json`
+`Producten/Dashboard_online/pve_werkbestand_basis.json`
 
 De actieve workflow gebruikt:
 

@@ -2,7 +2,7 @@ const STORAGE_KEY = "emc_av_pve_dashboard_online_clone_v1";
 const PREVIOUS_STORAGE_KEYS = [];
 const INTRO_STORAGE_KEY = "emc_av_pve_dashboard_online_intro_seen_v1";
 const WORKFILE_PATH = "pve_werkbestand_basis.json";
-const MARKDOWN_PATH = "../centrale_eisenlijst_pve.md";
+const MARKDOWN_PATH = "../PvE/centrale_eisenlijst_pve.md";
 const APP_BASE_FILE_VERSION = "online-2026-05-19T18-17-27-443Z";
 
 const categories = [
@@ -2637,7 +2637,7 @@ async function publishOnlineWorkfile() {
     window.alert(
       "Publiceren lukte niet.\n\n" +
       "Start eerst de lokale publish-helper in Terminal:\n\n" +
-      "node pve_dashboard/tools/publish-helper.mjs\n\n" +
+      "node Producten/Dashboard_lokaal/tools/publish-helper.mjs\n\n" +
       `Foutmelding: ${error.message}`
     );
   } finally {

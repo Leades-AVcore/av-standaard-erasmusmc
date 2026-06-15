@@ -2,7 +2,7 @@
 
 Dit dashboard is een lokale werklaag bovenop de centrale eisenlijst:
 
-- Centrale bron: `../centrale_eisenlijst_pve.md`
+- Centrale bron in de lokale productstructuur: `../PvE/centrale_eisenlijst_pve.md`
 - Bewerkbaar basiswerkbestand: `pve_werkbestand_basis.json`
 - Documentatie groepering: `groepering_uitkomsten_basis.md`
 - Actuele basisindeling: `basisindeling_eis_pnt_uit_opl.md`
@@ -50,7 +50,7 @@ Gebruik per nieuwe bron dezelfde methode:
 
 ## Werkbestand en originele eisen
 
-De originele eisenlijst `../centrale_eisenlijst_pve.md` blijft onaangetast. Die lijst is de herleidbare bron voor de formele eisen.
+De originele eisenlijst `../PvE/centrale_eisenlijst_pve.md` blijft onaangetast. Die lijst is de herleidbare bron voor de formele eisen.
 
 Het dashboard werkt met een bewerkbare kopie in `pve_werkbestand_basis.json`. Daarin staan:
 
@@ -148,7 +148,7 @@ python3 -m http.server 4173
 Open daarna:
 
 ```text
-http://localhost:4173/pve_dashboard/
+http://localhost:4173/Producten/Dashboard_online/
 ```
 
 Gebruik bij voorkeur een lokale server in plaats van direct openen als bestand, omdat de app de Markdown-eisenlijst via `fetch` inleest.

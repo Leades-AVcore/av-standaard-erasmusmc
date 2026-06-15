@@ -142,7 +142,7 @@
     },
     "version": 1,
     "baseFileVersion": "online-2026-05-19T18-17-27-443Z",
-    "sourceFile": "../centrale_eisenlijst_pve.md",
+    "sourceFile": "../PvE/centrale_eisenlijst_pve.md",
     "purpose": "Centraal bewerkbaar basisbestand voor het dashboard, met originele input intact als wensen/input en reproduceerbare koppelingen naar uitwerkingen, oplossingen en standaardonderdelen.",
     "method": "Traceerketen: WNS wensen/input -> UIT uitwerkingen met MoSCoW -> OPL oplossingen -> STD praktische AV-standaardonderdelen. De input blijft wens/behoefte; het onderscheid tussen wens en eis ontstaat bij de MoSCoW-prioriteit van de uitwerking.",
     "onlineUpdatedAt": "2026-05-19T18:17:27.443Z",
