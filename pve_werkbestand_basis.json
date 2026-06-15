@@ -1,10 +1,10 @@
 {
   "meta": {
     "project": "Uniforme AV-standaard Erasmus MC",
-    "updatedAt": "2026-06-15T16:30:36.858Z",
+    "updatedAt": "2026-06-15T18:40:48.318Z",
     "actor": "jesse",
     "version": 3,
-    "baseFileVersion": "2026-06-15-driestappenmodel-v2",
+    "baseFileVersion": "2026-06-15-driestappenmodel-v3",
     "sourceFile": "../PvE/centrale_eisenlijst_pve.md",
     "purpose": "Eenvoudig en herleidbaar werkbestand voor de AV-standaard. Het zichtbare proces bestaat uit eisen, uitwerkingen met oplossing en concrete producten.",
     "method": "Input uit bronnen wordt samengevat tot eisen. Samenhangende eisen worden gebundeld in een uitwerking met passende oplossing. Concrete opleveringen worden als product gekoppeld. Samen vormen deze drie lagen de AV-standaard.",
@@ -51,7 +51,10 @@
         "UIT-012"
       ],
       "products": [
-        "PRD-001"
+        "PRD-001",
+        "PRD-002",
+        "PRD-003",
+        "PRD-004"
       ]
     },
     "processText": {
@@ -1390,7 +1393,9 @@
         "EIS-001",
         "EIS-002"
       ],
-      "productIds": [],
+      "productIds": [
+        "PRD-003"
+      ],
       "legacySolutionIds": [
         "OPL-001",
         "OPL-002"
@@ -1415,7 +1420,8 @@
         "EIS-024"
       ],
       "productIds": [
-        "PRD-001"
+        "PRD-001",
+        "PRD-003"
       ],
       "legacySolutionIds": [
         "OPL-001",
@@ -1437,7 +1443,9 @@
       "requirementIds": [
         "EIS-006"
       ],
-      "productIds": [],
+      "productIds": [
+        "PRD-002"
+      ],
       "legacySolutionIds": [
         "OPL-003",
         "OPL-005"
@@ -1459,7 +1467,9 @@
         "EIS-004",
         "EIS-005"
       ],
-      "productIds": [],
+      "productIds": [
+        "PRD-002"
+      ],
       "legacySolutionIds": [
         "OPL-002",
         "OPL-004"
@@ -1483,7 +1493,9 @@
         "EIS-010",
         "EIS-011"
       ],
-      "productIds": [],
+      "productIds": [
+        "PRD-002"
+      ],
       "legacySolutionIds": [
         "OPL-004",
         "OPL-009"
@@ -1506,7 +1518,9 @@
         "EIS-006",
         "EIS-012"
       ],
-      "productIds": [],
+      "productIds": [
+        "PRD-002"
+      ],
       "legacySolutionIds": [
         "OPL-005"
       ],
@@ -1526,7 +1540,9 @@
         "EIS-013",
         "EIS-014"
       ],
-      "productIds": [],
+      "productIds": [
+        "PRD-004"
+      ],
       "legacySolutionIds": [
         "OPL-006",
         "OPL-007"
@@ -1550,7 +1566,8 @@
         "EIS-021"
       ],
       "productIds": [
-        "PRD-001"
+        "PRD-001",
+        "PRD-004"
       ],
       "legacySolutionIds": [
         "OPL-008",
@@ -1574,7 +1591,9 @@
         "EIS-016",
         "EIS-017"
       ],
-      "productIds": [],
+      "productIds": [
+        "PRD-004"
+      ],
       "legacySolutionIds": [
         "OPL-006",
         "OPL-010"
@@ -1596,7 +1615,10 @@
         "EIS-022",
         "EIS-023"
       ],
-      "productIds": [],
+      "productIds": [
+        "PRD-002",
+        "PRD-004"
+      ],
       "legacySolutionIds": [
         "OPL-011"
       ],
@@ -1638,7 +1660,10 @@
       "requirementIds": [
         "EIS-003"
       ],
-      "productIds": [],
+      "productIds": [
+        "PRD-003",
+        "PRD-004"
+      ],
       "legacySolutionIds": [
         "OPL-012"
       ],
@@ -1652,26 +1677,110 @@
     {
       "id": "PRD-001",
       "title": "Digitaal instructie- en ondersteuningsplatform",
-      "type": "Advies",
-      "description": "Subadvies voor een ruimtegebonden digitaal platform met korte startinstructie op het hoofdscherm en bedienpaneel, een unieke QR-code naar uitgebreide instructie en support, en een afgeschermde beheerfunctie voor ruimte-, apparatuur-, onderhouds- en storingsinformatie.",
-      "requirementIds": [
-        "EIS-003",
-        "EIS-008",
-        "EIS-013",
-        "EIS-018",
-        "EIS-021",
-        "EIS-024",
-        "EIS-025"
-      ],
+      "type": "Advies en gebruikersvoorziening",
+      "description": "Ruimtegebonden voorziening met korte startinstructie, een unieke QR-route naar uitgebreide uitleg en ondersteuning, en afgeschermde beheerinformatie.",
       "elaborationIds": [
         "UIT-002",
         "UIT-008",
         "UIT-011"
       ],
-      "file": "Producten/Instructieplatform/Sub-advies_instructie.pdf",
-      "validation": "Het document bevat een voorgestelde concepttoets met praktijkscenario's voor starten, QR-gebruik, probleemhulp, support, beheer en onderhoud. Een volledig technisch werkend platform, beveiliging en systeemkoppelingen zijn nog niet getest.",
-      "nextStep": "Klikbaar prototype maken, gebruikers- en beheerflow toetsen, feedback verwerken, technische haalbaarheid en toegangsrechten uitwerken, koppeling met Topdesk of ServiceNow onderzoeken en daarna een pilot binnen AVO uitvoeren.",
+      "file": "Producten/Instructieplatform/Productkaart_Digitaal_instructieplatform.pdf",
+      "validation": "Korte productkaart opgesteld. Het verdiepende subadvies is beschikbaar als Producten/Instructieplatform/Sub-advies_instructie.pdf.",
+      "nextStep": "Klikbaar prototype maken en in enkele representatieve ruimtes testen met gebruikers, gasten en beheerders.",
+      "requirementIds": [
+        "EIS-007",
+        "EIS-008",
+        "EIS-021",
+        "EIS-024",
+        "EIS-018",
+        "EIS-019",
+        "EIS-020",
+        "EIS-025"
+      ],
       "order": 1
+    },
+    {
+      "id": "PRD-002",
+      "title": "AV-ruimtetypenboek en technisch standaardontwerp",
+      "type": "Ontwerp- en referentiedocument",
+      "description": "Praktisch standaardboek dat per MDO-, onderwijs- en vergaderruimtype de functionaliteit, techniek, aansluitingen, infrastructuur en acceptatiecriteria vastlegt.",
+      "elaborationIds": [
+        "UIT-003",
+        "UIT-004",
+        "UIT-005",
+        "UIT-006",
+        "UIT-010"
+      ],
+      "file": "Producten/AV-ruimtetypenboek/Productkaart_AV-ruimtetypenboek.pdf",
+      "validation": "Productvoorstel als korte productkaart uitgewerkt en gekoppeld aan de technische en ruimtetypegebonden uitwerkingen.",
+      "nextStep": "Eerste versie uitwerken voor vergaderruimte, MDO-ruimte en onderwijsruimte en deze technisch afstemmen.",
+      "requirementIds": [
+        "EIS-006",
+        "EIS-004",
+        "EIS-005",
+        "EIS-009",
+        "EIS-010",
+        "EIS-011",
+        "EIS-012",
+        "EIS-022",
+        "EIS-023"
+      ],
+      "order": 2
+    },
+    {
+      "id": "PRD-003",
+      "title": "Bedienings- en automatiseringsconcept",
+      "type": "Functioneel ontwerp en prototype",
+      "description": "Uniform ontwerp voor startscenario's, bediening, automatische opstart, foutmeldingen, afsluiting, reset en energiestand.",
+      "elaborationIds": [
+        "UIT-001",
+        "UIT-002",
+        "UIT-012"
+      ],
+      "file": "Producten/Bedieningsconcept/Productkaart_Bedienings_en_automatiseringsconcept.pdf",
+      "validation": "Productvoorstel als korte productkaart uitgewerkt en gekoppeld aan opstart, gebruikerservaring en automatisch afsluiten.",
+      "nextStep": "Klikbaar bedieningsprototype maken en de start- en afsluitscenario's met gebruikers en technisch stakeholders toetsen.",
+      "requirementIds": [
+        "EIS-001",
+        "EIS-002",
+        "EIS-007",
+        "EIS-008",
+        "EIS-021",
+        "EIS-024",
+        "EIS-003"
+      ],
+      "order": 3
+    },
+    {
+      "id": "PRD-004",
+      "title": "Beheer-, monitoring- en lifecycleplan",
+      "type": "Beheer- en implementatieplan",
+      "description": "Samenhangend plan voor assetregistratie, monitoring, support, rapportage, lifecycle, beveiliging en structurele verbetering van de AV-vloot.",
+      "elaborationIds": [
+        "UIT-007",
+        "UIT-008",
+        "UIT-009",
+        "UIT-010",
+        "UIT-012"
+      ],
+      "file": "Producten/Beheer_monitoring_lifecycle/Productkaart_Beheer_monitoring_lifecycleplan.pdf",
+      "validation": "Productvoorstel als korte productkaart uitgewerkt en gekoppeld aan beheer, governance, monitoring en veilige uitbreiding.",
+      "nextStep": "Minimale registratieset, rollenmatrix, dashboardopzet, rapportagecyclus en lifecycleplanning met AVO en IT-beheer uitwerken.",
+      "requirementIds": [
+        "EIS-013",
+        "EIS-014",
+        "EIS-018",
+        "EIS-019",
+        "EIS-020",
+        "EIS-021",
+        "EIS-015",
+        "EIS-016",
+        "EIS-017",
+        "EIS-022",
+        "EIS-023",
+        "EIS-003"
+      ],
+      "order": 4
     }
   ],
   "logs": [
@@ -2345,8 +2454,8 @@
       "summary": "Nieuwe online input, algemene gebruikersinput en het instructieplatform opnieuw geanalyseerd en in de volledige traceerketen verwerkt."
     },
     {
-      "id": "LOG-1781541036864",
-      "timestamp": "2026-06-15T16:30:36.864Z",
+      "id": "LOG-1781548848324",
+      "timestamp": "2026-06-15T18:40:48.324Z",
       "actor": "jesse",
       "action": "model:simplified",
       "entityType": "dashboard",

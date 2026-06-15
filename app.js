@@ -1,6 +1,6 @@
 const WORKFILE_PATH = "pve_werkbestand_basis.json";
 const STORAGE_KEY = "emc_av_standaard_online_simple_v3";
-const APP_BASE_FILE_VERSION = "2026-06-15-driestappenmodel-v2";
+const APP_BASE_FILE_VERSION = "2026-06-15-driestappenmodel-v3";
 const INTRO_KEY = "emc_av_standaard_online_intro_simple_v3";
 
 let state = null;
@@ -846,6 +846,8 @@ function closeSourceDrawer() {
 
 function productFileHref(file) {
   const normalized = file.replaceAll("\\", "/");
+  const isOnline = !["localhost", "127.0.0.1", ""].includes(window.location.hostname);
+  if (isOnline) return `productbestanden/${encodeURIComponent(normalized.split("/").pop())}`;
   const marker = "Producten/";
   return normalized.includes(marker) ? `../${normalized.split(marker)[1]}` : normalized;
 }
