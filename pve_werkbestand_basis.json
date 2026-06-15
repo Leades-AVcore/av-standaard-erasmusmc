@@ -1,10 +1,10 @@
 {
   "meta": {
     "project": "Uniforme AV-standaard Erasmus MC",
-    "updatedAt": "2026-06-15T18:40:48.318Z",
+    "updatedAt": "2026-06-15T19:16:29.826Z",
     "actor": "jesse",
     "version": 3,
-    "baseFileVersion": "2026-06-15-driestappenmodel-v3",
+    "baseFileVersion": "2026-06-15-driestappenmodel-v4",
     "sourceFile": "../PvE/centrale_eisenlijst_pve.md",
     "purpose": "Eenvoudig en herleidbaar werkbestand voor de AV-standaard. Het zichtbare proces bestaat uit eisen, uitwerkingen met oplossing en concrete producten.",
     "method": "Input uit bronnen wordt samengevat tot eisen. Samenhangende eisen worden gebundeld in een uitwerking met passende oplossing. Concrete opleveringen worden als product gekoppeld. Samen vormen deze drie lagen de AV-standaard.",
@@ -1711,9 +1711,9 @@
         "UIT-006",
         "UIT-010"
       ],
-      "file": "Producten/AV-ruimtetypenboek/Productkaart_AV-ruimtetypenboek.pdf",
-      "validation": "Productvoorstel als korte productkaart uitgewerkt en gekoppeld aan de technische en ruimtetypegebonden uitwerkingen.",
-      "nextStep": "Eerste versie uitwerken voor vergaderruimte, MDO-ruimte en onderwijsruimte en deze technisch afstemmen.",
+      "file": "Producten/AV-ruimtetypenboek/Handboek_AV-standaard_Erasmus_MC_concept_0.1.pdf",
+      "validation": "Concept 0.1 bevat de algemene AV-standaard, drie ruimteprofielen, acceptatieopzet, herleidbaarheid en een sjabloon voor toekomstige ruimtevarianten.",
+      "nextStep": "Ruimtevarianten, scherm- en audionormen, aansluitprofielen, MDO-kwaliteit en technische keuzes met gebruikers, beheer en technische stakeholders valideren.",
       "requirementIds": [
         "EIS-006",
         "EIS-004",
@@ -2454,8 +2454,8 @@
       "summary": "Nieuwe online input, algemene gebruikersinput en het instructieplatform opnieuw geanalyseerd en in de volledige traceerketen verwerkt."
     },
     {
-      "id": "LOG-1781548848324",
-      "timestamp": "2026-06-15T18:40:48.324Z",
+      "id": "LOG-1781550989829",
+      "timestamp": "2026-06-15T19:16:29.829Z",
       "actor": "jesse",
       "action": "model:simplified",
       "entityType": "dashboard",
