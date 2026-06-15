@@ -1,6 +1,6 @@
 const WORKFILE_PATH = "pve_werkbestand_basis.json";
 const STORAGE_KEY = "emc_av_standaard_online_simple_v3";
-const APP_BASE_FILE_VERSION = "2026-06-15-driestappenmodel-v1";
+const APP_BASE_FILE_VERSION = "2026-06-15-driestappenmodel-v2";
 const INTRO_KEY = "emc_av_standaard_online_intro_simple_v3";
 
 let state = null;
