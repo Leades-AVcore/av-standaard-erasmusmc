@@ -46,9 +46,8 @@ try {
 }
 
 assertArray(data, "requirements");
-assertArray(data, "outcomes");
-assertArray(data, "solutions");
-assertArray(data, "standardParts");
+assertArray(data, "elaborations");
+assertArray(data, "products");
 
 const now = new Date();
 const stamp = now.toISOString().replace(/[:.]/g, "-");

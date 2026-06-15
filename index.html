@@ -3,204 +3,134 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PvE-dashboard AV-standaard</title>
-    <link rel="stylesheet" href="styles.css?v=20260615-products">
+    <title>AV-standaard Erasmus MC</title>
+    <link rel="stylesheet" href="styles.css?v=20260615-simple-v2">
   </head>
   <body>
     <header class="topbar">
       <div>
-        <p class="eyebrow">AV-standaard Erasmus MC</p>
-        <h1>PvE-dashboard</h1>
+        <p class="eyebrow">Erasmus MC</p>
+        <h1>AV-standaard</h1>
       </div>
       <div class="top-actions">
         <span id="actorLabel" class="save-state"></span>
         <span id="saveState" class="save-state">Automatisch opgeslagen</span>
         <button id="shareExportBtn" type="button">Opslaan & delen</button>
-        <button id="fileMenuButton" class="icon-button" type="button" aria-label="Bestand menu">
-          <span></span><span></span><span></span>
-        </button>
+        <button id="fileMenuButton" class="icon-button" type="button" aria-label="Bestandsopties" title="Bestandsopties">•••</button>
         <div id="fileMenu" class="file-menu" hidden>
           <button id="exportJsonBtn" type="button">Werkbestand exporteren</button>
-          <button id="exportCsvBtn" type="button">Uitwerkingen exporteren als CSV</button>
-          <button id="openAnalysisBtn" type="button">Analyse openen</button>
-          <label>
-            Werkbestand importeren
-            <input id="importJsonInput" type="file" accept="application/json">
-          </label>
-          <button id="resetLocalBtn" type="button">Opnieuw laden uit werkbestand</button>
+          <button id="exportCsvBtn" type="button">Eisen exporteren als CSV</button>
+          <label>Werkbestand importeren<input id="importJsonInput" type="file" accept="application/json"></label>
+          <button id="resetLocalBtn" type="button">Basisbestand opnieuw laden</button>
+          <button id="publishOnlineBtn" type="button" hidden>Online versie bijwerken</button>
         </div>
       </div>
     </header>
 
     <main>
-      <section class="summary-grid" aria-label="Samenvatting" hidden>
-        <article class="summary-card coral">
-          <strong id="totalItems">0</strong>
-          <span>Wensen/input</span>
-        </article>
-        <article class="summary-card teal">
-          <strong id="totalRequirements">0</strong>
-          <span>Uitwerkingen</span>
-        </article>
-        <article class="summary-card yellow">
-          <strong id="mustRequirements">0</strong>
-          <span>Must-uitw.</span>
-        </article>
-        <article class="summary-card blue">
-          <strong id="linkedRequirements">0</strong>
-          <span>Opl. dekking</span>
-        </article>
-        <article class="summary-card rose">
-          <strong id="totalStandardParts">0</strong>
-          <span>Standaard</span>
-        </article>
-      </section>
-
       <nav class="tabs" aria-label="Dashboard navigatie">
         <button class="tab flow-tab active" data-tab="flow" type="button">Flow</button>
         <span class="nav-gap" aria-hidden="true"></span>
-        <button class="tab step-tab first-step layer-requirements" data-tab="list" type="button">Wensen/input</button>
-        <button class="tab step-tab layer-outcomes" data-tab="outcomes" type="button">Uitwerkingen</button>
-        <button class="tab step-tab layer-solutions" data-tab="solutions" type="button">Oplossingen</button>
-        <button class="tab step-tab layer-standard" data-tab="standard" type="button">AV-standaard</button>
-        <button class="tab step-tab layer-products" data-tab="products" type="button">Producten</button>
+        <button class="tab step-tab step-input" data-tab="requirements" type="button"><span>1</span> Input</button>
+        <button class="tab step-tab step-elaboration" data-tab="elaborations" type="button"><span>2</span> Uitwerkingen</button>
+        <button class="tab step-tab step-product" data-tab="products" type="button"><span>3</span> Producten</button>
         <span class="tab-spacer"></span>
-        <button class="tab small-tab" data-tab="workflow" type="button">Documentatie</button>
-        <button id="inputDrawerButton" class="tab small-tab input-tab" type="button" aria-label="Bronnen">Bronnen</button>
+        <button class="tab small-tab" data-tab="documentation" type="button">Documentatie</button>
+        <button id="sourceDrawerButton" class="tab small-tab" type="button">Bronnen</button>
       </nav>
 
-      <section id="list" class="panel">
+      <section id="flow" class="panel active">
         <div class="panel-head">
           <div>
-            <h2>Wensen/input</h2>
-            <p>De oorspronkelijke input blijft behouden als wens of behoefte. Het onderscheid tussen wens en eis ontstaat later bij de uitwerking.</p>
-          </div>
-          <div class="button-row">
-            <button id="addInputBtn" type="button" hidden></button>
-            <button id="addRequirementBtn" type="button">Wens/input toevoegen</button>
+            <h2>AV-standaard in drie stappen</h2>
+            <p>Van samengevatte input naar een uitwerking met oplossing en een concreet product.</p>
           </div>
         </div>
-        <div class="stage-note layer-requirements">
-          <strong data-process-title="input">1. Input verzamelen</strong>
-          <button class="stage-edit" type="button" onclick="openEditor('processText', 'input')">Bewerk tekst</button>
-          <p data-process-description="input">In deze stap wordt alle opgehaalde informatie vastgelegd als input, wens of behoefte. Per inputitem blijft zichtbaar waar de informatie vandaan komt, inclusief bron, stakeholderrol, context en toelichting.</p>
+        <div class="stage-note">
+          <div>
+            <strong data-process-title="flow"></strong>
+            <p data-process-description="flow"></p>
+          </div>
+          <button class="icon-edit" type="button" data-edit-process="flow" title="Beschrijving bewerken" aria-label="Beschrijving bewerken">✎</button>
+        </div>
+        <div id="flowChart" class="flow-chart"></div>
+      </section>
+
+      <section id="requirements" class="panel">
+        <div class="panel-head">
+          <div>
+            <h2>Input en eisen</h2>
+            <p>Samengevatte eisen met alleen categorie, soort, toelichting en herkomst.</p>
+          </div>
+          <button id="addRequirementBtn" type="button">Eis toevoegen</button>
+        </div>
+        <div class="stage-note layer-input">
+          <div>
+            <strong data-process-title="input"></strong>
+            <p data-process-description="input"></p>
+          </div>
+          <button class="icon-edit" type="button" data-edit-process="input" title="Beschrijving bewerken" aria-label="Beschrijving bewerken">✎</button>
         </div>
         <div class="filters">
-          <label>Zoeken <input id="searchInput" type="search" placeholder="Zoek in eis, wens, bron..."></label>
-          <label>Soort <select id="kindFilter"></select></label>
-          <label>Categorie <select id="categoryFilter"></select></label>
-          <label>Prioriteit <select id="priorityFilter"></select></label>
+          <label>Zoeken<input id="requirementSearch" type="search" placeholder="Zoek in eis, toelichting of bron"></label>
+          <label>Soort<select id="typeFilter"></select></label>
+          <label>Categorie<select id="categoryFilter"></select></label>
         </div>
-        <button id="addWishBtn" type="button" hidden></button>
-        <div id="centralList"></div>
-        <div id="inputCards" class="solution-grid" hidden></div>
+        <div id="requirementList" class="requirement-list"></div>
       </section>
 
-      <section id="workflow" class="panel">
+      <section id="elaborations" class="panel">
         <div class="panel-head">
           <div>
-            <h2>Documentatie</h2>
-            <p>Navolgbare werkwijze van broninput naar standaardonderdelen, inclusief aanpak en borging.</p>
+            <h2>Uitwerkingen en oplossingen</h2>
+            <p>Hier worden samenhangende eisen uitgewerkt en direct voorzien van een passende oplossing.</p>
           </div>
+          <button id="addElaborationBtn" type="button">Uitwerking toevoegen</button>
         </div>
-        <div id="workflowSteps" class="workflow-compact"></div>
-      </section>
-
-      <section id="outcomes" class="panel">
-        <div class="panel-head">
+        <div class="stage-note layer-elaboration">
           <div>
-            <h2>Uitwerkingen</h2>
-            <p>Korte functionele of technische uitwerkingen. Hier wordt MoSCoW toegepast.</p>
+            <strong data-process-title="elaboration"></strong>
+            <p data-process-description="elaboration"></p>
           </div>
-          <button id="addOutcomeBtn" type="button">Uitwerking toevoegen</button>
+          <button class="icon-edit" type="button" data-edit-process="elaboration" title="Beschrijving bewerken" aria-label="Beschrijving bewerken">✎</button>
         </div>
-        <div class="stage-note layer-outcomes">
-          <strong data-process-title="outcome">2 en 3. Input uitwerken en MoSCoW prioriteren</strong>
-          <button class="stage-edit" type="button" onclick="openEditor('processText', 'outcome')">Bewerk tekst</button>
-          <p data-process-description="outcome">Losse input wordt vertaald naar duidelijke functionele, technische of organisatorische uitwerkingen. Op deze uitgewerkte behoefte wordt MoSCoW toegepast, zodat onderscheid ontstaat tussen eis, wens en optie.</p>
-        </div>
-        <div id="outcomeCards" class="solution-grid"></div>
-      </section>
-
-      <section id="solutions" class="panel">
-        <div class="panel-head">
-          <div>
-            <h2>Oplossingen</h2>
-            <p>Concrete oplossingsrichtingen die uitwerkingen invullen en later worden gebundeld tot standaardonderdelen.</p>
-          </div>
-          <button id="addSolutionBtn" type="button">Oplossing toevoegen</button>
-        </div>
-        <div class="stage-note layer-solutions">
-          <strong data-process-title="solution">4. Oplossingsrichting koppelen</strong>
-          <button class="stage-edit" type="button" onclick="openEditor('processText', 'solution')">Bewerk tekst</button>
-          <p data-process-description="solution">Per uitgewerkte behoefte wordt een mogelijke technische, organisatorische of procesmatige oplossing gekoppeld. Hiermee wordt de stap gemaakt van wat nodig is naar hoe dit uitvoerbaar wordt.</p>
-        </div>
-        <div id="solutionCards" class="solution-grid"></div>
-      </section>
-
-      <section id="standard" class="panel">
-        <div class="panel-head">
-          <div>
-            <h2>AV-standaard</h2>
-            <p>Invulbare conceptbouwstenen voor de uiteindelijke AV-standaard, met prioriteit en gekoppelde oplossingen.</p>
-          </div>
-          <button id="addStandardPartBtn" type="button">Standaardonderdeel toevoegen</button>
-        </div>
-        <div class="stage-note layer-standard">
-          <strong data-process-title="standard">5. Vertalen naar AV-standaard</strong>
-          <button class="stage-edit" type="button" onclick="openEditor('processText', 'standard')">Bewerk tekst</button>
-          <p data-process-description="standard">De oplossingsrichting wordt vertaald naar een concreet onderdeel van de AV-standaard. Dit onderdeel moet bruikbaar zijn voor ontwerp, inrichting, beheer en toetsing.</p>
-        </div>
-        <div id="standardPartCards" class="solution-grid"></div>
+        <div id="elaborationCards" class="card-grid"></div>
       </section>
 
       <section id="products" class="panel">
         <div class="panel-head">
           <div>
             <h2>Producten</h2>
-            <p>Concrete opleveringen waarin onderdelen van de AV-standaard zijn uitgewerkt, getoetst of voorbereid.</p>
+            <p>De daadwerkelijke opleveringen waarin onderdelen van de AV-standaard concreet worden gemaakt.</p>
           </div>
           <button id="addProductBtn" type="button">Product toevoegen</button>
         </div>
-        <div class="stage-note layer-products">
-          <strong data-process-title="product">6. Uitwerken en opleveren</strong>
-          <button class="stage-edit" type="button" onclick="openEditor('processText', 'product')">Bewerk tekst</button>
-          <p data-process-description="product">In deze stap worden standaardonderdelen omgezet in concrete producten, adviezen, prototypes of implementatieonderdelen. Per product blijft zichtbaar waarop het is gebaseerd en welke vervolgstappen nog nodig zijn.</p>
+        <div class="stage-note layer-product">
+          <div>
+            <strong data-process-title="product"></strong>
+            <p data-process-description="product"></p>
+          </div>
+          <button class="icon-edit" type="button" data-edit-process="product" title="Beschrijving bewerken" aria-label="Beschrijving bewerken">✎</button>
         </div>
-        <div id="productCards" class="solution-grid"></div>
+        <div id="productCards" class="card-grid"></div>
       </section>
 
-      <section id="flow" class="panel active">
+      <section id="documentation" class="panel">
         <div class="panel-head">
           <div>
-            <h2>Flow</h2>
-            <p>Visuele koppeling van wensen/input naar uitwerkingen, oplossingen, AV-standaardonderdelen en producten.</p>
+            <h2>Documentatie</h2>
+            <p>De eenvoudige, herleidbare werkwijze achter het dashboard.</p>
           </div>
         </div>
-        <div class="stage-note">
-          <strong data-process-title="flow">7. Controleren van koppelingen</strong>
-          <button class="stage-edit" type="button" onclick="openEditor('processText', 'flow')">Bewerk tekst</button>
-          <p data-process-description="flow">In Flow wordt gecontroleerd of input, uitwerkingen, oplossingen, standaardonderdelen en producten logisch aan elkaar gekoppeld zijn. Zo worden ontbrekende koppelingen en gaten in het proces zichtbaar.</p>
-        </div>
-        <div id="flowChart" class="flow-chart"></div>
-      </section>
-
-      <section id="analysis" class="panel">
-        <div class="panel-head">
-          <div>
-            <h2>Analyse</h2>
-            <p>Verdeling, dekking en open koppelingen.</p>
-          </div>
-        </div>
-        <div id="analysisGrid" class="analysis-grid"></div>
+        <div id="documentationContent" class="documentation"></div>
       </section>
     </main>
 
-    <aside id="inputDrawer" class="drawer" aria-label="Bronnen">
+    <aside id="sourceDrawer" class="drawer" aria-label="Bronnen">
       <div class="drawer-head">
         <div>
           <h2>Bronnen</h2>
-          <p>Bronnen voor wensen/input.</p>
+          <p>Interviews, analyses, observaties en aangeleverde producten.</p>
         </div>
         <button id="closeDrawerBtn" class="ghost" type="button">Sluiten</button>
       </div>
@@ -218,83 +148,32 @@
         <div id="dialogFields" class="dialog-fields"></div>
         <div class="dialog-actions">
           <button id="deleteDialogBtn" class="danger" type="button">Verwijderen</button>
-          <button id="saveDialogBtn" value="default" type="submit">Opslaan</button>
+          <button type="submit">Opslaan</button>
         </div>
       </form>
     </dialog>
 
     <dialog id="actorDialog" class="dialog small">
       <form id="actorForm" method="dialog">
-        <div class="dialog-head">
-          <h2>Wie werkt er in het dashboard?</h2>
-        </div>
-        <p class="muted">Deze naam wordt gebruikt in het wijzigingslogboek, zodat later zichtbaar is wie wat heeft aangepast.</p>
-        <label>Naam <input id="actorNameInput" type="text" placeholder="Voornaam + achternaam"></label>
-        <div class="dialog-actions">
-          <button id="saveActorBtn" value="default" type="submit">Starten</button>
-        </div>
+        <div class="dialog-head"><h2>Wie werkt er in het dashboard?</h2></div>
+        <p class="muted">De naam wordt opgenomen in het wijzigingslogboek.</p>
+        <label>Naam<input id="actorNameInput" type="text" placeholder="Voornaam + achternaam" required></label>
+        <div class="dialog-actions"><button type="submit">Starten</button></div>
       </form>
     </dialog>
 
-    <dialog id="introDialog" class="dialog intro-dialog">
-      <form method="dialog">
-        <div class="dialog-head">
-          <div>
-            <p class="eyebrow">Welkom in de Flow</p>
-            <h2>Rondkijken mag</h2>
-          </div>
-          <button id="closeIntroDialogBtn" class="ghost" type="button">Sluiten</button>
-        </div>
-        <p>
-          Dit dashboard laat zien hoe input uit de praktijk wordt uitgewerkt naar oplossingen, onderdelen van de AV-standaard en concrete producten.
-          De Flow is bedoeld als startpunt: kijk rustig rond en volg de lijnen van links naar rechts.
-        </p>
-        <div class="intro-grid">
-          <article>
-            <strong>Route volgen</strong>
-            <span>Klik op een wens, uitwerking, oplossing, standaardonderdeel of product. De gekoppelde route wordt dan geaccentueerd.</span>
-          </article>
-          <article>
-            <strong>Details bekijken</strong>
-            <span>Dubbelklik op een item om de details te openen. Bij uitwerkingen kan ook de MoSCoW-prioriteit worden bekeken of aangepast.</span>
-          </article>
-          <article>
-            <strong>Meedenken</strong>
-            <span>Je kunt items bekijken, aanpassen en koppelingen leggen. Gebruik daarna eventueel <em>Opslaan & delen</em> om je versie terug te sturen.</span>
-          </article>
-          <article>
-            <strong>Werk in ontwikkeling</strong>
-            <span>Nieuwe uitwerkingen en standaardonderdelen worden nog met stakeholders getoetst. Producten tonen wat al concreet is uitgewerkt.</span>
-          </article>
-        </div>
-        <p class="muted">
-          Voor meer uitleg over de methode en processtappen kun je bovenin op <strong>Documentatie</strong> klikken.
-        </p>
-        <p class="intro-signature">Met vriendelijke groet,<br>Jesse van Leeuwen</p>
-        <div class="dialog-actions">
-          <button id="startIntroDialogBtn" value="default" type="submit">Start met rondkijken</button>
-        </div>
-      </form>
-    </dialog>
-
-    <dialog id="linkDialog" class="dialog small">
-      <form id="linkForm" method="dialog">
-        <div class="dialog-head">
-          <h2>Koppel oplossing</h2>
-          <button id="closeLinkDialogBtn" class="ghost" type="button">Sluiten</button>
-        </div>
-        <p id="linkRequirementLabel" class="muted"></p>
-        <label>Bestaande oplossing <select id="existingSolutionSelect"></select></label>
-        <div class="splitter"><span>of nieuwe oplossing</span></div>
-        <label>Naam <input id="newSolutionName" type="text" placeholder="Bijv. Uniform bedieningspaneel"></label>
-        <label>Beschrijving <textarea id="newSolutionDescription" placeholder="Korte beschrijving"></textarea></label>
-        <div class="dialog-actions">
-          <button id="saveLinkBtn" value="default" type="submit">Koppelen</button>
-        </div>
-      </form>
+    <dialog id="introDialog" class="dialog small">
+      <div class="intro-content">
+        <h2>Welkom in de AV-standaard</h2>
+        <p>Dit dashboard laat in drie stappen zien hoe input wordt omgezet in een uitwerking met oplossing en uiteindelijk in een concreet product.</p>
+        <p>Klik één keer op een onderdeel in Flow om de verbonden route te zien. Dubbelklik om de details te bekijken of aan te passen. Via Documentatie lees je hoe de methode is opgebouwd.</p>
+        <p>De producten worden aangevuld zodra een oplossing werkelijk is uitgewerkt of opgeleverd.</p>
+        <p>Met vriendelijke groet,<br><strong>Jesse van Leeuwen</strong></p>
+        <div class="dialog-actions"><button id="closeIntroBtn" type="button">Rondkijken</button></div>
+      </div>
     </dialog>
 
     <div id="toast" class="toast" role="status" aria-live="polite"></div>
-    <script src="app.js?v=20260615-products-v4"></script>
+    <script src="app.js?v=20260615-simple-v2"></script>
   </body>
 </html>
