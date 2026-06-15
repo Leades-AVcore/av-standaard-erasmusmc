@@ -1,10 +1,73 @@
 {
   "meta": {
     "project": "Uniforme AV-standaard Erasmus MC",
-    "updatedAt": "2026-05-19T18:17:27.443Z",
+    "updatedAt": "2026-06-15T15:38:30.765Z",
     "actor": "jesse",
     "flowOrder": {
-      "inputs": [],
+      "requirements": [
+        "EIS-001",
+        "EIS-002",
+        "EIS-003",
+        "EIS-004",
+        "EIS-005",
+        "EIS-006",
+        "EIS-007",
+        "EIS-020",
+        "EIS-021",
+        "EIS-022",
+        "EIS-039",
+        "EIS-008",
+        "EIS-009",
+        "EIS-010",
+        "EIS-011",
+        "EIS-023",
+        "EIS-024",
+        "EIS-025",
+        "EIS-012",
+        "EIS-013",
+        "EIS-014",
+        "EIS-026",
+        "EIS-027",
+        "EIS-028",
+        "EIS-040",
+        "EIS-044",
+        "EIS-015",
+        "EIS-016",
+        "EIS-029",
+        "EIS-030",
+        "EIS-031",
+        "EIS-032",
+        "EIS-041",
+        "EIS-042",
+        "EIS-045",
+        "EIS-046",
+        "EIS-017",
+        "EIS-033",
+        "EIS-034",
+        "EIS-035",
+        "EIS-047",
+        "EIS-048",
+        "EIS-049",
+        "EIS-018",
+        "EIS-036",
+        "EIS-043",
+        "EIS-019",
+        "EIS-037",
+        "EIS-038",
+        "EIS-050",
+        "EIS-051",
+        "EIS-052",
+        "EIS-053",
+        "EIS-054",
+        "EIS-055",
+        "EIS-057",
+        "EIS-058",
+        "EIS-060",
+        "EIS-059",
+        "EIS-061",
+        "EIS-062",
+        "EIS-056"
+      ],
       "points": [
         "PNT-001",
         "PNT-002",
@@ -28,520 +91,102 @@
         "PNT-020",
         "PNT-021",
         "PNT-022",
-        "PNT-023"
-      ],
-      "requirements": [
-        "EIS-001",
-        "EIS-002",
-        "EIS-004",
-        "EIS-005",
-        "EIS-006",
-        "EIS-015",
-        "EIS-028",
-        "EIS-037",
-        "EIS-039",
-        "EIS-020",
-        "EIS-007",
-        "EIS-044",
-        "EIS-021",
-        "EIS-026",
-        "EIS-040",
-        "EIS-014",
-        "EIS-027",
-        "EIS-003",
-        "EIS-022",
-        "EIS-008",
-        "EIS-023",
-        "EIS-024",
-        "EIS-025",
-        "EIS-016",
-        "EIS-036",
-        "EIS-043",
-        "EIS-030",
-        "EIS-031",
-        "EIS-032",
-        "EIS-041",
-        "EIS-042",
-        "EIS-046",
-        "EIS-012",
-        "EIS-009",
-        "EIS-010",
-        "EIS-011",
-        "EIS-013",
-        "EIS-018",
-        "EIS-029",
-        "EIS-045",
-        "EIS-048",
-        "EIS-017",
-        "EIS-049",
-        "EIS-033",
-        "EIS-034",
-        "EIS-035",
-        "EIS-047",
-        "EIS-019",
-        "EIS-038"
+        "PNT-023",
+        "PNT-024",
+        "PNT-025"
       ],
       "outcomes": [
         "UIT-001",
-        "UIT-003",
-        "UIT-006",
-        "UIT-004",
         "UIT-002",
-        "UIT-008",
+        "UIT-003",
+        "UIT-004",
         "UIT-005",
+        "UIT-006",
         "UIT-007",
+        "UIT-008",
         "UIT-009",
-        "UIT-010"
+        "UIT-010",
+        "UIT-011",
+        "UIT-012"
       ],
       "solutions": [
         "OPL-001",
         "OPL-002",
         "OPL-003",
-        "OPL-005",
         "OPL-004",
-        "OPL-009",
-        "OPL-008",
-        "OPL-007",
+        "OPL-005",
         "OPL-006",
+        "OPL-007",
+        "OPL-008",
+        "OPL-009",
         "OPL-010",
-        "OPL-011"
+        "OPL-011",
+        "OPL-012"
       ],
       "standardParts": [
         "STD-001",
         "STD-002",
         "STD-003",
-        "STD-005",
         "STD-004",
-        "STD-007",
+        "STD-005",
         "STD-006",
+        "STD-007",
         "STD-008",
-        "STD-009"
+        "STD-009",
+        "STD-010"
+      ],
+      "products": [
+        "PRD-001"
       ]
     },
+    "version": 2,
+    "baseFileVersion": "online-2026-06-15-products-v1",
+    "sourceFile": "../PvE/centrale_eisenlijst_pve.md",
+    "purpose": "Centraal bewerkbaar basisbestand voor het dashboard. Oorspronkelijke wensen/input blijven intact; nieuwe input wordt herleidbaar toegevoegd en gekoppeld aan uitwerkingen, oplossingen, standaardonderdelen en concrete producten.",
+    "method": "Traceerketen: WNS wensen/input -> UIT toetsbare uitwerkingen met MoSCoW -> OPL oplossingsrichtingen -> STD praktische AV-standaardonderdelen -> PRD concrete producten. MoSCoW op nieuwe uitwerkingen blijft een voorstel totdat dit met stakeholders is afgestemd.",
     "processText": {
       "input": {
         "title": "1. Input verzamelen",
-        "description": "In deze stap wordt alle opgehaalde informatie vastgelegd als input, wens of behoefte. De input komt uit interviews, online reacties, gesprekken, observaties, inventarisatie en data-analyse. Per inputitem wordt vastgelegd waar de informatie vandaan komt, zoals bron, stakeholderrol, context en korte toelichting. Het resultaat is een overzicht van alle opgehaalde wensen en signalen, met herleidbare koppeling naar bron en stakeholder."
+        "description": "Alle opgehaalde informatie wordt eerst vastgelegd als wens, behoefte of praktijksignaal. De bron, stakeholder, context en onderbouwing blijven zichtbaar. Bestaande input wordt niet overschreven: nieuwe formulieren, gesprekken, analyses en observaties worden als aanvullende bron verwerkt of als nieuw inputitem toegevoegd."
       },
       "outcome": {
         "title": "2 en 3. Input uitwerken en MoSCoW prioriteren",
-        "description": "In deze stap wordt losse input vertaald naar een duidelijke functionele, technische of organisatorische uitwerking. De oorspronkelijke opmerking blijft behouden, maar wordt inhoudelijk scherper gemaakt. Daarna krijgt de uitgewerkte behoefte een MoSCoW-prioriteit. De prioriteit wordt dus niet gekoppeld aan de losse input, maar aan de onderliggende behoefte. Dit geeft een duidelijk onderscheid tussen eis, wens en optie."
+        "description": "Samenhangende input wordt vertaald naar een korte, concrete en toetsbare functionele, technische of organisatorische uitwerking. Op deze uitwerking wordt MoSCoW toegepast. Nieuwe prioriteiten zijn voorstellen en worden pas definitief na afstemming met de betrokken stakeholders."
       },
       "solution": {
         "title": "4. Oplossingsrichting koppelen",
-        "description": "In deze stap wordt per uitgewerkte behoefte een mogelijke oplossing gekoppeld. Hiermee wordt de stap gemaakt van wat nodig is naar hoe dit opgelost kan worden. De oplossing kan technisch, organisatorisch of procesmatig zijn, bijvoorbeeld een standaard bedienconcept, vaste pc met standaard startprofiel, netwerkgebonden AV-apparatuur, centrale registratie of monitoring."
+        "description": "Per uitwerking wordt een passende technische, organisatorische of procesmatige oplossingsrichting gekoppeld. Een oplossing kan meerdere uitwerkingen afdekken en een uitwerking kan meerdere oplossingen nodig hebben. De koppeling blijft zichtbaar in Flow."
       },
       "standard": {
         "title": "5. Vertalen naar AV-standaard",
-        "description": "In deze stap wordt de oplossingsrichting vertaald naar een concreet onderdeel van de AV-standaard. Dit onderdeel moet bruikbaar zijn voor ontwerp, inrichting, beheer en toetsing. Het beschrijft niet alleen techniek, maar ook de bijdrage aan gebruiksgemak, betrouwbaarheid, beheerbaarheid en standaardisatie."
+        "description": "De oplossingsrichtingen worden vertaald naar concrete standaardonderdelen voor ontwerp, inrichting, beheer en toetsing. Hier staat wat in de praktijk uniform moet worden toegepast, inclusief aandacht voor gebruiksgemak, betrouwbaarheid en beheerbaarheid."
       },
       "flow": {
-        "title": "De koppelingen",
-        "description": "In deze stap wordt gecontroleerd of alle onderdelen logisch aan elkaar gekoppeld zijn. In Flow is zichtbaar of input nog geen uitwerking heeft, of een uitwerking nog geen oplossing heeft, of een oplossing nog niet is vertaald naar een standaardonderdeel. Klik op een item om de route te accentueren; dubbelklik om details te openen."
+        "title": "7. Controleren van koppelingen",
+        "description": "Flow controleert de volledige route van wens naar uitwerking, oplossing, AV-standaard en product. Een enkele klik accentueert de verbonden route; dubbelklikken opent de details. Ontbrekende koppelingen worden in de analyse zichtbaar."
+      },
+      "product": {
+        "title": "6. Uitwerken en opleveren",
+        "description": "Standaardonderdelen worden uitgewerkt tot concrete producten, adviezen, prototypes of implementatieonderdelen. Het dashboard registreert de inhoud, status, onderbouwing, bestandslocatie, validatie en vervolgstappen. Het productbestand zelf blijft in de map Producten staan."
       }
-    },
-    "version": 1,
-    "baseFileVersion": "online-2026-05-19T18-17-27-443Z",
-    "sourceFile": "../PvE/centrale_eisenlijst_pve.md",
-    "purpose": "Centraal bewerkbaar basisbestand voor het dashboard, met originele input intact als wensen/input en reproduceerbare koppelingen naar uitwerkingen, oplossingen en standaardonderdelen.",
-    "method": "Traceerketen: WNS wensen/input -> UIT uitwerkingen met MoSCoW -> OPL oplossingen -> STD praktische AV-standaardonderdelen. De input blijft wens/behoefte; het onderscheid tussen wens en eis ontstaat bij de MoSCoW-prioriteit van de uitwerking.",
-    "onlineUpdatedAt": "2026-05-19T18:17:27.443Z",
-    "onlineSourceFile": "online-publicatie-2026-05-19T18-17-27-378Z.json"
-  },
-  "inputs": [],
-  "points": [
-    {
-      "id": "PNT-001",
-      "title": "Snel startscenario",
-      "description": "Ruimte, vaste techniek en presets zijn direct klaar voor regulier gebruik.",
-      "inputIds": [],
-      "outcomeIds": [
-        "UIT-001"
-      ],
-      "requirementIds": [
-        "EIS-001",
-        "EIS-002",
-        "EIS-028",
-        "EIS-037"
-      ],
-      "category": "Functionele eisen",
-      "status": "Voorstel",
-      "order": 1
-    },
-    {
-      "id": "PNT-002",
-      "title": "Vaste pc en toegang",
-      "description": "De vaste pc is betrouwbaar beschikbaar en sluit aan op werkomgeving en authenticatie.",
-      "inputIds": [],
-      "outcomeIds": [
-        "UIT-001"
-      ],
-      "requirementIds": [
-        "EIS-004",
-        "EIS-005",
-        "EIS-006"
-      ],
-      "category": "Functionele eisen",
-      "status": "Voorstel",
-      "order": 2
-    },
-    {
-      "id": "PNT-003",
-      "title": "Automatische reset",
-      "description": "De ruimte keert na gebruik terug naar een vaste standaardstatus.",
-      "inputIds": [],
-      "outcomeIds": [
-        "UIT-001"
-      ],
-      "requirementIds": [
-        "EIS-015"
-      ],
-      "category": "Beheereisen",
-      "status": "Voorstel",
-      "order": 3
-    },
-    {
-      "id": "PNT-004",
-      "title": "Teams en MDO",
-      "description": "Teams en MDO-video zijn voorspelbaar beschikbaar met passende kwaliteit.",
-      "inputIds": [],
-      "outcomeIds": [
-        "UIT-004"
-      ],
-      "requirementIds": [
-        "EIS-003",
-        "EIS-022"
-      ],
-      "category": "Functionele eisen",
-      "status": "Voorstel",
-      "order": 4
-    },
-    {
-      "id": "PNT-005",
-      "title": "Ruimtetypekwaliteit",
-      "description": "Beeld, geluid, schermen en projectie sluiten aan op onderwijs, overleg en MDO.",
-      "inputIds": [],
-      "outcomeIds": [
-        "UIT-006",
-        "UIT-004"
-      ],
-      "requirementIds": [
-        "EIS-014",
-        "EIS-027"
-      ],
-      "category": "Technische eisen",
-      "status": "Voorstel",
-      "order": 5
-    },
-    {
-      "id": "PNT-006",
-      "title": "Presenteren en aansluiten",
-      "description": "Bekabeld, draadloos en Apple/MacBook-presenteren werken via beperkte standaard aansluitingen.",
-      "inputIds": [],
-      "outcomeIds": [
-        "UIT-003",
-        "UIT-006"
-      ],
-      "requirementIds": [
-        "EIS-007",
-        "EIS-020",
-        "EIS-021",
-        "EIS-039",
-        "EIS-044"
-      ],
-      "category": "Functionele eisen",
-      "status": "Voorstel",
-      "order": 6
-    },
-    {
-      "id": "PNT-007",
-      "title": "Uniforme gebruikslogica",
-      "description": "Vergelijkbare ruimtes werken herkenbaar en beperken verschillen in basisgebruik.",
-      "inputIds": [],
-      "outcomeIds": [
-        "UIT-002"
-      ],
-      "requirementIds": [
-        "EIS-008",
-        "EIS-016"
-      ],
-      "category": "Gebruikseisen",
-      "status": "Voorstel",
-      "order": 7
-    },
-    {
-      "id": "PNT-008",
-      "title": "Foutarme bediening",
-      "description": "Bediening is zelfstandig, eenduidig en snel reagerend voor gebruikers zonder technische kennis.",
-      "inputIds": [],
-      "outcomeIds": [
-        "UIT-002"
-      ],
-      "requirementIds": [
-        "EIS-023",
-        "EIS-024",
-        "EIS-025"
-      ],
-      "category": "Gebruikseisen",
-      "status": "Voorstel",
-      "order": 8
-    },
-    {
-      "id": "PNT-009",
-      "title": "Docentwerkplek",
-      "description": "Werkplek en inrichting ondersteunen praktisch onderwijsgebruik.",
-      "inputIds": [],
-      "outcomeIds": [
-        "UIT-005"
-      ],
-      "requirementIds": [
-        "EIS-009",
-        "EIS-010"
-      ],
-      "category": "Gebruikseisen",
-      "status": "Voorstel",
-      "order": 9
-    },
-    {
-      "id": "PNT-010",
-      "title": "Onderwijsaudio",
-      "description": "Grotere onderwijsruimtes zijn verstaanbaar zonder hinder voor aangrenzende zalen.",
-      "inputIds": [],
-      "outcomeIds": [
-        "UIT-005"
-      ],
-      "requirementIds": [
-        "EIS-011",
-        "EIS-012",
-        "EIS-013"
-      ],
-      "category": "Technische eisen",
-      "status": "Voorstel",
-      "order": 10
-    },
-    {
-      "id": "PNT-011",
-      "title": "Hoorcollegeondersteuning",
-      "description": "Ondersteuning voor hoorcolleges blijft beschikbaar en wordt gestandaardiseerd.",
-      "inputIds": [],
-      "outcomeIds": [
-        "UIT-005"
-      ],
-      "requirementIds": [
-        "EIS-018"
-      ],
-      "category": "Ondersteuning en instructie",
-      "status": "Voorstel",
-      "order": 11
-    },
-    {
-      "id": "PNT-012",
-      "title": "Robuuste infrastructuur",
-      "description": "Hardware, bekabeling, kasten, merken en typen zijn foutbestendig en beheerbaar.",
-      "inputIds": [],
-      "outcomeIds": [
-        "UIT-006"
-      ],
-      "requirementIds": [
-        "EIS-026",
-        "EIS-040"
-      ],
-      "category": "Technische eisen",
-      "status": "Voorstel",
-      "order": 12
-    },
-    {
-      "id": "PNT-013",
-      "title": "Asset en lifecycle",
-      "description": "AV-componenten zijn betrouwbaar geregistreerd en geschikt voor lifecyclebeheer.",
-      "inputIds": [],
-      "outcomeIds": [
-        "UIT-007"
-      ],
-      "requirementIds": [
-        "EIS-029",
-        "EIS-045"
-      ],
-      "category": "Beheereisen",
-      "status": "Voorstel",
-      "order": 13
-    },
-    {
-      "id": "PNT-014",
-      "title": "Vlootrapportage",
-      "description": "Rapportages leveren stuurinformatie over vloot, merkdominantie en kritische locaties.",
-      "inputIds": [],
-      "outcomeIds": [
-        "UIT-007",
-        "UIT-009"
-      ],
-      "requirementIds": [
-        "EIS-048"
-      ],
-      "category": "Monitoringseisen",
-      "status": "Voorstel",
-      "order": 14
-    },
-    {
-      "id": "PNT-015",
-      "title": "Remote beheer",
-      "description": "Beheer krijgt op afstand inzicht in status en daadwerkelijk gebruik.",
-      "inputIds": [],
-      "outcomeIds": [
-        "UIT-009"
-      ],
-      "requirementIds": [
-        "EIS-033"
-      ],
-      "category": "Monitoringseisen",
-      "status": "Voorstel",
-      "order": 15
-    },
-    {
-      "id": "PNT-016",
-      "title": "Ruimtestatus en no-show",
-      "description": "Bezetting, aanwezigheid en no-show kunnen zichtbaar of analyseerbaar worden gemaakt.",
-      "inputIds": [],
-      "outcomeIds": [
-        "UIT-009"
-      ],
-      "requirementIds": [
-        "EIS-017",
-        "EIS-034",
-        "EIS-035"
-      ],
-      "category": "Monitoringseisen",
-      "status": "Voorstel",
-      "order": 16
-    },
-    {
-      "id": "PNT-017",
-      "title": "Incident- en supportanalyse",
-      "description": "Incidentdata is eenduidig en bruikbaar voor oorzaken en supportcapaciteit.",
-      "inputIds": [],
-      "outcomeIds": [
-        "UIT-009"
-      ],
-      "requirementIds": [
-        "EIS-047",
-        "EIS-049"
-      ],
-      "category": "Monitoringseisen",
-      "status": "Voorstel",
-      "order": 17
-    },
-    {
-      "id": "PNT-018",
-      "title": "Supportproces",
-      "description": "AV-incidenten hebben duidelijke routering en sluiten aan op AVO, IT-beheer en servicedesk.",
-      "inputIds": [],
-      "outcomeIds": [
-        "UIT-008"
-      ],
-      "requirementIds": [
-        "EIS-030",
-        "EIS-046"
-      ],
-      "category": "Beheereisen",
-      "status": "Voorstel",
-      "order": 18
-    },
-    {
-      "id": "PNT-019",
-      "title": "Validatie en draagvlak",
-      "description": "Use-cases, PoC en stakeholderbetrokkenheid borgen invoering en acceptatie.",
-      "inputIds": [],
-      "outcomeIds": [
-        "UIT-008"
-      ],
-      "requirementIds": [
-        "EIS-031",
-        "EIS-032"
-      ],
-      "category": "Beheereisen",
-      "status": "Voorstel",
-      "order": 19
-    },
-    {
-      "id": "PNT-020",
-      "title": "Richtlijn en kennis",
-      "description": "De AV-standaard is formeel vastgelegd met benodigde interne kennis.",
-      "inputIds": [],
-      "outcomeIds": [
-        "UIT-008"
-      ],
-      "requirementIds": [
-        "EIS-041",
-        "EIS-042"
-      ],
-      "category": "Beheereisen",
-      "status": "Voorstel",
-      "order": 20
-    },
-    {
-      "id": "PNT-021",
-      "title": "Instructie en adoptie",
-      "description": "Gebruikers krijgen compacte instructie, communicatie en leermomenten.",
-      "inputIds": [],
-      "outcomeIds": [
-        "UIT-002",
-        "UIT-008"
-      ],
-      "requirementIds": [
-        "EIS-036",
-        "EIS-043"
-      ],
-      "category": "Ondersteuning en instructie",
-      "status": "Voorstel",
-      "order": 21
-    },
-    {
-      "id": "PNT-022",
-      "title": "Veilige verbindingen",
-      "description": "De standaard houdt rekening met veilige en versleutelde verbindingen.",
-      "inputIds": [],
-      "outcomeIds": [
-        "UIT-010"
-      ],
-      "requirementIds": [
-        "EIS-019"
-      ],
-      "category": "Toekomst en innovatie",
-      "status": "Voorstel",
-      "order": 22
-    },
-    {
-      "id": "PNT-023",
-      "title": "Slimme functies",
-      "description": "Toekomstige slimme functies kunnen worden ingepast zonder de basis te verstoren.",
-      "inputIds": [],
-      "outcomeIds": [
-        "UIT-010"
-      ],
-      "requirementIds": [
-        "EIS-038"
-      ],
-      "category": "Toekomst en innovatie",
-      "status": "Voorstel",
-      "order": 23
     }
-  ],
+  },
   "sources": [
     {
       "id": "BR-001",
       "title": "Arwin Ralf",
-      "type": "Interview/input",
+      "type": "Online input/interview",
       "date": "",
-      "path": "",
+      "path": "Input/Interviews/Uitwerking online input Arwin Ralf.docx; Input/Interviews/Online_formulieren/Arwin - Input voor PvE AV-standaard Erasmus MC.pdf",
       "status": "Verwerkt",
-      "insight": "Afgeleid uit centrale eisenlijst."
+      "insight": "Onderwijsruimtes moeten snel starten, betrouwbaar werken en aansluiten op de positieve gebruikservaring van OWR50+. Problemen met vaste pc, achtergelaten sessies en verschillen tussen ruimtes vertragen de start."
     },
     {
       "id": "BR-002",
       "title": "Cris Borsje",
-      "type": "Interview/input",
+      "type": "Gesprek",
       "date": "",
-      "path": "",
+      "path": "Input/Interviews/Uitwerking gesprek Cris Borsje.docx",
       "status": "Verwerkt",
       "insight": "Afgeleid uit centrale eisenlijst."
     },
@@ -550,52 +195,52 @@
       "title": "Data-analyse",
       "type": "Data-analyse",
       "date": "",
-      "path": "",
+      "path": "Input/Data_en_analyses/edcontrols_analysis/Onderzoeksrapport - Data analyse.docx",
       "status": "Verwerkt",
       "insight": "Afgeleid uit centrale eisenlijst."
     },
     {
       "id": "BR-004",
       "title": "Dik van Gent",
-      "type": "Interview/input",
+      "type": "Online input/interview",
       "date": "",
-      "path": "",
+      "path": "Input/Interviews/Uitwerking online input Dik van Gent.docx; Input/Interviews/Online_formulieren/Dik - Input voor PvE AV-standaard Erasmus MC.pdf",
       "status": "Verwerkt",
-      "insight": "Afgeleid uit centrale eisenlijst."
+      "insight": "Goede audio, betrouwbare vaste pc, toegang tot de eigen werkomgeving en passende geluidsversterking zijn belangrijk voor onderwijsruimtes."
     },
     {
       "id": "BR-005",
       "title": "Erik Magre",
-      "type": "Interview/input",
+      "type": "Gesprek",
       "date": "",
-      "path": "",
+      "path": "Input/Interviews/Uitwerking gesprek Erik Magre.docx",
       "status": "Verwerkt",
       "insight": "Afgeleid uit centrale eisenlijst."
     },
     {
       "id": "BR-006",
       "title": "Judith",
-      "type": "Interview/input",
+      "type": "Gesprek",
       "date": "",
-      "path": "",
+      "path": "Input/Interviews/Uitwerking gesprek Judith.docx",
       "status": "Verwerkt",
       "insight": "Afgeleid uit centrale eisenlijst."
     },
     {
       "id": "BR-007",
       "title": "Martin Verhoek",
-      "type": "Interview/input",
+      "type": "Online input/interview",
       "date": "",
-      "path": "",
+      "path": "Input/Interviews/Uitwerking online input Martin Verhoek.docx; Input/Interviews/Online_formulieren/Martin - Input voor PvE AV-standaard Erasmus MC.pdf",
       "status": "Verwerkt",
-      "insight": "Afgeleid uit centrale eisenlijst."
+      "insight": "De ruimte moet met één handeling starten. Beelddelen, correct uitloggen en verschillen tussen centrale en decentrale ruimtes vragen aandacht."
     },
     {
       "id": "BR-008",
       "title": "Rick Waalboer",
-      "type": "Interview/input",
+      "type": "Gesprek",
       "date": "",
-      "path": "",
+      "path": "Input/Interviews/Uitwerking gesprek Rick Waalboer.docx",
       "status": "Verwerkt",
       "insight": "Afgeleid uit centrale eisenlijst."
     },
@@ -604,9 +249,41 @@
       "title": "UMC Utrecht",
       "type": "Externe orientatie",
       "date": "",
-      "path": "",
+      "path": "Input/Interviews/Uitwerking bezoek UMC Utrecht.docx",
       "status": "Verwerkt",
       "insight": "Afgeleid uit centrale eisenlijst."
+    },
+    {
+      "id": "BR-010",
+      "title": "Laurens Bosman",
+      "type": "Online input/interview",
+      "path": "Input/Interviews/Uitwerkingen/Uitwerking online input Laurens Bosman.docx; Input/Interviews/Online_formulieren/Laurens - Input voor PvE AV-standaard Erasmus MC.pdf",
+      "status": "Verwerkt",
+      "insight": "Schermgrootte en leesbaarheid, betrouwbare USB-C-aansluiting en standaard beschikbare microfoonvoorzieningen zijn belangrijk. Ondersteuning wordt als vriendelijk en snel ervaren."
+    },
+    {
+      "id": "BR-011",
+      "title": "Martijn Verbeek",
+      "type": "Online input/interview",
+      "path": "Input/Interviews/Uitwerkingen/Uitwerking online input Martijn Verbeek.docx; Input/Interviews/Online_formulieren/Martijn - Input voor PvE AV-standaard Erasmus MC.pdf",
+      "status": "Verwerkt",
+      "insight": "Schermopstart, USB-C, muis en toetsenbord moeten betrouwbaar zijn. Hybride onderwijs en een professionele uitstraling naar externen zijn aanvullende aandachtspunten."
+    },
+    {
+      "id": "BR-012",
+      "title": "Algemene gebruikersinput",
+      "type": "Observatie/informele input",
+      "path": "Input/Observaties_en_gebruikersinput/Uitwerking algemene gebruikersinput.docx",
+      "status": "Verwerkt",
+      "insight": "Gasten hebben behoefte aan herkenbare aansluitpunten en korte ruimtegebonden instructie. Automatisch afsluiten, resetten, uitloggen en uitschakelen moeten voorkomen dat een ruimte verkeerd wordt achtergelaten."
+    },
+    {
+      "id": "BR-013",
+      "title": "Subadvies digitaal instructie- en ondersteuningsplatform",
+      "type": "Productanalyse",
+      "path": "Producten/Instructieplatform/Sub-advies_instructie.pdf",
+      "status": "Verwerkt",
+      "insight": "Uitgewerkt productconcept voor korte instructie in de ruimte, een ruimtegebonden digitale pagina, ondersteuning, storingsmelding en afgeschermde beheerinformatie."
     }
   ],
   "wishes": [
@@ -645,7 +322,7 @@
       "category": "Functionele eisen",
       "requirement": "De AV-ruimte moet met maximaal een handeling kunnen worden opgestart voor regulier gebruik.",
       "explanation": "De gebruiker moet de ruimte kunnen starten zonder complexe handelingen of technische voorkennis. Een vergadering of onderwijsactiviteit moet binnen maximaal 1 minuut gestart kunnen worden.",
-      "source": "Arwin Ralf; Martin Verhoek; Erik Magre; Rick Waalboer",
+      "source": "Arwin Ralf; Martin Verhoek; Erik Magre; Rick Waalboer; Laurens Bosman; Martijn Verbeek",
       "type": "Functionele eis",
       "priority": "Must",
       "evidence": "Arwin noemt eenvoudig kunnen starten als hoogste prioriteit. Martin beschrijft de ideale ruimte als: bij binnenkomst op een knop drukken, waarna alles automatisch aangaat. Erik noemt werking met een knop en een maximale starttijd van 1 minuut. Rick benoemt dat overleggen nu vaak 5 tot 10 minuten later starten door verschillen en complexiteit.",
@@ -662,7 +339,7 @@
       "category": "Functionele eisen",
       "requirement": "Het AV-systeem moet automatische opstartscenario's ondersteunen waarbij de benodigde voorzieningen automatisch worden ingeschakeld.",
       "explanation": "Na het starten moeten onder andere schermen, audio, pc en vergaderfunctionaliteit klaarstaan volgens het gekozen gebruiksscenario.",
-      "source": "Martin Verhoek; Erik Magre; Rick Waalboer",
+      "source": "Martin Verhoek; Erik Magre; Rick Waalboer; Martijn Verbeek; Algemene gebruikersinput",
       "type": "Functionele eis",
       "priority": "Must",
       "evidence": "Martin geeft aan dat na een druk op de knop alles automatisch moet aangaan zoals nodig. Erik noemt dat functionaliteit automatisch moet werken. Rick benoemt automatisering en scenario-gebaseerde inrichting als gewenste verbetering.",
@@ -679,7 +356,7 @@
       "category": "Functionele eisen",
       "requirement": "Teams-functionaliteit moet stabiel, voorspelbaar en eenvoudig beschikbaar zijn in de ruimte.",
       "explanation": "De gebruiker moet zonder onduidelijke stappen een Teams-verbinding kunnen gebruiken wanneer dit nodig is.",
-      "source": "Arwin Ralf; Dik van Gent",
+      "source": "Arwin Ralf; Dik van Gent; Laurens Bosman; Martijn Verbeek",
       "type": "Functionele eis",
       "priority": "Must",
       "evidence": "Arwin noemt een betrouwbare Teams-verbinding als belangrijke prioriteit. Dik noemt automatische Teams-aansluiting als gewenste eigenschap.",
@@ -747,7 +424,7 @@
       "category": "Functionele eisen",
       "requirement": "Het delen van beeldmateriaal moet eenvoudig en betrouwbaar kunnen plaatsvinden.",
       "explanation": "Beelddelen mag geen terugkerend knelpunt vormen tijdens onderwijs, overleg of vergaderingen.",
-      "source": "Martin Verhoek",
+      "source": "Martin Verhoek; Laurens Bosman; Martijn Verbeek",
       "type": "Functionele eis",
       "priority": "Should",
       "evidence": "Martin geeft aan dat het delen van beelden soms lastig kan zijn.",
@@ -764,7 +441,7 @@
       "category": "Functionele eisen",
       "requirement": "Een laptop moet direct kunnen worden aangesloten en gebruikt voor presentatie zonder aanvullende complexe handelingen.",
       "explanation": "Aansluiten moet leiden tot directe beschikbaarheid van het laptopbeeld binnen het gekozen presentatiescenario.",
-      "source": "Cris Borsje",
+      "source": "Cris Borsje; Laurens Bosman; Martijn Verbeek; Algemene gebruikersinput",
       "type": "Functionele eis",
       "priority": "Should",
       "evidence": "Cris noemt laptop aansluiten en direct starten als werkende oplossing en verbeterpunt voor directe interactie.",
@@ -832,7 +509,7 @@
       "category": "Gebruikseisen",
       "requirement": "Vergelijkbare ruimtes moeten zoveel mogelijk dezelfde gebruikslogica, bediening en werking hebben.",
       "explanation": "Gebruikers moeten niet per ruimte opnieuw hoeven uitzoeken hoe basisfuncties werken. De basisbediening moet ruimte-onafhankelijk herkenbaar zijn.",
-      "source": "Arwin Ralf; Martin Verhoek; Dik van Gent; Erik Magre; Rick Waalboer",
+      "source": "Arwin Ralf; Martin Verhoek; Dik van Gent; Erik Magre; Rick Waalboer; Laurens Bosman; Martijn Verbeek; Algemene gebruikersinput",
       "type": "Gebruikseis",
       "priority": "Must",
       "evidence": "Arwin benoemt verschillen tussen nieuwe en oudere onderwijsruimtes als belemmerend. Martin benoemt verwarring tussen centrale en decentrale ruimtes. Dik noemt gelijke werking in iedere ruimte als prioriteit. Erik noemt ruimte-onafhankelijke werking als uitgangspunt. Rick noemt gebrek aan uniformiteit het grootste probleem en koppelt dit aan 5 tot 10 minuten vertraging.",
@@ -900,7 +577,7 @@
       "category": "Gebruikseisen",
       "requirement": "De bediening van AV-ruimtes moet eenduidig en foutarm zijn ingericht, met zo min mogelijk verschillende bedieningscomponenten.",
       "explanation": "De ruimte moet gebruikers zonder technische kennis ondersteunen en het risico op gebruikersfouten beperken.",
-      "source": "Cris Borsje; Erik Magre; Rick Waalboer; Judith; Data-analyse",
+      "source": "Cris Borsje; Erik Magre; Rick Waalboer; Judith; Data-analyse; Algemene gebruikersinput",
       "type": "Gebruikseis",
       "priority": "Must",
       "evidence": "Cris benoemt dat problemen vooral gebruikersgerelateerd zijn en ontstaan door onbekendheid, complexiteit en meerdere gebruikers die tegelijk ingrijpen. Erik benoemt een bedieningspaneel, minimale handelingen en geen losse afstandsbedieningen. Rick noemt kastjes, tablets, losse regelaars en onduidelijke bediening als knelpunten. Judith herkent gebruikersfouten, complexiteit en gebrek aan uniformiteit vanuit onderwijs. De data-analyse concludeert dat verbetering vooral ligt in de interactie tussen gebruiker en systeem en het verminderen van foutgevoelige handelingen.",
@@ -917,7 +594,7 @@
       "category": "Gebruikseisen",
       "requirement": "Gastdocenten, docenten en gebruikers zonder technische kennis moeten de ruimte zelfstandig kunnen starten voor basisgebruik.",
       "explanation": "Het basisgebruik moet begrijpelijk zijn zonder uitgebreide uitleg of technische ondersteuning ter plaatse.",
-      "source": "Erik Magre; Rick Waalboer; Judith",
+      "source": "Erik Magre; Rick Waalboer; Judith; Algemene gebruikersinput",
       "type": "Gebruikseis",
       "priority": "Must",
       "evidence": "Erik noemt dat gastdocenten eenvoudig moeten kunnen starten en dat gebruikers zonder technische kennis direct moeten kunnen werken. Rick geeft aan dat zelfs digitaal vaardige gebruikers vertraging ervaren door onduidelijke bediening. Judith benoemt dat digitale vaardigheden sterk verschillen per docent en dat docenten zonder ingewikkelde handelingen moeten kunnen starten.",
@@ -985,7 +662,7 @@
       "category": "Technische eisen",
       "requirement": "De AV-standaard moet goede beeldkwaliteit en goede geluidskwaliteit ondersteunen voor onderwijs, overleg en vergaderingen.",
       "explanation": "Beeld en geluid moeten voldoende betrouwbaar en bruikbaar zijn voor de inhoudelijke uitvoering van onderwijs en overleg. Audio moet als kritisch onderdeel expliciet worden geborgd.",
-      "source": "Arwin Ralf; Dik van Gent; Erik Magre; Rick Waalboer",
+      "source": "Arwin Ralf; Dik van Gent; Erik Magre; Rick Waalboer; Laurens Bosman; Martijn Verbeek",
       "type": "Technische eis",
       "priority": "Must",
       "evidence": "Arwin noemt goede beeld- en geluidskwaliteit als relevante eisen. Dik prioriteert goede beeldkwaliteit als hoogste en goede geluidskwaliteit als tweede prioriteit. Erik stelt dat geluid kritischer is dan beeld en altijd betrouwbaar moet functioneren. Rick benoemt inconsistente geluidskwaliteit als knelpunt.",
@@ -1019,7 +696,7 @@
       "category": "Technische eisen",
       "requirement": "Per ruimtetype moeten vaste normen worden vastgelegd voor aantal schermen, schermgrootte en projectievoorzieningen.",
       "explanation": "De inrichting moet voorspelbaar aansluiten op het gebruik van MDO-, onderwijs- en vergaderruimtes.",
-      "source": "Erik Magre; Rick Waalboer",
+      "source": "Erik Magre; Rick Waalboer; Laurens Bosman",
       "type": "Technische eis",
       "priority": "Should",
       "evidence": "Erik noemt behoefte aan vaste normen voor schermgrootte en aantal schermen. Rick benoemt verschillen tussen MDO-ruimtes met meerdere schermen en andere ruimtes met een scherm als onderdeel van de huidige variatie.",
@@ -1070,7 +747,7 @@
       "category": "Technische eisen",
       "requirement": "Aansluitmogelijkheden voor gebruikers moeten worden beperkt tot de noodzakelijke en gestandaardiseerde aansluitingen per ruimtetype.",
       "explanation": "Minder variatie in aansluitingen moet het risico op verkeerd aansluiten en foutgevoelige handelingen verminderen.",
-      "source": "Data-analyse",
+      "source": "Data-analyse; Laurens Bosman; Martijn Verbeek; Algemene gebruikersinput",
       "type": "Technische eis",
       "priority": "Must",
       "evidence": "De data-analyse benoemt \"niet goed aangesloten\" als meest voorkomende incidentoorzaak en vertaalt dit naar de aanbeveling om aansluitmogelijkheden te minimaliseren.",
@@ -1087,7 +764,7 @@
       "category": "Beheereisen",
       "requirement": "De ruimte moet na gebruik automatisch terugkeren naar een vaste standaardstatus.",
       "explanation": "Pc-sessie, AV-instellingen en relevante systeeminstellingen moeten worden hersteld zodat de volgende gebruiker direct kan starten. Dit omvat waar relevant automatisch uitloggen, automatisch uitschakelen en schermen uitzetten.",
-      "source": "Arwin Ralf; Martin Verhoek; Dik van Gent; Cris Borsje; Erik Magre; Rick Waalboer",
+      "source": "Arwin Ralf; Martin Verhoek; Dik van Gent; Cris Borsje; Erik Magre; Rick Waalboer; Algemene gebruikersinput",
       "type": "Beheereis",
       "priority": "Must",
       "evidence": "Arwin benoemt pc's die ingelogd worden achtergelaten en waarvoor een reboot nodig is. Martin benoemt verkeerd uitloggen als oorzaak van vertraging. Dik benoemt gewijzigde instellingen die starten op de geplande tijd bemoeilijken. Cris en Erik noemen automatisch uitloggen en afsluiten. Rick benoemt dat ruimtes niet altijd correct worden achtergelaten.",
@@ -1257,7 +934,7 @@
       "category": "Monitoringseisen",
       "requirement": "De bezettings- of ruimtestatus moet voor gebruikers zichtbaar zijn waar dit binnen de ruimte-inrichting wordt toegepast.",
       "explanation": "Gebruikers moeten kunnen zien of een ruimte bezet is, zodat ruimtegebruik duidelijker wordt.",
-      "source": "Martin Verhoek",
+      "source": "Martin Verhoek; Algemene gebruikersinput",
       "type": "Monitoringseis",
       "priority": "Should",
       "evidence": "Martin benoemt als positief punt dat bij centrale ruimtes zichtbaar is wanneer een ruimte bezet is.",
@@ -1274,7 +951,7 @@
       "category": "Monitoringseisen",
       "requirement": "Beheer moet remote inzicht kunnen krijgen in de status en het daadwerkelijke gebruik van AV-ruimtes.",
       "explanation": "Monitoring moet ondersteunen bij proactief beheer, foutanalyse en inzicht in gebruik. Waar passend kan dit via beheerplatformen van gekozen merken of systemen.",
-      "source": "Cris Borsje; Erik Magre; UMC Utrecht",
+      "source": "Cris Borsje; Erik Magre; UMC Utrecht; Algemene gebruikersinput",
       "type": "Monitoringseis",
       "priority": "Must",
       "evidence": "Cris benoemt dat huidige monitoring beperkt is en dat inzicht in daadwerkelijk gebruik en op afstand meekijken ontbreekt. Erik noemt dat centrale inzichten en monitoring nog niet expliciet zijn ingericht. UMC Utrecht gebruikt beheerplatformen van de gekozen merken Logitech en LG.",
@@ -1291,7 +968,7 @@
       "category": "Monitoringseisen",
       "requirement": "AV-ruimtes moeten aanwezigheidsdetectie kunnen ondersteunen voor inzicht in gebruik en no-show-situaties.",
       "explanation": "Aanwezigheidsinformatie moet kunnen helpen bij beheer en efficiënter ruimtegebruik.",
-      "source": "Cris Borsje",
+      "source": "Cris Borsje; Algemene gebruikersinput",
       "type": "Monitoringseis",
       "priority": "Should",
       "evidence": "Cris noemt detectie van aanwezigheid in ruimtes als gewenste functionaliteit.",
@@ -1308,7 +985,7 @@
       "category": "Monitoringseisen",
       "requirement": "Het systeem moet no-show-situaties kunnen signaleren en ruimtes automatisch kunnen vrijgeven na een instelbare periode zonder activiteit.",
       "explanation": "Als voorbeeld uit de input geldt vrijgeven na 10 minuten zonder activiteit.",
-      "source": "Cris Borsje",
+      "source": "Cris Borsje; Algemene gebruikersinput",
       "type": "Monitoringseis",
       "priority": "Could",
       "evidence": "Cris noemt automatisch vrijgeven van ruimtes bij no-show, bijvoorbeeld na 10 minuten geen activiteit.",
@@ -1349,8 +1026,8 @@
       "status": "Concept",
       "owner": "",
       "solutionIds": [],
-      "isParent": false,
       "parentId": "",
+      "isParent": false,
       "order": 42
     },
     {
@@ -1393,7 +1070,7 @@
       "category": "Ondersteuning en instructie",
       "requirement": "Instructie en communicatie moeten gebruikers helpen om de uniforme bediening correct te gebruiken.",
       "explanation": "Instructie moet gericht zijn op het voorkomen van gebruikersfouten en het verminderen van onzekerheid bij start en bediening. Communicatie moet onderdeel zijn van de implementatie.",
-      "source": "Cris Borsje; Rick Waalboer; Judith; Data-analyse",
+      "source": "Cris Borsje; Rick Waalboer; Judith; Data-analyse; Arwin Ralf; Laurens Bosman; Martijn Verbeek; Algemene gebruikersinput",
       "type": "Ondersteuning en instructie",
       "priority": "Must",
       "evidence": "Cris benoemt onbekendheid, niet lezen van instructies en onbegrip van werking als oorzaken van problemen. Rick benoemt dat acceptatie duidelijke uitleg, communicatie en ondersteuning vraagt. Judith benadrukt dat communicatie en instructie onderdeel moeten worden van het advies en dat gebruikers voldoende informatie nodig hebben om zelfstandig en correct te bedienen. De data-analyse noemt incidentcategorieen zoals \"functie werkt niet\" en \"vraag/hulp\" als aanwijzing dat gebruikers ondersteuning nodig hebben.",
@@ -1471,15 +1148,223 @@
       "parentId": "",
       "isParent": false,
       "order": 49
+    },
+    {
+      "id": "EIS-050",
+      "category": "Technische eisen",
+      "requirement": "Beeldschermen en projectievoorzieningen moeten zodanig worden gedimensioneerd en geplaatst dat de getoonde inhoud vanaf de relevante zitplaatsen leesbaar is.",
+      "explanation": "De gekozen schermgrootte en positie moeten passen bij de kijkafstand, ruimteafmetingen en het gebruiksdoel. Vervanging van projectie door een kleiner scherm mag de leesbaarheid niet verminderen.",
+      "source": "Laurens Bosman",
+      "type": "Technische eis",
+      "priority": "Should",
+      "evidence": "Laurens geeft aan dat vervangen beamers door kleinere schermen heeft geleid tot slechtere leesbaarheid.",
+      "status": "Te toetsen",
+      "owner": "",
+      "solutionIds": [],
+      "isParent": false,
+      "parentId": "EIS-027",
+      "order": 1
+    },
+    {
+      "id": "EIS-051",
+      "category": "Technische eisen",
+      "requirement": "Microfoon- en spraakversterking moeten onderdeel zijn van de standaardconfiguratie wanneer ruimtetype, groepsgrootte of gebruiksscenario dit noodzakelijk maakt.",
+      "explanation": "Voor regulier gebruik mag een noodzakelijke microfoonvoorziening niet afhankelijk zijn van een losse aanvullende bestelling.",
+      "source": "Laurens Bosman",
+      "type": "Technische eis",
+      "priority": "Should",
+      "evidence": "Laurens meldt dat in sommige ruimtes een microfoon apart moet worden besteld.",
+      "status": "Te toetsen",
+      "owner": "",
+      "solutionIds": [],
+      "isParent": false,
+      "parentId": "EIS-012",
+      "order": 1
+    },
+    {
+      "id": "EIS-052",
+      "category": "Functionele eisen",
+      "requirement": "Ondersteunde externe laptops moeten via een uniforme USB-C-aansluiting of een vastgelegde standaardfallback betrouwbaar beeld en geluid kunnen delen.",
+      "explanation": "De aansluiting moet bij een functionele ruimtetest aantoonbaar werken met de ondersteunde apparaattypen. Wanneer USB-C niet beschikbaar of geschikt is, moet de alternatieve standaard duidelijk herkenbaar zijn.",
+      "source": "Laurens Bosman; Martijn Verbeek; Algemene gebruikersinput",
+      "type": "Functionele eis",
+      "priority": "Should",
+      "evidence": "Laurens meldt terugkerende USB-C-problemen in OWR50-56; Martijn meldt dat USB-C voor externe laptops vaak niet werkt; algemene gebruikersinput noemt onduidelijke en wisselende aansluitingen.",
+      "status": "Te toetsen",
+      "owner": "",
+      "solutionIds": [],
+      "isParent": false,
+      "parentId": "EIS-020",
+      "order": 1
+    },
+    {
+      "id": "EIS-053",
+      "category": "Functionele eisen",
+      "requirement": "Het geselecteerde gebruiksscenario moet de benodigde beeldschermen automatisch inschakelen en de gekozen bron zichtbaar maken.",
+      "explanation": "Na het starten van een scenario mag geen aanvullende handeling nodig zijn om het hoofdscherm in te schakelen.",
+      "source": "Martijn Verbeek",
+      "type": "Functionele eis",
+      "priority": "Should",
+      "evidence": "Martijn noemt situaties waarin het scherm niet aangaat, onder andere in OWR13.",
+      "status": "Te toetsen",
+      "owner": "",
+      "solutionIds": [],
+      "isParent": false,
+      "parentId": "EIS-002",
+      "order": 1
+    },
+    {
+      "id": "EIS-054",
+      "category": "Technische eisen",
+      "requirement": "Toetsenbord, muis en overige noodzakelijke randapparatuur van de vaste pc moeten bij aanvang betrouwbaar en direct bruikbaar zijn.",
+      "explanation": "De ruimtetest moet controleren dat de randapparatuur verbonden, functioneel en logisch bereikbaar is.",
+      "source": "Martijn Verbeek",
+      "type": "Technische eis",
+      "priority": "Should",
+      "evidence": "Martijn benoemt dat betrouwbaarheid ook voor muis en toetsenbord geldt.",
+      "status": "Te toetsen",
+      "owner": "",
+      "solutionIds": [],
+      "isParent": false,
+      "parentId": "EIS-004",
+      "order": 1
+    },
+    {
+      "id": "EIS-055",
+      "category": "Functionele eisen",
+      "requirement": "Onderwijsruimtes die voor hybride onderwijs worden ingezet moeten lokale en externe deelnemers met passend beeld en geluid ondersteunen.",
+      "explanation": "De configuratie moet het onderwijsgebruik ondersteunen zonder dat een afzonderlijke afwijkende bediening nodig is.",
+      "source": "Martijn Verbeek",
+      "type": "Functionele eis",
+      "priority": "Should",
+      "evidence": "Martijn noemt systemen voor hybride onderwijs als toekomstige belangrijke functie.",
+      "status": "Te toetsen",
+      "owner": "",
+      "solutionIds": [],
+      "isParent": false,
+      "parentId": "EIS-003",
+      "order": 1
+    },
+    {
+      "id": "EIS-056",
+      "category": "Gebruikseisen",
+      "requirement": "De zichtbare AV-inrichting en gebruikersinteractie moeten een verzorgde en professionele indruk geven aan interne en externe deelnemers.",
+      "explanation": "Aansluitingen, scherminformatie, bediening en zichtbare bekabeling moeten ordelijk en herkenbaar zijn ingericht.",
+      "source": "Martijn Verbeek",
+      "type": "Gebruikseis",
+      "priority": "Should",
+      "evidence": "Martijn vraagt om een professionele uitstraling, ook richting externen.",
+      "status": "Te toetsen",
+      "owner": "",
+      "solutionIds": [],
+      "isParent": false,
+      "parentId": "",
+      "order": 56
+    },
+    {
+      "id": "EIS-057",
+      "category": "Gebruikseisen",
+      "requirement": "Gebruikersaansluitingen moeten per ruimtetype op een vaste, herkenbare en goed bereikbare locatie worden geplaatst.",
+      "explanation": "De locatie van aansluitpunten mag niet per vergelijkbare ruimte wisselen tussen bijvoorbeeld bureau, wand of apparatuurkast.",
+      "source": "Algemene gebruikersinput",
+      "type": "Gebruikseis",
+      "priority": "Should",
+      "evidence": "Algemene gebruikersinput noemt verschillen tussen aansluitingen op bureau en wand als bron van onzekerheid.",
+      "status": "Te toetsen",
+      "owner": "",
+      "solutionIds": [],
+      "isParent": false,
+      "parentId": "EIS-044",
+      "order": 1
+    },
+    {
+      "id": "EIS-058",
+      "category": "Ondersteuning en instructie",
+      "requirement": "Externe gebruikers en gasten moeten in de ruimte een korte instructie kunnen vinden voor aansluiten, starten en afsluiten.",
+      "explanation": "De instructie moet zonder technische voorkennis bruikbaar zijn en aansluiten op de daadwerkelijke inrichting van de ruimte.",
+      "source": "Algemene gebruikersinput",
+      "type": "Ondersteuning en instructie",
+      "priority": "Should",
+      "evidence": "Gasten weten volgens de algemene gebruikersinput niet altijd hoe zij moeten aansluiten en missen uniforme instructie.",
+      "status": "Te toetsen",
+      "owner": "",
+      "solutionIds": [],
+      "isParent": false,
+      "parentId": "EIS-036",
+      "order": 1
+    },
+    {
+      "id": "EIS-059",
+      "category": "Ondersteuning en instructie",
+      "requirement": "Iedere gestandaardiseerde AV-ruimte moet een ruimtegebonden digitale instructie bieden via een centraal beheerde QR-code of gelijkwaardige link.",
+      "explanation": "De digitale pagina moet de relevante gebruiksscenario's, veelvoorkomende problemen en de route naar ondersteuning tonen. De inhoud moet centraal kunnen worden aangepast zonder de toegangscode per ruimte te vervangen.",
+      "source": "Algemene gebruikersinput",
+      "type": "Ondersteuning en instructie",
+      "priority": "Should",
+      "evidence": "Algemene gebruikersinput stelt QR-codes en digitale, ruimte-specifieke instructie voor als ondersteuning voor gebruikers en gasten.",
+      "status": "Te toetsen",
+      "owner": "",
+      "solutionIds": [],
+      "isParent": false,
+      "parentId": "EIS-036",
+      "order": 2
+    },
+    {
+      "id": "EIS-060",
+      "category": "Beheereisen",
+      "requirement": "De vaste pc moet na afsluiten of een vastgestelde periode van inactiviteit automatisch uitloggen of vergrendelen volgens het geldende werkplekbeleid.",
+      "explanation": "Een sessie van de vorige gebruiker mag niet toegankelijk blijven en mag de start van de volgende gebruiker niet blokkeren.",
+      "source": "Algemene gebruikersinput",
+      "type": "Beheereis",
+      "priority": "Should",
+      "evidence": "Gebruikersinput noemt achtergelaten ingelogde pc's en de tijd die nodig is om de ruimte te herstellen.",
+      "status": "Te toetsen",
+      "owner": "",
+      "solutionIds": [],
+      "isParent": false,
+      "parentId": "EIS-015",
+      "order": 1
+    },
+    {
+      "id": "EIS-061",
+      "category": "Beheereisen",
+      "requirement": "Een actieve online vergadering of AV-sessie moet na het afsluitscenario of een instelbare periode zonder activiteit automatisch worden beëindigd.",
+      "explanation": "De afsluitlogica moet voorkomen dat vergaderingen, bronnen of audioverbindingen actief blijven nadat de ruimte is verlaten.",
+      "source": "Algemene gebruikersinput",
+      "type": "Beheereis",
+      "priority": "Should",
+      "evidence": "Algemene gebruikersinput noemt niet beëindigde vergaderingen en actieve systemen in lege ruimtes.",
+      "status": "Te toetsen",
+      "owner": "",
+      "solutionIds": [],
+      "isParent": false,
+      "parentId": "EIS-015",
+      "order": 2
+    },
+    {
+      "id": "EIS-062",
+      "category": "Beheereisen",
+      "requirement": "Schermen en AV-apparatuur moeten buiten actief gebruik automatisch dimmen of uitschakelen volgens instelbare gebruiks- en reserveringslogica.",
+      "explanation": "De regeling moet onnodig energiegebruik beperken zonder een snelle start van een gereserveerde activiteit te verhinderen.",
+      "source": "Algemene gebruikersinput",
+      "type": "Beheereis",
+      "priority": "Should",
+      "evidence": "Algemene gebruikersinput noemt schermen en systemen die na gebruik actief blijven; het instructieadvies benoemt energiegebruik als aandachtspunt.",
+      "status": "Te toetsen",
+      "owner": "",
+      "solutionIds": [],
+      "isParent": false,
+      "parentId": "EIS-015",
+      "order": 3
     }
   ],
   "outcomes": [
     {
       "id": "UIT-001",
-      "name": "Startklaar basisscenario",
+      "name": "Startklaar en compleet basisscenario",
       "outcomeType": "Functioneel",
       "status": "Concept",
-      "description": "De ruimte start snel, herkenbaar en keert na gebruik terug naar een vaste standaardstand.",
+      "description": "De ruimte start snel en volledig: schermen, vaste pc, randapparatuur, audio en gekozen presets zijn direct bruikbaar.",
       "requirementIds": [
         "EIS-001",
         "EIS-002",
@@ -1488,7 +1373,8 @@
         "EIS-004",
         "EIS-005",
         "EIS-006",
-        "EIS-015"
+        "EIS-053",
+        "EIS-054"
       ],
       "solutionIds": [
         "OPL-001",
@@ -1497,23 +1383,53 @@
       "note": "Bundelt snel starten, vaste pc, toegang, presets en automatische reset.",
       "pointIds": [
         "PNT-001",
-        "PNT-002",
-        "PNT-003"
+        "PNT-002"
+      ],
+      "priority": "Must"
+    },
+    {
+      "id": "UIT-002",
+      "name": "Uniforme foutarme gebruikerservaring",
+      "outcomeType": "Gebruik",
+      "status": "Concept",
+      "description": "Interne en externe gebruikers kunnen vergelijkbare ruimtes zelfstandig, herkenbaar en professioneel bedienen.",
+      "requirementIds": [
+        "EIS-008",
+        "EIS-016",
+        "EIS-023",
+        "EIS-024",
+        "EIS-025",
+        "EIS-036",
+        "EIS-043",
+        "EIS-056"
+      ],
+      "solutionIds": [
+        "OPL-001",
+        "OPL-009"
+      ],
+      "note": "Gebruiksgemak en adoptie blijven aan elkaar gekoppeld.",
+      "pointIds": [
+        "PNT-007",
+        "PNT-008",
+        "PNT-021",
+        "PNT-024"
       ],
       "priority": "Must"
     },
     {
       "id": "UIT-003",
-      "name": "Gestandaardiseerd presenteren",
+      "name": "Betrouwbaar gestandaardiseerd presenteren",
       "outcomeType": "Functioneel",
       "status": "Concept",
-      "description": "Presenteren werkt via herkenbare, beperkte en gestandaardiseerde aansluitmogelijkheden.",
+      "description": "Externe laptops, vaste pc's en ondersteunde apparaten delen beeld en geluid via herkenbare, beperkte en geteste aansluitmogelijkheden.",
       "requirementIds": [
         "EIS-007",
         "EIS-020",
         "EIS-021",
         "EIS-039",
-        "EIS-044"
+        "EIS-044",
+        "EIS-052",
+        "EIS-057"
       ],
       "solutionIds": [
         "OPL-003",
@@ -1526,44 +1442,18 @@
       "priority": "Must"
     },
     {
-      "id": "UIT-006",
-      "name": "Robuuste uniforme infrastructuur",
-      "outcomeType": "Technisch",
-      "status": "Concept",
-      "description": "Hardware, bekabeling, aansluitingen, merken, typen en ruimtetype-inrichting zijn robuust en beheerbaar gestandaardiseerd.",
-      "requirementIds": [
-        "EIS-014",
-        "EIS-027",
-        "EIS-007",
-        "EIS-020",
-        "EIS-021",
-        "EIS-039",
-        "EIS-044",
-        "EIS-026",
-        "EIS-040"
-      ],
-      "solutionIds": [
-        "OPL-005"
-      ],
-      "note": "Technische basis voor foutbestendigheid en beperking van variatie.",
-      "pointIds": [
-        "PNT-005",
-        "PNT-006",
-        "PNT-012"
-      ],
-      "priority": "Must"
-    },
-    {
       "id": "UIT-004",
       "name": "Betrouwbare hybride AV-kwaliteit",
       "outcomeType": "Functioneel",
       "status": "Concept",
-      "description": "Teams, MDO-video, beeld, geluid en schermconfiguratie zijn betrouwbaar afgestemd op het ruimtetype.",
+      "description": "Teams, MDO-video en hybride onderwijs leveren per ruimtetype passende beeld-, geluid- en deelnemerskwaliteit.",
       "requirementIds": [
         "EIS-003",
         "EIS-022",
         "EIS-014",
-        "EIS-027"
+        "EIS-027",
+        "EIS-050",
+        "EIS-055"
       ],
       "solutionIds": [
         "OPL-002",
@@ -1577,29 +1467,83 @@
       "priority": "Must"
     },
     {
-      "id": "UIT-002",
-      "name": "Uniforme foutarme bediening",
-      "outcomeType": "Gebruik",
+      "id": "UIT-005",
+      "name": "Leesbare en verstaanbare onderwijsruimte",
+      "outcomeType": "Functioneel",
       "status": "Concept",
-      "description": "Gebruikers kunnen ruimtes zelfstandig en foutarm bedienen via herkenbare logica en compacte instructie.",
+      "description": "Onderwijsruimtes bieden een bruikbare docentwerkplek, leesbaar beeld en passende spraakversterking zonder hinder voor aangrenzende ruimten.",
       "requirementIds": [
-        "EIS-008",
-        "EIS-016",
-        "EIS-023",
-        "EIS-024",
-        "EIS-025",
-        "EIS-036",
-        "EIS-043"
+        "EIS-009",
+        "EIS-010",
+        "EIS-011",
+        "EIS-012",
+        "EIS-013",
+        "EIS-018",
+        "EIS-050",
+        "EIS-051"
       ],
       "solutionIds": [
-        "OPL-001",
+        "OPL-004",
         "OPL-009"
       ],
-      "note": "Gebruiksgemak en adoptie blijven aan elkaar gekoppeld.",
+      "note": "Specifiek voor onderwijscontext en grotere zalen.",
       "pointIds": [
-        "PNT-007",
-        "PNT-008",
-        "PNT-021"
+        "PNT-005",
+        "PNT-009",
+        "PNT-010",
+        "PNT-011"
+      ],
+      "priority": "Must"
+    },
+    {
+      "id": "UIT-006",
+      "name": "Robuuste uniforme AV-infrastructuur",
+      "outcomeType": "Technisch",
+      "status": "Concept",
+      "description": "Hardware, bekabeling, aansluitpunten, merken en ruimtetype-inrichting zijn robuust, herkenbaar en beheerbaar gestandaardiseerd.",
+      "requirementIds": [
+        "EIS-014",
+        "EIS-027",
+        "EIS-007",
+        "EIS-020",
+        "EIS-021",
+        "EIS-039",
+        "EIS-044",
+        "EIS-026",
+        "EIS-040",
+        "EIS-052",
+        "EIS-057"
+      ],
+      "solutionIds": [
+        "OPL-005"
+      ],
+      "note": "Technische basis voor foutbestendigheid en beperking van variatie.",
+      "pointIds": [
+        "PNT-005",
+        "PNT-006",
+        "PNT-012"
+      ],
+      "priority": "Must"
+    },
+    {
+      "id": "UIT-007",
+      "name": "Actueel asset- en lifecyclebeheer",
+      "outcomeType": "Beheer",
+      "status": "Concept",
+      "description": "AV-assets zijn betrouwbaar geregistreerd en bruikbaar voor lifecycle, rapportage en beleidssturing.",
+      "requirementIds": [
+        "EIS-029",
+        "EIS-045",
+        "EIS-048"
+      ],
+      "solutionIds": [
+        "OPL-006",
+        "OPL-007"
+      ],
+      "note": "Datagedreven basis voor CMDB, lifecycle en vlootrapportage.",
+      "pointIds": [
+        "PNT-013",
+        "PNT-014"
       ],
       "priority": "Must"
     },
@@ -1629,54 +1573,6 @@
         "PNT-019",
         "PNT-020",
         "PNT-021"
-      ],
-      "priority": "Must"
-    },
-    {
-      "id": "UIT-005",
-      "name": "Onderwijsruimte verstaanbaar",
-      "outcomeType": "Functioneel",
-      "status": "Concept",
-      "description": "Onderwijsruimtes ondersteunen een bruikbare docentwerkplek, verstaanbaarheid en hoorcollegegebruik.",
-      "requirementIds": [
-        "EIS-009",
-        "EIS-010",
-        "EIS-011",
-        "EIS-012",
-        "EIS-013",
-        "EIS-018"
-      ],
-      "solutionIds": [
-        "OPL-004",
-        "OPL-009"
-      ],
-      "note": "Specifiek voor onderwijscontext en grotere zalen.",
-      "pointIds": [
-        "PNT-009",
-        "PNT-010",
-        "PNT-011"
-      ],
-      "priority": "Must"
-    },
-    {
-      "id": "UIT-007",
-      "name": "Actueel asset- en lifecyclebeheer",
-      "outcomeType": "Beheer",
-      "status": "Concept",
-      "description": "AV-assets zijn betrouwbaar geregistreerd en bruikbaar voor lifecycle, rapportage en beleidssturing.",
-      "requirementIds": [
-        "EIS-029",
-        "EIS-045",
-        "EIS-048"
-      ],
-      "solutionIds": [
-        "OPL-006",
-        "OPL-007"
-      ],
-      "note": "Datagedreven basis voor CMDB, lifecycle en vlootrapportage.",
-      "pointIds": [
-        "PNT-013",
-        "PNT-014"
       ],
       "priority": "Must"
     },
@@ -1727,15 +1623,60 @@
         "PNT-023"
       ],
       "priority": "Could"
+    },
+    {
+      "id": "UIT-011",
+      "name": "Ruimtegebonden gebruikersbegeleiding",
+      "outcomeType": "Ondersteuning",
+      "priority": "Must",
+      "status": "Te toetsen",
+      "description": "Iedere AV-ruimte biedt korte, actuele en ruimte-specifieke startinstructie, probleemhulp en een directe route naar ondersteuning.",
+      "requirementIds": [
+        "EIS-036",
+        "EIS-043",
+        "EIS-056",
+        "EIS-058",
+        "EIS-059"
+      ],
+      "pointIds": [
+        "PNT-021",
+        "PNT-024",
+        "PNT-025"
+      ],
+      "solutionIds": [
+        "OPL-009"
+      ],
+      "note": "MoSCoW-voorstel op basis van herhaalde gebruikersinput en het uitgewerkte instructieadvies; nog met stakeholders bevestigen."
+    },
+    {
+      "id": "UIT-012",
+      "name": "Automatisch sessie- en energiemanagement",
+      "outcomeType": "Beheer",
+      "priority": "Must",
+      "status": "Te toetsen",
+      "description": "Na gebruik worden vergaderingen, gebruikerssessies, AV-instellingen en energiegebruik automatisch veilig teruggebracht naar de afgesproken standaardstatus.",
+      "requirementIds": [
+        "EIS-015",
+        "EIS-060",
+        "EIS-061",
+        "EIS-062"
+      ],
+      "pointIds": [
+        "PNT-003"
+      ],
+      "solutionIds": [
+        "OPL-012"
+      ],
+      "note": "MoSCoW-voorstel; de bestaande automatische-resetbehoefte was al als Must opgenomen."
     }
   ],
   "solutions": [
     {
       "id": "OPL-001",
-      "name": "Scenario-bedienpaneel",
+      "name": "Scenario-bedienpaneel en startautomatisering",
       "type": "Ontwerp",
       "status": "Te onderzoeken",
-      "description": "Uniform bedienconcept met herkenbare scenario’s voor starten, presenteren, overleg, onderwijs en afsluiten.",
+      "description": "Uniform bedienconcept met herkenbare scenario's dat schermen, audio, vaste pc en vergaderfunctionaliteit automatisch in de juiste stand start.",
       "risk": "Scenario’s moeten per ruimtetype voldoende standaard zijn zonder noodzakelijke uitzonderingen onmogelijk te maken.",
       "note": "Draagt vooral bij aan snel starten en foutarme bediening.",
       "requirementIds": [
@@ -1743,48 +1684,38 @@
         "EIS-002",
         "EIS-028",
         "EIS-037",
-        "EIS-004",
-        "EIS-005",
-        "EIS-006",
-        "EIS-015",
+        "EIS-053",
         "EIS-008",
         "EIS-016",
         "EIS-023",
         "EIS-024",
-        "EIS-025",
-        "EIS-036",
-        "EIS-043"
+        "EIS-025"
       ]
     },
     {
       "id": "OPL-002",
-      "name": "Standaard vaste pc",
+      "name": "Standaard vaste pc en randapparatuur",
       "type": "Technisch",
       "status": "Te onderzoeken",
-      "description": "Gestandaardiseerde vaste pc-configuratie met snelle start, betrouwbare Teams-beschikbaarheid en passende authenticatie.",
+      "description": "Gestandaardiseerde vaste pc-configuratie met snelle start, betrouwbare Teams-beschikbaarheid, passende authenticatie en geteste muis en toetsenbord.",
       "risk": "Afstemming met werkplekbeheer, authenticatie en Teams-configuratie is noodzakelijk.",
       "note": "Technische basis voor startzekerheid en hybride overleg.",
       "requirementIds": [
-        "EIS-001",
-        "EIS-002",
-        "EIS-028",
-        "EIS-037",
         "EIS-004",
         "EIS-005",
         "EIS-006",
-        "EIS-015",
+        "EIS-028",
+        "EIS-054",
         "EIS-003",
-        "EIS-022",
-        "EIS-014",
-        "EIS-027"
+        "EIS-055"
       ]
     },
     {
       "id": "OPL-003",
-      "name": "Presentatiehub",
+      "name": "Gestandaardiseerde presentatieaansluiting",
       "type": "Technisch",
       "status": "Te onderzoeken",
-      "description": "Vast presentatiepakket per ruimtetype voor bekabeld, draadloos en Apple/MacBook-presenteren.",
+      "description": "Vaste presentatievoorziening per ruimtetype met geteste USB-C, een herkenbare fallback, draadloos presenteren en ondersteuning voor gangbare laptoptypen.",
       "risk": "Draadloos presenteren moet passen binnen beveiliging, beheer en betrouwbaarheid.",
       "note": "Oplossing voor beeld delen en aansluiten zonder complexiteit.",
       "requirementIds": [
@@ -1792,7 +1723,32 @@
         "EIS-020",
         "EIS-021",
         "EIS-039",
-        "EIS-044"
+        "EIS-044",
+        "EIS-052",
+        "EIS-057"
+      ]
+    },
+    {
+      "id": "OPL-004",
+      "name": "Ruimtetypegebonden AV-kit",
+      "type": "Ontwerp",
+      "status": "Te onderzoeken",
+      "description": "Standaard AV-configuraties per ruimtetype met passend schermformaat, camera, microfoons, spraakversterking, luidsprekers en docentwerkplek.",
+      "risk": "Ruimtetypes moeten scherp worden afgebakend om te veel varianten te voorkomen.",
+      "note": "Verbindt MDO-, onderwijs- en vergadercontext aan concrete inrichting.",
+      "requirementIds": [
+        "EIS-003",
+        "EIS-022",
+        "EIS-014",
+        "EIS-027",
+        "EIS-050",
+        "EIS-051",
+        "EIS-055",
+        "EIS-009",
+        "EIS-010",
+        "EIS-011",
+        "EIS-012",
+        "EIS-013"
       ]
     },
     {
@@ -1816,54 +1772,37 @@
       ]
     },
     {
-      "id": "OPL-004",
-      "name": "Ruimtetype AV-kit",
-      "type": "Ontwerp",
+      "id": "OPL-006",
+      "name": "AV-beheerplatform",
+      "type": "Beheer",
       "status": "Te onderzoeken",
-      "description": "Standaard AV-configuraties per ruimtetype met schermen, projectie, camera, microfoons, luidsprekers en docentwerkplek.",
-      "risk": "Ruimtetypes moeten scherp worden afgebakend om te veel varianten te voorkomen.",
-      "note": "Verbindt MDO-, onderwijs- en vergadercontext aan concrete inrichting.",
+      "description": "Centraal platform voor statusinzicht, gebruiksinzicht, storingssignalering, rapportage en koppeling met assetinformatie.",
+      "risk": "Monitoringdata moet actueel, eenduidig en bruikbaar blijven zonder onnodige beheerlust.",
+      "note": "Draagt bij aan remote beheer, rapportage en proactieve sturing.",
       "requirementIds": [
-        "EIS-003",
-        "EIS-022",
-        "EIS-014",
-        "EIS-027",
-        "EIS-009",
-        "EIS-010",
-        "EIS-011",
-        "EIS-012",
-        "EIS-013",
-        "EIS-018"
+        "EIS-029",
+        "EIS-045",
+        "EIS-048",
+        "EIS-033",
+        "EIS-017",
+        "EIS-034",
+        "EIS-035",
+        "EIS-047",
+        "EIS-049"
       ]
     },
     {
-      "id": "OPL-009",
-      "name": "Instructie en adoptie",
-      "type": "Instructie",
+      "id": "OPL-007",
+      "name": "CMDB-lifecycle register",
+      "type": "Beheer",
       "status": "Te onderzoeken",
-      "description": "Compact instructiepakket met communicatie, korte handleidingen en waar nodig inloop- of instructiesessies.",
-      "risk": "Instructie mag geen vervanging worden voor eenvoudige bediening.",
-      "note": "Ondersteunt zelfstandigheid, acceptatie en correct gebruik.",
+      "description": "Betrouwbare registratie van AV-componenten met lifecycle-informatie, aanschafdata, merkdominantie en kritische locaties.",
+      "risk": "Waarde hangt af van eigenaarschap, datakwaliteit en discipline in mutaties.",
+      "note": "Basis voor planmatig beheer en vervangingsplanning.",
       "requirementIds": [
-        "EIS-008",
-        "EIS-016",
-        "EIS-023",
-        "EIS-024",
-        "EIS-025",
-        "EIS-036",
-        "EIS-043",
-        "EIS-009",
-        "EIS-010",
-        "EIS-011",
-        "EIS-012",
-        "EIS-013",
-        "EIS-018",
-        "EIS-030",
-        "EIS-046",
-        "EIS-031",
-        "EIS-032",
-        "EIS-041",
-        "EIS-042"
+        "EIS-029",
+        "EIS-045",
+        "EIS-048"
       ]
     },
     {
@@ -1886,37 +1825,20 @@
       ]
     },
     {
-      "id": "OPL-007",
-      "name": "CMDB-lifecycle register",
-      "type": "Beheer",
-      "status": "Te onderzoeken",
-      "description": "Betrouwbare registratie van AV-componenten met lifecycle-informatie, aanschafdata, merkdominantie en kritische locaties.",
-      "risk": "Waarde hangt af van eigenaarschap, datakwaliteit en discipline in mutaties.",
-      "note": "Basis voor planmatig beheer en vervangingsplanning.",
+      "id": "OPL-009",
+      "name": "Ruimtegebonden instructie- en ondersteuningsplatform",
+      "type": "Instructie",
+      "status": "Voorkeur",
+      "description": "Digitaal platform met korte instructie op scherm en bedienpaneel, een unieke QR-route naar ruimte-specifieke uitleg, probleemhulp, support en afgeschermde beheerinformatie.",
+      "risk": "Technische haalbaarheid, beveiliging, toegangsrechten, eigenaarschap, energiegebruik en koppeling met Topdesk of ServiceNow moeten in een pilot worden uitgewerkt.",
+      "note": "Uitgewerkt in PRD-001 Subadvies digitaal instructie- en ondersteuningsplatform.",
       "requirementIds": [
-        "EIS-029",
-        "EIS-045",
-        "EIS-048"
-      ]
-    },
-    {
-      "id": "OPL-006",
-      "name": "AV-beheerplatform",
-      "type": "Beheer",
-      "status": "Te onderzoeken",
-      "description": "Centraal platform voor statusinzicht, gebruiksinzicht, storingssignalering, rapportage en koppeling met assetinformatie.",
-      "risk": "Monitoringdata moet actueel, eenduidig en bruikbaar blijven zonder onnodige beheerlust.",
-      "note": "Draagt bij aan remote beheer, rapportage en proactieve sturing.",
-      "requirementIds": [
-        "EIS-029",
-        "EIS-045",
-        "EIS-048",
-        "EIS-033",
-        "EIS-017",
-        "EIS-034",
-        "EIS-035",
-        "EIS-047",
-        "EIS-049"
+        "EIS-036",
+        "EIS-043",
+        "EIS-056",
+        "EIS-058",
+        "EIS-059",
+        "EIS-030"
       ]
     },
     {
@@ -1949,136 +1871,21 @@
         "EIS-019",
         "EIS-038"
       ]
-    }
-  ],
-  "standardParts": [
-    {
-      "id": "STD-001",
-      "name": "Automatisch start- en bedienconcept",
-      "type": "Standaard",
-      "priority": "Must",
-      "status": "Concept",
-      "description": "Bij binnenkomst kan de ruimte direct naar een herkenbare gebruiksstand worden gebracht. Het bedienpaneel toont preset-opties zoals overleg, onderwijs, MDO en presenteren; met een druk op de knop starten schermen, audio, pc en vergaderfunctionaliteit in de juiste configuratie. Op de schermen kan een korte startinstructie worden getoond wanneer de ruimte niet actief in gebruik is.",
-      "solutionIds": [
-        "OPL-001"
-      ],
-      "owner": "",
-      "note": "Concept-oplossing: invullen met exacte presets, startlogica, schermtekst en gewenste uitzonderingen per ruimtetype.",
-      "order": 1
     },
     {
-      "id": "STD-002",
-      "name": "Vaste pc met standaard startprofiel",
-      "type": "Technisch",
-      "priority": "Must",
-      "status": "Concept",
-      "description": "Elke relevante ruimte beschikt over een vaste pc die snel beschikbaar is voor onderwijs, overleg of vergadering. De pc start in een voorspelbaar profiel met de benodigde programma’s, Teams-functionaliteit en toegang tot de digitale werkomgeving volgens de gekozen authenticatiemethode.",
-      "solutionIds": [
-        "OPL-002"
-      ],
-      "owner": "",
-      "note": "Concept-oplossing: invullen met pc-profiel, loginvorm, softwarepakket, starttijd en beheerafspraken.",
-      "order": 2
-    },
-    {
-      "id": "STD-003",
-      "name": "Gestandaardiseerd presenteren",
-      "type": "Technisch",
-      "priority": "Must",
-      "status": "Concept",
-      "description": "Presenteren wordt per ruimte op dezelfde manier ondersteund via vaste aansluitmogelijkheden en waar nodig draadloze presentatie. Laptop, MacBook en vaste pc kunnen betrouwbaar beeld en geluid delen zonder aanvullende complexe handelingen voor de gebruiker.",
-      "solutionIds": [
-        "OPL-003"
-      ],
-      "owner": "",
-      "note": "Concept-oplossing: invullen met aansluitset, draadloze techniek, ondersteunde resoluties en fallback bij storing.",
-      "order": 3
-    },
-    {
-      "id": "STD-005",
-      "name": "Netwerkgebonden AV-infrastructuur",
-      "type": "Technisch",
-      "priority": "Must",
-      "status": "Concept",
-      "description": "AV-apparatuur wordt waar passend standaard op het netwerk aangesloten, zodat beheer, monitoring, statuscontrole en toekomstige ondersteuning mogelijk zijn. Bekabeling, apparatuurkasten, aansluitpunten en fysieke opbouw worden uniform en foutbestendig ingericht.",
-      "solutionIds": [
-        "OPL-005"
-      ],
-      "owner": "",
-      "note": "Concept-oplossing: invullen met netwerkvoorwaarden, VLAN/beveiliging, bekabelingsnorm, kastinrichting en beheerrechten.",
-      "order": 5
-    },
-    {
-      "id": "STD-004",
-      "name": "Ruimtetypegebonden AV-configuratie",
-      "type": "Ontwerp",
-      "priority": "Must",
-      "status": "Concept",
-      "description": "Per ruimtetype wordt een vaste AV-configuratie vastgesteld. Kleine vergaderruimtes, MDO-ruimtes, onderwijsruimtes en grote zalen krijgen elk een passende set voor schermen, camera, microfoons, luidsprekers, bediening en docent- of gebruikerswerkplek.",
-      "solutionIds": [
-        "OPL-004"
-      ],
-      "owner": "",
-      "note": "Concept-oplossing: invullen met ruimtetypen, basisset, plusopties en minimale prestatie per type.",
-      "order": 4
-    },
-    {
-      "id": "STD-007",
-      "name": "Governance, instructie en adoptie",
-      "type": "Proces",
-      "priority": "Must",
-      "status": "Concept",
-      "description": "De AV-standaard wordt ondersteund met duidelijke richtlijnen, beheerafspraken en korte gebruikersinstructies. Nieuwe of aangepaste ruimtes worden gevalideerd met betrokken stakeholders voordat de inrichting als standaard wordt vrijgegeven.",
-      "solutionIds": [
-        "OPL-008",
-        "OPL-009"
-      ],
-      "owner": "",
-      "note": "Concept-oplossing: invullen met besluitproces, rollen, testmomenten, instructievorm en communicatieafspraken.",
-      "order": 7
-    },
-    {
-      "id": "STD-006",
-      "name": "Centraal beheer en lifecycle-registratie",
+      "id": "OPL-012",
+      "name": "Automatische sessie- en energieregeling",
       "type": "Beheer",
-      "priority": "Must",
-      "status": "Concept",
-      "description": "Alle relevante AV-componenten worden centraal geregistreerd met locatie, type, lifecycle-status en beheerinformatie. Beheer kan daardoor zien welke apparatuur aanwezig is, wanneer vervanging nodig is en welke configuratie per ruimte geldt.",
-      "solutionIds": [
-        "OPL-006",
-        "OPL-007"
-      ],
-      "owner": "",
-      "note": "Concept-oplossing: invullen met registratiesysteem, verplichte velden, eigenaar, updateproces en lifecycle-termijnen.",
-      "order": 6
-    },
-    {
-      "id": "STD-008",
-      "name": "Monitoring en gebruiksinzicht",
-      "type": "Beheer",
-      "priority": "Should",
-      "status": "Concept",
-      "description": "Ruimtestatus, gebruik, no-shows, incidenten en relevante foutmeldingen worden inzichtelijk gemaakt in een dashboard of rapportage. Deze informatie wordt gebruikt voor beheer, capaciteitssturing en verbetering van de standaard.",
-      "solutionIds": [
-        "OPL-010"
-      ],
-      "owner": "",
-      "note": "Concept-oplossing: invullen met meetpunten, databronnen, rapportagefrequentie, privacygrenzen en verantwoordelijke rol.",
-      "order": 8
-    },
-    {
-      "id": "STD-009",
-      "name": "Voorbereid op toekomstige functies",
-      "type": "Innovatie",
-      "priority": "Could",
-      "status": "Concept",
-      "description": "De standaard houdt ruimte voor veilige uitbreiding met toekomstige functies zoals transcriptie, automatische scene-selectie, adaptieve instellingen of slimme ondersteuning. Nieuwe functies worden alleen toegevoegd wanneer veiligheid, beheerbaarheid en gebruikerswaarde zijn getoetst.",
-      "solutionIds": [
-        "OPL-011"
-      ],
-      "owner": "",
-      "note": "Concept-oplossing: invullen met innovatiecriteria, toetsingsproces, privacy/security-eisen en pilotvoorwaarden.",
-      "order": 9
+      "status": "Te onderzoeken",
+      "description": "Centrale afsluitlogica die gebruikerssessies vergrendelt of uitlogt, online vergaderingen beëindigt, AV-instellingen reset en schermen of apparatuur dimt of uitschakelt.",
+      "risk": "Inactiviteitsduur, reserveringskoppeling, werkplekbeleid en uitzonderingen per ruimtetype moeten gezamenlijk worden vastgesteld.",
+      "note": "Oplossingsvoorstel uit algemene gebruikersinput; nog technisch en organisatorisch valideren.",
+      "requirementIds": [
+        "EIS-015",
+        "EIS-060",
+        "EIS-061",
+        "EIS-062"
+      ]
     }
   ],
   "logs": [
@@ -2708,822 +2515,654 @@
     },
     {
       "id": "LOG-0073",
-      "at": "2026-05-18T15:49:06.513Z",
-      "actor": "jesse",
-      "action": "update",
-      "entityType": "requirement",
-      "entityId": "EIS-048",
-      "summary": "Wens/input bijgewerkt"
+      "at": "2026-05-18T15:43:36.153Z",
+      "actor": "Codex",
+      "action": "documentation:update",
+      "entityType": "workflow",
+      "entityId": "",
+      "summary": "Workflow en aanpak persoonlijker gemaakt met stakeholderafstemming en documentatie"
     },
     {
       "id": "LOG-0074",
-      "at": "2026-05-18T18:38:59.692Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-043",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
+      "at": "2026-05-18T16:20:00.000Z",
+      "actor": "Codex",
+      "action": "documentation:update",
+      "entityType": "workflow",
+      "entityId": "",
+      "summary": "Betrokkenen bij MoSCoW, uitwerkingen en technische brainstorm vastgelegd; actuele status standaard en rapport aangevuld"
     },
     {
       "id": "LOG-0075",
-      "at": "2026-05-18T18:39:02.747Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-036",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
+      "at": "2026-05-18T16:35:00.000Z",
+      "actor": "Codex",
+      "action": "documentation:update",
+      "entityType": "workflow",
+      "entityId": "",
+      "summary": "Aanpak uitgebreid met persoonlijke toelichting, voorbeelden en uitleg over Flow-koppelingen"
     },
     {
       "id": "LOG-0076",
-      "at": "2026-05-18T18:39:06.382Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-018",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
+      "at": "2026-05-19T12:20:00.000Z",
+      "actor": "Codex",
+      "action": "layout:update",
+      "entityType": "dashboard",
+      "entityId": "",
+      "summary": "Flow ingesteld als startpagina, processtappen per tabblad aangescherpt en analyse verplaatst naar menu"
     },
     {
       "id": "LOG-0077",
-      "at": "2026-05-18T18:39:19.599Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "outcome",
-      "entityId": "UIT-002",
-      "summary": "Volgorde van uitkomsten gewijzigd"
-    },
-    {
-      "id": "LOG-0078",
-      "at": "2026-05-18T18:39:23.366Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "outcome",
-      "entityId": "UIT-002",
-      "summary": "Volgorde van uitkomsten gewijzigd"
-    },
-    {
-      "id": "LOG-0079",
-      "at": "2026-05-18T18:39:30.281Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-036",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0080",
-      "at": "2026-05-18T18:39:33.114Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-043",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0081",
-      "at": "2026-05-18T18:39:36.303Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-043",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0082",
-      "at": "2026-05-18T18:40:04.270Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "outcome",
-      "entityId": "UIT-006",
-      "summary": "Volgorde van uitkomsten gewijzigd"
-    },
-    {
-      "id": "LOG-0083",
-      "at": "2026-05-18T19:48:32.561Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-003",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0084",
-      "at": "2026-05-18T19:48:38.150Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-007",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0085",
-      "at": "2026-05-18T19:48:41.828Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-021",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0086",
-      "at": "2026-05-18T19:48:44.856Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-020",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0087",
-      "at": "2026-05-18T19:48:48.533Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-022",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0088",
-      "at": "2026-05-18T19:50:24.560Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-015",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0089",
-      "at": "2026-05-18T19:50:27.328Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-016",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0090",
-      "at": "2026-05-18T19:50:31.622Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-015",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0091",
-      "at": "2026-05-18T19:50:35.092Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-015",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0092",
-      "at": "2026-05-18T19:50:39.007Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-014",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0093",
-      "at": "2026-05-18T19:50:42.881Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-044",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0094",
-      "at": "2026-05-18T19:50:49.160Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-044",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0095",
-      "at": "2026-05-18T19:50:54.000Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-044",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0096",
-      "at": "2026-05-18T19:51:01.554Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-028",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0097",
-      "at": "2026-05-18T19:51:04.216Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-028",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0098",
-      "at": "2026-05-18T19:51:06.945Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-028",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0099",
-      "at": "2026-05-18T19:51:13.024Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-037",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0100",
-      "at": "2026-05-18T19:51:15.291Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-037",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0101",
-      "at": "2026-05-18T19:51:17.756Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-037",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0102",
-      "at": "2026-05-18T19:51:19.515Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-037",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0103",
-      "at": "2026-05-18T19:51:21.849Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-037",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0104",
-      "at": "2026-05-18T19:51:44.992Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "outcome",
-      "entityId": "UIT-006",
-      "summary": "Volgorde van uitkomsten gewijzigd"
-    },
-    {
-      "id": "LOG-0105",
-      "at": "2026-05-18T19:51:55.694Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-014",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0106",
-      "at": "2026-05-18T19:52:01.609Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-027",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0107",
-      "at": "2026-05-18T19:52:04.825Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-027",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0108",
-      "at": "2026-05-18T19:52:10.071Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-026",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0109",
-      "at": "2026-05-18T19:52:12.791Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-040",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0110",
-      "at": "2026-05-18T19:52:16.793Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-026",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0111",
-      "at": "2026-05-18T19:52:19.125Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-040",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0112",
-      "at": "2026-05-18T19:52:21.192Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-026",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0113",
-      "at": "2026-05-18T19:52:28.742Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-011",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0114",
-      "at": "2026-05-18T19:52:31.178Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-010",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0115",
-      "at": "2026-05-18T19:52:33.624Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-009",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0116",
-      "at": "2026-05-18T19:52:38.521Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-043",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0117",
-      "at": "2026-05-18T19:52:51.371Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "outcome",
-      "entityId": "UIT-005",
-      "summary": "Volgorde van uitkomsten gewijzigd"
-    },
-    {
-      "id": "LOG-0118",
-      "at": "2026-05-18T19:52:53.271Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "outcome",
-      "entityId": "UIT-005",
-      "summary": "Volgorde van uitkomsten gewijzigd"
-    },
-    {
-      "id": "LOG-0119",
-      "at": "2026-05-18T19:53:01.045Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "outcome",
-      "entityId": "UIT-008",
-      "summary": "Volgorde van uitkomsten gewijzigd"
-    },
-    {
-      "id": "LOG-0120",
-      "at": "2026-05-18T19:53:03.793Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-036",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0121",
-      "at": "2026-05-18T19:53:07.832Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-036",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0122",
-      "at": "2026-05-18T19:53:12.864Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-043",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0123",
-      "at": "2026-05-18T19:53:19.282Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-030",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0124",
-      "at": "2026-05-18T19:53:21.335Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-031",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0125",
-      "at": "2026-05-18T19:53:23.283Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-032",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0126",
-      "at": "2026-05-18T19:53:25.440Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-041",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0127",
-      "at": "2026-05-18T19:53:27.940Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-042",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0128",
-      "at": "2026-05-18T19:53:33.252Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-046",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0129",
-      "at": "2026-05-18T19:53:36.807Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-018",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0130",
-      "at": "2026-05-18T19:53:40.299Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-049",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0131",
-      "at": "2026-05-18T19:53:42.457Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-048",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0132",
-      "at": "2026-05-18T19:53:44.509Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "requirement",
-      "entityId": "EIS-049",
-      "summary": "Volgorde van wensen/input in Flow gewijzigd"
-    },
-    {
-      "id": "LOG-0133",
-      "at": "2026-05-18T19:54:02.416Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "solution",
-      "entityId": "OPL-006",
-      "summary": "Volgorde van oplossingen gewijzigd"
-    },
-    {
-      "id": "LOG-0134",
-      "at": "2026-05-18T19:54:18.162Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "solution",
-      "entityId": "OPL-005",
-      "summary": "Volgorde van oplossingen gewijzigd"
-    },
-    {
-      "id": "LOG-0135",
-      "at": "2026-05-18T19:54:22.038Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "standardPart",
-      "entityId": "STD-005",
-      "summary": "Volgorde van standaardonderdelen gewijzigd"
-    },
-    {
-      "id": "LOG-0136",
-      "at": "2026-05-18T19:54:47.344Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "solution",
-      "entityId": "OPL-009",
-      "summary": "Volgorde van oplossingen gewijzigd"
-    },
-    {
-      "id": "LOG-0137",
-      "at": "2026-05-18T19:54:53.157Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "solution",
-      "entityId": "OPL-007",
-      "summary": "Volgorde van oplossingen gewijzigd"
-    },
-    {
-      "id": "LOG-0138",
-      "at": "2026-05-18T19:54:57.214Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "solution",
-      "entityId": "OPL-006",
-      "summary": "Volgorde van oplossingen gewijzigd"
-    },
-    {
-      "id": "LOG-0139",
-      "at": "2026-05-18T19:55:04.285Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "solution",
-      "entityId": "OPL-010",
-      "summary": "Volgorde van oplossingen gewijzigd"
-    },
-    {
-      "id": "LOG-0140",
-      "at": "2026-05-18T19:55:09.676Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "standardPart",
-      "entityId": "STD-006",
-      "summary": "Volgorde van standaardonderdelen gewijzigd"
-    },
-    {
-      "id": "LOG-0141",
-      "at": "2026-05-18T19:55:19.617Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "outcome",
-      "entityId": "UIT-005",
-      "summary": "Volgorde van uitkomsten gewijzigd"
-    },
-    {
-      "id": "LOG-0142",
-      "at": "2026-05-18T19:55:40.397Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "outcome",
-      "entityId": "UIT-005",
-      "summary": "Volgorde van uitkomsten gewijzigd"
-    },
-    {
-      "id": "LOG-0143",
-      "at": "2026-05-18T19:55:45.193Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "solution",
-      "entityId": "OPL-009",
-      "summary": "Volgorde van oplossingen gewijzigd"
-    },
-    {
-      "id": "LOG-0144",
-      "at": "2026-05-18T19:55:48.089Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "solution",
-      "entityId": "OPL-008",
-      "summary": "Volgorde van oplossingen gewijzigd"
-    },
-    {
-      "id": "LOG-0145",
-      "at": "2026-05-19T07:18:01.233Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "solution",
-      "entityId": "OPL-003",
-      "summary": "Volgorde van oplossingen gewijzigd"
-    },
-    {
-      "id": "LOG-0146",
-      "at": "2026-05-19T07:18:03.427Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "standardPart",
-      "entityId": "STD-003",
-      "summary": "Volgorde van standaardonderdelen gewijzigd"
-    },
-    {
-      "id": "LOG-0147",
-      "at": "2026-05-19T07:18:08.589Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "solution",
-      "entityId": "OPL-001",
-      "summary": "Volgorde van oplossingen gewijzigd"
-    },
-    {
-      "id": "LOG-0148",
-      "at": "2026-05-19T07:18:13.100Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "solution",
-      "entityId": "OPL-002",
-      "summary": "Volgorde van oplossingen gewijzigd"
-    },
-    {
-      "id": "LOG-0149",
-      "at": "2026-05-19T07:18:22.463Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "solution",
-      "entityId": "OPL-003",
-      "summary": "Volgorde van oplossingen gewijzigd"
-    },
-    {
-      "id": "LOG-0150",
-      "at": "2026-05-19T07:18:24.961Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "standardPart",
-      "entityId": "STD-003",
-      "summary": "Volgorde van standaardonderdelen gewijzigd"
-    },
-    {
-      "id": "LOG-0151",
-      "at": "2026-05-19T07:18:32.346Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "solution",
-      "entityId": "OPL-005",
-      "summary": "Volgorde van oplossingen gewijzigd"
-    },
-    {
-      "id": "LOG-0152",
-      "at": "2026-05-19T07:18:34.221Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "standardPart",
-      "entityId": "STD-005",
-      "summary": "Volgorde van standaardonderdelen gewijzigd"
-    },
-    {
-      "id": "LOG-0153",
-      "at": "2026-05-19T07:18:49.440Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "solution",
-      "entityId": "OPL-002",
-      "summary": "Volgorde van oplossingen gewijzigd"
-    },
-    {
-      "id": "LOG-0154",
-      "at": "2026-05-19T07:18:52.798Z",
-      "actor": "jesse",
-      "action": "trace:order",
-      "entityType": "standardPart",
-      "entityId": "STD-002",
-      "summary": "Volgorde van standaardonderdelen gewijzigd"
-    },
-    {
-      "id": "LOG-0155",
-      "at": "2026-05-19T11:29:37.437Z",
-      "actor": "jesse",
-      "action": "export:share",
+      "at": "2026-06-15T15:38:30.793Z",
+      "actor": "Codex namens Jesse van Leeuwen",
+      "action": "rebuild:input",
       "entityType": "dashboard",
       "entityId": "",
-      "summary": "Werkbestand en logboek geexporteerd"
+      "summary": "Nieuwe online input, algemene gebruikersinput en het instructieplatform opnieuw geanalyseerd en in de volledige traceerketen verwerkt."
+    }
+  ],
+  "points": [
+    {
+      "id": "PNT-001",
+      "title": "Snel en volledig startscenario",
+      "description": "Ruimte, vaste techniek, randapparatuur, schermen en presets zijn direct klaar voor regulier gebruik.",
+      "inputIds": [],
+      "outcomeIds": [
+        "UIT-001"
+      ],
+      "requirementIds": [
+        "EIS-001",
+        "EIS-002",
+        "EIS-028",
+        "EIS-037",
+        "EIS-053",
+        "EIS-054"
+      ],
+      "category": "Functionele eisen",
+      "status": "Voorstel",
+      "order": 1
     },
     {
-      "id": "LOG-0156",
-      "at": "2026-05-19T11:41:00.860Z",
-      "actor": "jesse",
-      "action": "update",
-      "entityType": "processText",
-      "entityId": "outcome",
-      "summary": "Procestekst bijgewerkt"
+      "id": "PNT-002",
+      "title": "Vaste pc en toegang",
+      "description": "De vaste pc is betrouwbaar beschikbaar en sluit aan op werkomgeving en authenticatie.",
+      "inputIds": [],
+      "outcomeIds": [
+        "UIT-001"
+      ],
+      "requirementIds": [
+        "EIS-004",
+        "EIS-005",
+        "EIS-006"
+      ],
+      "category": "Functionele eisen",
+      "status": "Voorstel",
+      "order": 2
     },
     {
-      "id": "LOG-0157",
-      "at": "2026-05-19T11:42:00.183Z",
-      "actor": "jesse",
-      "action": "update",
-      "entityType": "processText",
-      "entityId": "input",
-      "summary": "Procestekst bijgewerkt"
+      "id": "PNT-003",
+      "title": "Automatische reset en afsluiting",
+      "description": "De ruimte sluit sessies af, herstelt de standaardstatus en beperkt onnodig actief AV-gebruik.",
+      "inputIds": [],
+      "outcomeIds": [
+        "UIT-001",
+        "UIT-012"
+      ],
+      "requirementIds": [
+        "EIS-015",
+        "EIS-060",
+        "EIS-061",
+        "EIS-062"
+      ],
+      "category": "Beheereisen",
+      "status": "Voorstel",
+      "order": 3
     },
     {
-      "id": "LOG-0158",
-      "at": "2026-05-19T11:43:13.360Z",
-      "actor": "jesse",
-      "action": "update",
-      "entityType": "processText",
-      "entityId": "outcome",
-      "summary": "Procestekst bijgewerkt"
+      "id": "PNT-004",
+      "title": "Teams, MDO en hybride onderwijs",
+      "description": "Teams, MDO-video en hybride onderwijs zijn voorspelbaar beschikbaar met passende beeld- en geluidskwaliteit.",
+      "inputIds": [],
+      "outcomeIds": [
+        "UIT-004"
+      ],
+      "requirementIds": [
+        "EIS-003",
+        "EIS-022",
+        "EIS-055"
+      ],
+      "category": "Functionele eisen",
+      "status": "Voorstel",
+      "order": 4
     },
     {
-      "id": "LOG-0159",
-      "at": "2026-05-19T11:59:27.087Z",
-      "actor": "jesse",
-      "action": "export:json",
-      "entityType": "dashboard",
-      "entityId": "",
-      "summary": "Werkbestand geexporteerd"
+      "id": "PNT-005",
+      "title": "Leesbare ruimtetypekwaliteit",
+      "description": "Beeld, geluid, schermgrootte, microfoons en projectie sluiten aantoonbaar aan op onderwijs, overleg en MDO.",
+      "inputIds": [],
+      "outcomeIds": [
+        "UIT-004",
+        "UIT-005",
+        "UIT-006"
+      ],
+      "requirementIds": [
+        "EIS-014",
+        "EIS-027",
+        "EIS-050",
+        "EIS-051"
+      ],
+      "category": "Technische eisen",
+      "status": "Voorstel",
+      "order": 5
     },
     {
-      "id": "LOG-0160",
-      "at": "2026-05-19T18:16:24.330Z",
-      "actor": "jesse",
-      "action": "publish:online",
-      "entityType": "dashboard",
-      "entityId": "",
-      "summary": "Publicatie naar online speelversie gestart"
+      "id": "PNT-006",
+      "title": "Betrouwbaar presenteren en aansluiten",
+      "description": "USB-C, vaste aansluitingen, draadloos en Apple/MacBook-presenteren werken herkenbaar en betrouwbaar.",
+      "inputIds": [],
+      "outcomeIds": [
+        "UIT-003",
+        "UIT-006"
+      ],
+      "requirementIds": [
+        "EIS-007",
+        "EIS-020",
+        "EIS-021",
+        "EIS-039",
+        "EIS-044",
+        "EIS-052",
+        "EIS-057"
+      ],
+      "category": "Functionele eisen",
+      "status": "Voorstel",
+      "order": 6
     },
     {
-      "id": "LOG-0161",
-      "at": "2026-05-19T18:17:23.772Z",
-      "actor": "jesse",
-      "action": "update",
-      "entityType": "processText",
-      "entityId": "flow",
-      "summary": "Procestekst bijgewerkt"
+      "id": "PNT-007",
+      "title": "Uniforme gebruikslogica",
+      "description": "Vergelijkbare ruimtes werken herkenbaar en beperken verschillen in basisgebruik.",
+      "inputIds": [],
+      "outcomeIds": [
+        "UIT-002"
+      ],
+      "requirementIds": [
+        "EIS-008",
+        "EIS-016"
+      ],
+      "category": "Gebruikseisen",
+      "status": "Voorstel",
+      "order": 7
     },
     {
-      "id": "LOG-0162",
-      "at": "2026-05-19T18:17:27.340Z",
-      "actor": "jesse",
-      "action": "publish:online",
-      "entityType": "dashboard",
-      "entityId": "",
-      "summary": "Publicatie naar online speelversie gestart"
+      "id": "PNT-008",
+      "title": "Foutarme en professionele bediening",
+      "description": "Bediening is zelfstandig, eenduidig, snel reagerend en verzorgd voor interne en externe gebruikers.",
+      "inputIds": [],
+      "outcomeIds": [
+        "UIT-002"
+      ],
+      "requirementIds": [
+        "EIS-023",
+        "EIS-024",
+        "EIS-025",
+        "EIS-056"
+      ],
+      "category": "Gebruikseisen",
+      "status": "Voorstel",
+      "order": 8
     },
     {
-      "id": "LOG-0163",
-      "at": "2026-05-19T18:17:27.443Z",
-      "actor": "Online update-script",
-      "action": "basis:update",
-      "entityType": "dashboard",
-      "entityId": "pve_werkbestand_basis",
-      "summary": "Online basiswerkbestand bijgewerkt vanuit online-publicatie-2026-05-19T18-17-27-378Z.json"
+      "id": "PNT-009",
+      "title": "Docentwerkplek",
+      "description": "Werkplek en inrichting ondersteunen praktisch onderwijsgebruik.",
+      "inputIds": [],
+      "outcomeIds": [
+        "UIT-005"
+      ],
+      "requirementIds": [
+        "EIS-009",
+        "EIS-010"
+      ],
+      "category": "Gebruikseisen",
+      "status": "Voorstel",
+      "order": 9
+    },
+    {
+      "id": "PNT-010",
+      "title": "Onderwijsaudio",
+      "description": "Grotere onderwijsruimtes zijn verstaanbaar zonder hinder voor aangrenzende zalen.",
+      "inputIds": [],
+      "outcomeIds": [
+        "UIT-005"
+      ],
+      "requirementIds": [
+        "EIS-011",
+        "EIS-012",
+        "EIS-013"
+      ],
+      "category": "Technische eisen",
+      "status": "Voorstel",
+      "order": 10
+    },
+    {
+      "id": "PNT-011",
+      "title": "Hoorcollegeondersteuning",
+      "description": "Ondersteuning voor hoorcolleges blijft beschikbaar en wordt gestandaardiseerd.",
+      "inputIds": [],
+      "outcomeIds": [
+        "UIT-005"
+      ],
+      "requirementIds": [
+        "EIS-018"
+      ],
+      "category": "Ondersteuning en instructie",
+      "status": "Voorstel",
+      "order": 11
+    },
+    {
+      "id": "PNT-012",
+      "title": "Robuuste infrastructuur",
+      "description": "Hardware, bekabeling, kasten, merken en typen zijn foutbestendig en beheerbaar.",
+      "inputIds": [],
+      "outcomeIds": [
+        "UIT-006"
+      ],
+      "requirementIds": [
+        "EIS-026",
+        "EIS-040"
+      ],
+      "category": "Technische eisen",
+      "status": "Voorstel",
+      "order": 12
+    },
+    {
+      "id": "PNT-013",
+      "title": "Asset en lifecycle",
+      "description": "AV-componenten zijn betrouwbaar geregistreerd en geschikt voor lifecyclebeheer.",
+      "inputIds": [],
+      "outcomeIds": [
+        "UIT-007"
+      ],
+      "requirementIds": [
+        "EIS-029",
+        "EIS-045"
+      ],
+      "category": "Beheereisen",
+      "status": "Voorstel",
+      "order": 13
+    },
+    {
+      "id": "PNT-014",
+      "title": "Vlootrapportage",
+      "description": "Rapportages leveren stuurinformatie over vloot, merkdominantie en kritische locaties.",
+      "inputIds": [],
+      "outcomeIds": [
+        "UIT-007",
+        "UIT-009"
+      ],
+      "requirementIds": [
+        "EIS-048"
+      ],
+      "category": "Monitoringseisen",
+      "status": "Voorstel",
+      "order": 14
+    },
+    {
+      "id": "PNT-015",
+      "title": "Remote beheer",
+      "description": "Beheer krijgt op afstand inzicht in status en daadwerkelijk gebruik.",
+      "inputIds": [],
+      "outcomeIds": [
+        "UIT-009"
+      ],
+      "requirementIds": [
+        "EIS-033"
+      ],
+      "category": "Monitoringseisen",
+      "status": "Voorstel",
+      "order": 15
+    },
+    {
+      "id": "PNT-016",
+      "title": "Ruimtestatus en no-show",
+      "description": "Bezetting, aanwezigheid en no-show kunnen zichtbaar of analyseerbaar worden gemaakt.",
+      "inputIds": [],
+      "outcomeIds": [
+        "UIT-009"
+      ],
+      "requirementIds": [
+        "EIS-017",
+        "EIS-034",
+        "EIS-035"
+      ],
+      "category": "Monitoringseisen",
+      "status": "Voorstel",
+      "order": 16
+    },
+    {
+      "id": "PNT-017",
+      "title": "Incident- en supportanalyse",
+      "description": "Incidentdata is eenduidig en bruikbaar voor oorzaken en supportcapaciteit.",
+      "inputIds": [],
+      "outcomeIds": [
+        "UIT-009"
+      ],
+      "requirementIds": [
+        "EIS-047",
+        "EIS-049"
+      ],
+      "category": "Monitoringseisen",
+      "status": "Voorstel",
+      "order": 17
+    },
+    {
+      "id": "PNT-018",
+      "title": "Supportproces",
+      "description": "AV-incidenten hebben duidelijke routering en sluiten aan op AVO, IT-beheer en servicedesk.",
+      "inputIds": [],
+      "outcomeIds": [
+        "UIT-008"
+      ],
+      "requirementIds": [
+        "EIS-030",
+        "EIS-046"
+      ],
+      "category": "Beheereisen",
+      "status": "Voorstel",
+      "order": 18
+    },
+    {
+      "id": "PNT-019",
+      "title": "Validatie en draagvlak",
+      "description": "Use-cases, PoC en stakeholderbetrokkenheid borgen invoering en acceptatie.",
+      "inputIds": [],
+      "outcomeIds": [
+        "UIT-008"
+      ],
+      "requirementIds": [
+        "EIS-031",
+        "EIS-032"
+      ],
+      "category": "Beheereisen",
+      "status": "Voorstel",
+      "order": 19
+    },
+    {
+      "id": "PNT-020",
+      "title": "Richtlijn en kennis",
+      "description": "De AV-standaard is formeel vastgelegd met benodigde interne kennis.",
+      "inputIds": [],
+      "outcomeIds": [
+        "UIT-008"
+      ],
+      "requirementIds": [
+        "EIS-041",
+        "EIS-042"
+      ],
+      "category": "Beheereisen",
+      "status": "Voorstel",
+      "order": 20
+    },
+    {
+      "id": "PNT-021",
+      "title": "Ruimtegebonden instructie en adoptie",
+      "description": "Gebruikers en gasten krijgen korte, actuele, ruimte-specifieke instructie en een directe route naar ondersteuning.",
+      "inputIds": [],
+      "outcomeIds": [
+        "UIT-002",
+        "UIT-008",
+        "UIT-011"
+      ],
+      "requirementIds": [
+        "EIS-036",
+        "EIS-043",
+        "EIS-058",
+        "EIS-059"
+      ],
+      "category": "Ondersteuning en instructie",
+      "status": "Voorstel",
+      "order": 21
+    },
+    {
+      "id": "PNT-022",
+      "title": "Veilige verbindingen",
+      "description": "De standaard houdt rekening met veilige en versleutelde verbindingen.",
+      "inputIds": [],
+      "outcomeIds": [
+        "UIT-010"
+      ],
+      "requirementIds": [
+        "EIS-019"
+      ],
+      "category": "Toekomst en innovatie",
+      "status": "Voorstel",
+      "order": 22
+    },
+    {
+      "id": "PNT-023",
+      "title": "Slimme functies",
+      "description": "Toekomstige slimme functies kunnen worden ingepast zonder de basis te verstoren.",
+      "inputIds": [],
+      "outcomeIds": [
+        "UIT-010"
+      ],
+      "requirementIds": [
+        "EIS-038"
+      ],
+      "category": "Toekomst en innovatie",
+      "status": "Voorstel",
+      "order": 23
+    },
+    {
+      "id": "PNT-024",
+      "title": "Professionele gebruikerservaring",
+      "description": "De zichtbare inrichting en interactie ondersteunen een verzorgde ervaring voor interne en externe deelnemers.",
+      "inputIds": [],
+      "outcomeIds": [
+        "UIT-002",
+        "UIT-011"
+      ],
+      "requirementIds": [
+        "EIS-056"
+      ],
+      "category": "Gebruikseisen",
+      "status": "Voorstel",
+      "order": 24
+    },
+    {
+      "id": "PNT-025",
+      "title": "Gaststart en ondersteuning",
+      "description": "Gasten vinden de juiste aansluiting, startstappen, probleemhulp en supportroute zonder technische voorkennis.",
+      "inputIds": [],
+      "outcomeIds": [
+        "UIT-011"
+      ],
+      "requirementIds": [
+        "EIS-057",
+        "EIS-058",
+        "EIS-059"
+      ],
+      "category": "Ondersteuning en instructie",
+      "status": "Voorstel",
+      "order": 25
+    }
+  ],
+  "standardParts": [
+    {
+      "id": "STD-001",
+      "name": "Automatisch start- en bedienconcept",
+      "type": "Standaard",
+      "priority": "Must",
+      "status": "Concept",
+      "description": "Bij binnenkomst kan de gebruiker een herkenbaar scenario kiezen. Met één handeling starten schermen, audio, vaste pc en vergaderfunctionaliteit in de juiste configuratie. De bediening en schermopstart worden bij oplevering als één complete keten getest.",
+      "solutionIds": [
+        "OPL-001"
+      ],
+      "owner": "",
+      "note": "Concept-oplossing: invullen met exacte presets, startlogica, schermtekst en gewenste uitzonderingen per ruimtetype.",
+      "order": 1
+    },
+    {
+      "id": "STD-002",
+      "name": "Vaste pc met betrouwbaar startprofiel",
+      "type": "Technisch",
+      "priority": "Must",
+      "status": "Concept",
+      "description": "Elke relevante ruimte beschikt over een vaste pc die snel beschikbaar is met de benodigde programma's, Teams-functionaliteit, digitale werkomgeving en betrouwbare randapparatuur. Login, muis en toetsenbord maken deel uit van de functionele ruimtetest.",
+      "solutionIds": [
+        "OPL-002"
+      ],
+      "owner": "",
+      "note": "Concept-oplossing: invullen met pc-profiel, loginvorm, softwarepakket, starttijd en beheerafspraken.",
+      "order": 2
+    },
+    {
+      "id": "STD-003",
+      "name": "Gestandaardiseerd presenteren en aansluiten",
+      "type": "Technisch",
+      "priority": "Must",
+      "status": "Concept",
+      "description": "Presenteren wordt per ruimtetype op dezelfde manier ondersteund via een geteste USB-C-aansluiting, een vastgelegde fallback en waar passend draadloos presenteren. Aansluitpunten staan op een vaste herkenbare locatie en ondersteunen de afgesproken apparaattypen.",
+      "solutionIds": [
+        "OPL-003"
+      ],
+      "owner": "",
+      "note": "Concept-oplossing: invullen met aansluitset, draadloze techniek, ondersteunde resoluties en fallback bij storing.",
+      "order": 3
+    },
+    {
+      "id": "STD-004",
+      "name": "Ruimtetypegebonden AV-configuratie",
+      "type": "Ontwerp",
+      "priority": "Must",
+      "status": "Concept",
+      "description": "Per ruimtetype wordt een vaste AV-configuratie vastgesteld met schermgrootte en plaatsing op basis van kijkafstand, passende camera's, microfoons, spraakversterking, luidsprekers en docent- of gebruikerswerkplek.",
+      "solutionIds": [
+        "OPL-004"
+      ],
+      "owner": "",
+      "note": "Concept-oplossing: invullen met ruimtetypen, basisset, plusopties en minimale prestatie per type.",
+      "order": 4
+    },
+    {
+      "id": "STD-005",
+      "name": "Netwerkgebonden AV-infrastructuur",
+      "type": "Technisch",
+      "priority": "Must",
+      "status": "Concept",
+      "description": "AV-apparatuur wordt waar passend standaard op het netwerk aangesloten, zodat beheer, monitoring, statuscontrole en toekomstige ondersteuning mogelijk zijn. Bekabeling, apparatuurkasten, aansluitpunten en fysieke opbouw worden uniform en foutbestendig ingericht.",
+      "solutionIds": [
+        "OPL-005"
+      ],
+      "owner": "",
+      "note": "Concept-oplossing: invullen met netwerkvoorwaarden, VLAN/beveiliging, bekabelingsnorm, kastinrichting en beheerrechten.",
+      "order": 5
+    },
+    {
+      "id": "STD-006",
+      "name": "Centraal beheer en lifecycle-registratie",
+      "type": "Beheer",
+      "priority": "Must",
+      "status": "Concept",
+      "description": "Alle relevante AV-componenten worden centraal geregistreerd met locatie, type, lifecycle-status en beheerinformatie. Beheer kan daardoor zien welke apparatuur aanwezig is, wanneer vervanging nodig is en welke configuratie per ruimte geldt.",
+      "solutionIds": [
+        "OPL-006",
+        "OPL-007"
+      ],
+      "owner": "",
+      "note": "Concept-oplossing: invullen met registratiesysteem, verplichte velden, eigenaar, updateproces en lifecycle-termijnen.",
+      "order": 6
+    },
+    {
+      "id": "STD-007",
+      "name": "Governance, instructie en adoptie",
+      "type": "Proces",
+      "priority": "Must",
+      "status": "Concept",
+      "description": "De AV-standaard wordt ondersteund met duidelijke richtlijnen, beheerafspraken en een ruimtegebonden digitaal instructie- en ondersteuningsplatform. Nieuwe of aangepaste ruimtes worden met gebruikers en beheerders gevalideerd; instructie en beheerinformatie worden bij technische of proceswijzigingen bijgewerkt.",
+      "solutionIds": [
+        "OPL-008",
+        "OPL-009"
+      ],
+      "owner": "",
+      "note": "PRD-001 werkt het instructie- en ondersteuningsdeel uit. Rollen, pilot, beveiliging en systeemkoppelingen moeten nog definitief worden vastgesteld.",
+      "order": 7
+    },
+    {
+      "id": "STD-008",
+      "name": "Monitoring en gebruiksinzicht",
+      "type": "Beheer",
+      "priority": "Should",
+      "status": "Concept",
+      "description": "Ruimtestatus, gebruik, no-shows, incidenten en relevante foutmeldingen worden inzichtelijk gemaakt in een dashboard of rapportage. Deze informatie wordt gebruikt voor beheer, capaciteitssturing en verbetering van de standaard.",
+      "solutionIds": [
+        "OPL-010"
+      ],
+      "owner": "",
+      "note": "Concept-oplossing: invullen met meetpunten, databronnen, rapportagefrequentie, privacygrenzen en verantwoordelijke rol.",
+      "order": 8
+    },
+    {
+      "id": "STD-009",
+      "name": "Voorbereid op toekomstige functies",
+      "type": "Innovatie",
+      "priority": "Could",
+      "status": "Concept",
+      "description": "De standaard houdt ruimte voor veilige uitbreiding met toekomstige functies zoals transcriptie, automatische scene-selectie, adaptieve instellingen of slimme ondersteuning. Nieuwe functies worden alleen toegevoegd wanneer veiligheid, beheerbaarheid en gebruikerswaarde zijn getoetst.",
+      "solutionIds": [
+        "OPL-011"
+      ],
+      "owner": "",
+      "note": "Concept-oplossing: invullen met innovatiecriteria, toetsingsproces, privacy/security-eisen en pilotvoorwaarden.",
+      "order": 9
+    },
+    {
+      "id": "STD-010",
+      "name": "Automatische afsluiting en energiestand",
+      "type": "Beheer",
+      "priority": "Must",
+      "status": "Te toetsen",
+      "description": "Na het gekozen afsluitscenario of een vastgestelde periode zonder activiteit beëindigt de ruimte actieve vergaderingen, vergrendelt of beëindigt de gebruikerssessie, herstelt de standaardinstellingen en dimt of schakelt schermen en AV-apparatuur uit.",
+      "solutionIds": [
+        "OPL-012"
+      ],
+      "owner": "",
+      "note": "Exacte termijnen, uitzonderingen en koppeling met reserverings- of aanwezigheidsinformatie nog vaststellen.",
+      "order": 10
+    }
+  ],
+  "products": [
+    {
+      "id": "PRD-001",
+      "name": "Digitaal instructie- en ondersteuningsplatform",
+      "type": "Advies",
+      "status": "Concept gereed",
+      "description": "Subadvies voor een ruimtegebonden digitaal platform met korte startinstructie op het hoofdscherm en bedienpaneel, een unieke QR-code naar uitgebreide instructie en support, en een afgeschermde beheerfunctie voor ruimte-, apparatuur-, onderhouds- en storingsinformatie.",
+      "standardPartIds": [
+        "STD-007"
+      ],
+      "solutionIds": [
+        "OPL-009"
+      ],
+      "outcomeIds": [
+        "UIT-002",
+        "UIT-008",
+        "UIT-011"
+      ],
+      "requirementIds": [
+        "EIS-029",
+        "EIS-030",
+        "EIS-036",
+        "EIS-043",
+        "EIS-045",
+        "EIS-056",
+        "EIS-058",
+        "EIS-059",
+        "EIS-062"
+      ],
+      "path": "Producten/Instructieplatform/Sub-advies_instructie.pdf",
+      "validation": "Het document bevat een voorgestelde concepttoets met praktijkscenario's voor starten, QR-gebruik, probleemhulp, support, beheer en onderhoud. Een volledig technisch werkend platform, beveiliging en systeemkoppelingen zijn nog niet getest.",
+      "nextStep": "Klikbaar prototype maken, gebruikers- en beheerflow toetsen, feedback verwerken, technische haalbaarheid en toegangsrechten uitwerken, koppeling met Topdesk of ServiceNow onderzoeken en daarna een pilot binnen AVO uitvoeren.",
+      "note": "Het product is een uitgewerkt conceptadvies en nog geen geïmplementeerd platform.",
+      "order": 1
     }
   ]
 }

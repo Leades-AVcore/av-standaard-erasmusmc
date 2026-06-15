@@ -17,6 +17,7 @@
   --layer-outcomes: #8b5cf6;
   --layer-solutions: #16a34a;
   --layer-standard: #e11d48;
+  --layer-products: #0f766e;
   --panel: #ffffff;
   --shadow: 0 14px 30px rgba(32, 43, 50, 0.08);
   --shadow-soft: 0 8px 20px rgba(32, 43, 50, 0.06);
@@ -326,6 +327,15 @@ main {
 
 .tab.layer-standard.active {
   background: var(--layer-standard);
+}
+
+.tab.layer-products {
+  --step-color: var(--layer-products);
+  background: color-mix(in srgb, var(--layer-products) 12%, #ffffff);
+}
+
+.tab.layer-products.active {
+  background: var(--layer-products);
 }
 
 .step-tab {
@@ -975,10 +985,10 @@ textarea {
   position: relative;
   display: grid;
   width: max-content;
-  min-width: 1780px;
+  min-width: 2190px;
   margin-inline: auto;
-  grid-template-columns: 330px 360px 300px 330px;
-  column-gap: 110px;
+  grid-template-columns: 320px 350px 290px 320px 320px;
+  column-gap: 105px;
   row-gap: 12px;
   align-items: start;
   justify-content: center;
@@ -1022,6 +1032,10 @@ textarea {
 
 .layer-standard {
   --column-color: var(--layer-standard);
+}
+
+.layer-products {
+  --column-color: var(--layer-products);
 }
 
 .trace-stack {
@@ -1156,7 +1170,8 @@ textarea {
 }
 
 .solution-trace-node,
-.standard-trace-node {
+.standard-trace-node,
+.product-trace-node {
   border-left: 6px solid var(--item-color, var(--flow-accent));
 }
 
@@ -1182,7 +1197,8 @@ textarea {
 }
 
 .standard-trace-node p,
-.solution-trace-node p {
+.solution-trace-node p,
+.product-trace-node p {
   -webkit-line-clamp: 3;
 }
 

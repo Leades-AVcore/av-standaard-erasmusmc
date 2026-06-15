@@ -1,9 +1,9 @@
-const STORAGE_KEY = "emc_av_pve_dashboard_online_clone_v1";
+const STORAGE_KEY = "emc_av_pve_dashboard_online_clone_v2";
 const PREVIOUS_STORAGE_KEYS = [];
-const INTRO_STORAGE_KEY = "emc_av_pve_dashboard_online_intro_seen_v1";
+const INTRO_STORAGE_KEY = "emc_av_pve_dashboard_online_intro_seen_v2";
 const WORKFILE_PATH = "pve_werkbestand_basis.json";
 const MARKDOWN_PATH = "../PvE/centrale_eisenlijst_pve.md";
-const APP_BASE_FILE_VERSION = "online-2026-05-19T18-17-27-443Z";
+const APP_BASE_FILE_VERSION = "online-2026-06-15-products-v1";
 
 const categories = [
   "Functionele eisen",
@@ -30,7 +30,8 @@ const layerColors = {
   point: "#f59e0b",
   outcome: "#8b5cf6",
   solution: "#16a34a",
-  standard: "#e11d48"
+  standard: "#e11d48",
+  product: "#0f766e"
 };
 const typeColors = {
   Functioneel: categoryColors["Functionele eisen"],
@@ -47,8 +48,8 @@ const typeColors = {
 };
 const workflowIntro = {
   title: "Documentatie van het ontwerpproces",
-  intro: "Dit dashboard beschrijft en bewaakt de route van opgehaalde input naar een onderbouwde AV-standaard. Flow is de startpagina, omdat daar direct zichtbaar is hoe wensen, uitwerkingen, oplossingen en standaardonderdelen met elkaar verbonden zijn.",
-  approach: "De vier inhoudelijke tabbladen zijn bedoeld voor detailwerk: input vastleggen, uitwerkingen aanscherpen, oplossingen koppelen en standaardonderdelen invullen. In Flow controleer ik vervolgens of de route van links naar rechts klopt.",
+  intro: "Dit dashboard beschrijft en bewaakt de route van opgehaalde input naar een onderbouwde AV-standaard en concrete producten. Flow is de startpagina, omdat daar direct zichtbaar is hoe wensen, uitwerkingen, oplossingen, standaardonderdelen en opleveringen met elkaar verbonden zijn.",
+  approach: "De vijf inhoudelijke tabbladen zijn bedoeld voor detailwerk: input vastleggen, uitwerkingen aanscherpen, oplossingen koppelen, standaardonderdelen invullen en producten documenteren. In Flow controleer ik vervolgens of de route van links naar rechts klopt.",
   principle: "Het onderscheid tussen wens en eis ontstaat bij de uitwerking. De MoSCoW-indeling is besproken met Cris Borsje, Erik Magré, Jos en Koen, zodat niet alleen mijn interpretatie leidend is."
 };
 
@@ -79,6 +80,11 @@ const workflow = [
     description: "In deze stap wordt de oplossingsrichting vertaald naar een concreet onderdeel van de AV-standaard. Dit onderdeel moet bruikbaar zijn voor ontwerp, inrichting, beheer en toetsing. Een standaardonderdeel beschrijft niet alleen techniek, maar ook hoe de oplossing bijdraagt aan gebruiksgemak, betrouwbaarheid, beheerbaarheid en standaardisatie. Resultaat: concept standaardonderdelen, basis voor het Programma van Eisen en basis voor het technische ontwerp."
   },
   {
+    title: "Product uitwerken",
+    code: "PRD",
+    description: "In deze stap wordt een standaardonderdeel uitgewerkt tot een concreet product, advies, prototype of implementatieonderdeel. Het productbestand blijft buiten het dashboard bewaard; in het dashboard worden de status, onderbouwing, koppelingen, validatie en vervolgstappen vastgelegd. Resultaat: aantoonbare opleveringen die terug te herleiden zijn naar de oorspronkelijke input."
+  },
+  {
     title: "Controleren van koppelingen",
     code: "FLW",
     description: "In deze stap wordt gecontroleerd of alle onderdelen logisch aan elkaar gekoppeld zijn. In het dashboard is zichtbaar of input nog geen uitwerking heeft, of een uitwerking nog geen oplossing heeft, of een oplossing nog niet is vertaald naar een standaardonderdeel. Resultaat: inzicht in ontbrekende koppelingen, controle op volledigheid en betere onderbouwing van ontwerpkeuzes."
@@ -92,7 +98,7 @@ const workflow = [
 
 const workflowDocumentation = {
   title: "Gebruik van dit tabblad",
-  description: "Dit tabblad is de documentatieplek van het dashboard. De inhoudelijke bewerking gebeurt in de vier tabbladen Wensen/input, Uitwerkingen, Oplossingen en AV-standaard. Flow is bedoeld als startpunt en controlebord."
+  description: "Dit tabblad is de documentatieplek van het dashboard. De inhoudelijke bewerking gebeurt in de vijf tabbladen Wensen/input, Uitwerkingen, Oplossingen, AV-standaard en Producten. Flow is bedoeld als startpunt en controlebord."
 };
 
 const laterWorkflow = [
@@ -125,9 +131,13 @@ const defaultProcessText = {
     title: "5. Vertalen naar AV-standaard",
     description: "In deze stap wordt de oplossingsrichting vertaald naar een concreet onderdeel van de AV-standaard. Dit onderdeel moet bruikbaar zijn voor ontwerp, inrichting, beheer en toetsing. Het beschrijft niet alleen techniek, maar ook de bijdrage aan gebruiksgemak, betrouwbaarheid, beheerbaarheid en standaardisatie."
   },
+  product: {
+    title: "6. Uitwerken en opleveren",
+    description: "In deze stap worden onderdelen van de AV-standaard uitgewerkt tot concrete producten, adviezen, prototypes of implementatieonderdelen. Per product wordt vastgelegd welke standaardonderdelen het invult, wat de status is, waar het productbestand staat en welke validatie of vervolgstap nog nodig is."
+  },
   flow: {
-    title: "6. Controleren van koppelingen",
-    description: "In deze stap wordt gecontroleerd of alle onderdelen logisch aan elkaar gekoppeld zijn. In Flow is zichtbaar of input nog geen uitwerking heeft, of een uitwerking nog geen oplossing heeft, of een oplossing nog niet is vertaald naar een standaardonderdeel. Klik op een item om de route te accentueren; dubbelklik om details te openen."
+    title: "7. Controleren van koppelingen",
+    description: "In deze stap wordt gecontroleerd of alle onderdelen logisch aan elkaar gekoppeld zijn. In Flow is zichtbaar of input nog geen uitwerking heeft, een uitwerking nog geen oplossing heeft, een oplossing nog geen standaardonderdeel heeft of een standaardonderdeel nog niet in een product terugkomt. Klik op een item om de route te accentueren; dubbelklik om details te openen."
   }
 };
 
@@ -161,7 +171,8 @@ let state = {
       requirements: [],
       outcomes: [],
       solutions: [],
-      standardParts: []
+      standardParts: [],
+      products: []
     },
     processText: defaultProcessText
   },
@@ -173,6 +184,7 @@ let state = {
   outcomes: [],
   solutions: [],
   standardParts: [],
+  products: [],
   logs: []
 };
 
@@ -211,7 +223,7 @@ function cacheElements() {
     "inputDrawerButton", "inputDrawer", "drawerShade", "closeDrawerBtn", "addSourceBtn", "sourceList",
     "totalItems", "totalRequirements", "mustRequirements", "linkedRequirements", "totalStandardParts",
     "searchInput", "kindFilter", "categoryFilter", "priorityFilter", "centralList",
-    "addWishBtn", "addRequirementBtn", "addInputBtn", "addPointBtn", "workflowSteps", "inputCards", "pointCards", "addOutcomeBtn", "outcomeCards", "addSolutionBtn", "solutionCards", "addStandardPartBtn", "standardPartCards", "flowChart", "analysisGrid",
+    "addWishBtn", "addRequirementBtn", "addInputBtn", "addPointBtn", "workflowSteps", "inputCards", "pointCards", "addOutcomeBtn", "outcomeCards", "addSolutionBtn", "solutionCards", "addStandardPartBtn", "standardPartCards", "addProductBtn", "productCards", "flowChart", "analysisGrid",
     "editDialog", "editForm", "dialogTitle", "dialogFields", "deleteDialogBtn", "saveDialogBtn", "closeEditDialogBtn",
     "linkDialog", "linkForm", "linkRequirementLabel", "existingSolutionSelect", "newSolutionName", "newSolutionDescription", "saveLinkBtn", "closeLinkDialogBtn",
     "actorDialog", "actorForm", "actorNameInput", "saveActorBtn", "introDialog", "closeIntroDialogBtn", "startIntroDialogBtn", "toast"
@@ -258,6 +270,7 @@ function bindEvents() {
   els.addOutcomeBtn.addEventListener("click", () => openEditor("outcome"));
   els.addSolutionBtn.addEventListener("click", () => openEditor("solution"));
   if (els.addStandardPartBtn) els.addStandardPartBtn.addEventListener("click", () => openEditor("standardPart"));
+  if (els.addProductBtn) els.addProductBtn.addEventListener("click", () => openEditor("product"));
 
   [els.searchInput, els.kindFilter, els.categoryFilter, els.priorityFilter].forEach((control) => {
     control.addEventListener("input", renderCentralList);
@@ -356,7 +369,8 @@ function normalizeState(input) {
         requirements: input.meta?.flowOrder?.requirements || [],
         outcomes: input.meta?.flowOrder?.outcomes || [],
         solutions: input.meta?.flowOrder?.solutions || [],
-        standardParts: input.meta?.flowOrder?.standardParts || []
+        standardParts: input.meta?.flowOrder?.standardParts || [],
+        products: input.meta?.flowOrder?.products || []
       },
       processText: migrateProcessText(mergeProcessText(input.meta?.processText))
     },
@@ -398,6 +412,14 @@ function normalizeState(input) {
       priority: normalizePriority(part.priority || "Should"),
       solutionIds: part.solutionIds || [],
       order: Number.isFinite(part.order) ? part.order : index + 1
+    })),
+    products: (input.products || []).map((product, index) => ({
+      ...product,
+      standardPartIds: product.standardPartIds || [],
+      solutionIds: product.solutionIds || [],
+      outcomeIds: product.outcomeIds || [],
+      requirementIds: product.requirementIds || [],
+      order: Number.isFinite(product.order) ? product.order : index + 1
     })),
     logs: input.logs || []
   };
@@ -601,6 +623,7 @@ function renderAll() {
   renderOutcomes();
   renderSolutions();
   renderStandardParts();
+  renderProducts();
   renderFlow();
   renderAnalysis();
 }
@@ -1034,6 +1057,25 @@ function renderStandardParts() {
   els.standardPartCards.innerHTML = cards + addItemCard("Standaardonderdeel toevoegen", "Onderdeel van de AV-standaard toevoegen.", "standardPart");
 }
 
+function renderProducts() {
+  if (!els.productCards) return;
+  const cards = state.products.map((product) => `
+    <article class="solution-card color-card" style="--item-color:${productColor(product)}">
+      <div>
+        <strong>${escapeHtml(product.id)} ${escapeHtml(product.name)}</strong>
+        <br><small>${escapeHtml(product.type || "Product")} - ${escapeHtml(product.status || "Concept")}</small>
+      </div>
+      <p>${escapeHtml(product.description || "Geen beschrijving.")}</p>
+      <small>${(product.standardPartIds || []).length} standaardonderdelen gekoppeld</small>
+      ${product.path ? `<small>Bestand: ${escapeHtml(product.path)}</small>` : ""}
+      <div class="actions">
+        <button type="button" onclick="openEditor('product', '${product.id}')">Bewerk</button>
+      </div>
+    </article>
+  `).join("");
+  els.productCards.innerHTML = cards + addItemCard("Product toevoegen", "Advies, prototype of ander opgeleverd product toevoegen.", "product");
+}
+
 function addItemCard(title, text, type) {
   return `
     <button class="add-card" type="button" onclick="openEditor('${type}')">
@@ -1046,14 +1088,19 @@ function addItemCard(title, text, type) {
 
 function renderFlow() {
   const outcomeGroups = flowOutcomeGroups();
-  const flowRequirements = applyManualFlowOrder([...state.requirements].sort(compareRequirementsByHierarchy), "requirements", (req) => req.id);
+  const flowRequirements = applyManualFlowOrder(
+    state.requirements.filter((req) => !req.parentId).sort(compareRequirementsByHierarchy),
+    "requirements",
+    (req) => req.id
+  );
   const flowStandards = flowStandardParts();
+  const flowProducts = flowProductItems();
   els.flowChart.innerHTML = `
     <div class="trace-flow">
       <div class="trace-column trace-input layer-requirements">
         <h3>Wensen/input</h3>
         <div class="trace-stack" data-flow-stack="requirements">
-          ${flowRequirements.map((req) => renderTraceRequirementCard({ req, groups: outcomeGroups.filter((group) => group.requirements.some((item) => item.id === req.id)) })).join("") || `<div class="empty">Nog geen wensen/input.</div>`}
+          ${flowRequirements.map((req) => renderTraceRequirementCard({ req, groups: outcomeGroups.filter((group) => group.requirements.some((item) => topRequirement(item).id === req.id)) })).join("") || `<div class="empty">Nog geen wensen/input.</div>`}
           ${traceAddButton("Wens/input toevoegen", "requirement")}
         </div>
       </div>
@@ -1076,6 +1123,13 @@ function renderFlow() {
         <div class="trace-stack" data-flow-stack="standardParts">
           ${flowStandards.map(renderTraceStandardPartNode).join("") || `<div class="empty">Nog geen standaardonderdelen.</div>`}
           ${traceAddButton("Standaardonderdeel toevoegen", "standardPart")}
+        </div>
+      </div>
+      <div class="trace-column trace-products layer-products">
+        <h3>Producten</h3>
+        <div class="trace-stack" data-flow-stack="products">
+          ${flowProducts.map(renderTraceProductNode).join("") || `<div class="empty">Nog geen producten.</div>`}
+          ${traceAddButton("Product toevoegen", "product")}
         </div>
       </div>
       <svg id="traceSvg" class="trace-svg" aria-hidden="true"></svg>
@@ -1363,8 +1417,22 @@ function renderTraceStandardPartNode(part) {
   `;
 }
 
+function renderTraceProductNode(product) {
+  return `
+    <article class="trace-card product-trace-node" style="--item-color:${productColor(product)}" data-trace-product="${escapeAttr(product.id)}" data-flow-edit-type="product" data-flow-edit-id="${escapeAttr(product.id)}" draggable="true" data-drag-type="product" data-drag-id="${escapeAttr(product.id)}" data-drop-type="product" data-drop-id="${escapeAttr(product.id)}">
+      <strong><small>${escapeHtml(product.id)}</small> ${escapeHtml(product.name)}</strong>
+      <p>${escapeHtml(product.description || "")}</p>
+      <small>${escapeHtml(product.status || "Concept")} - ${(product.standardPartIds || []).length} standaardonderdelen gekoppeld</small>
+    </article>
+  `;
+}
+
 function flowStandardParts() {
   return applyManualFlowOrder([...state.standardParts], "standardParts", (part) => part.id);
+}
+
+function flowProductItems() {
+  return applyManualFlowOrder([...state.products], "products", (product) => product.id);
 }
 
 function topRequirementsFromIds(ids) {
@@ -1448,6 +1516,10 @@ function standardPartColor(part) {
   return typeColors[part?.type] || layerColors.standard;
 }
 
+function productColor(product) {
+  return typeColors[product?.type] || layerColors.product;
+}
+
 function updateFlowBoard() {
   layoutTraceBoard();
   applyFlowSelection();
@@ -1516,7 +1588,8 @@ function flowSelectionFor(type, id) {
     points: new Set(),
     outcomes: new Set(),
     solutions: new Set(),
-    standardParts: new Set()
+    standardParts: new Set(),
+    products: new Set()
   };
   if (type === "requirement") {
     selection.requirements.add(id);
@@ -1542,6 +1615,9 @@ function flowSelectionFor(type, id) {
   }
   if (type === "standardPart") {
     addStandardPartRoute(selection, state.standardParts.find((part) => part.id === id));
+  }
+  if (type === "product") {
+    addProductRoute(selection, state.products.find((product) => product.id === id));
   }
   return selection;
 }
@@ -1573,7 +1649,12 @@ function addOutcomeRoute(selection, outcome, options = {}) {
       selection.solutions.add(solutionId);
       state.standardParts
         .filter((part) => (part.solutionIds || []).includes(solutionId))
-        .forEach((part) => selection.standardParts.add(part.id));
+        .forEach((part) => {
+          selection.standardParts.add(part.id);
+          state.products
+            .filter((product) => (product.standardPartIds || []).includes(part.id))
+            .forEach((product) => selection.products.add(product.id));
+        });
     });
   }
 }
@@ -1581,6 +1662,9 @@ function addOutcomeRoute(selection, outcome, options = {}) {
 function addStandardPartRoute(selection, part) {
   if (!part) return;
   selection.standardParts.add(part.id);
+  state.products
+    .filter((product) => (product.standardPartIds || []).includes(part.id))
+    .forEach((product) => selection.products.add(product.id));
   (part.solutionIds || []).forEach((solutionId) => {
     selection.solutions.add(solutionId);
     state.outcomes
@@ -1589,16 +1673,40 @@ function addStandardPartRoute(selection, part) {
   });
 }
 
+function addProductRoute(selection, product) {
+  if (!product) return;
+  selection.products.add(product.id);
+  (product.standardPartIds || []).forEach((partId) => selection.standardParts.add(partId));
+  (product.solutionIds || []).forEach((solutionId) => selection.solutions.add(solutionId));
+  (product.outcomeIds || []).forEach((outcomeId) => {
+    addOutcomeRoute(selection, state.outcomes.find((outcome) => outcome.id === outcomeId), { includeAllSolutions: false });
+  });
+  (product.requirementIds || []).forEach((requirementId) => selection.requirements.add(requirementId));
+}
+
 function applyFlowSelection() {
   const flow = document.querySelector(".trace-flow");
   if (!flow) return;
   const selection = currentFlowSelection();
   flow.classList.toggle("has-flow-selection", Boolean(selection));
-  markFlowNodes(flow, "[data-trace-req-id]", "traceReqId", selection?.requirements);
+  markRequirementFlowNodes(flow, selection?.requirements);
   markFlowNodes(flow, "[data-trace-point]", "tracePoint", selection?.points);
   markFlowNodes(flow, "[data-trace-outcome]", "traceOutcome", selection?.outcomes);
   markFlowNodes(flow, "[data-trace-solution]", "traceSolution", selection?.solutions);
   markFlowNodes(flow, "[data-trace-standard]", "traceStandard", selection?.standardParts);
+  markFlowNodes(flow, "[data-trace-product]", "traceProduct", selection?.products);
+}
+
+function markRequirementFlowNodes(flow, selectedIds) {
+  flow.querySelectorAll("[data-trace-req-id]").forEach((node) => {
+    const requirementId = node.dataset.traceReqId;
+    const requirement = requirementById(requirementId);
+    const active = !selectedIds
+      || selectedIds.has(requirementId)
+      || descendantRequirements(requirement?.id || "").some((child) => selectedIds.has(child.id));
+    node.classList.toggle("flow-selected", Boolean(selectedIds && active));
+    node.classList.toggle("flow-dimmed", Boolean(selectedIds && !active));
+  });
 }
 
 function markFlowNodes(flow, selector, datasetKey, selectedIds) {
@@ -1687,7 +1795,10 @@ function canTraceDrop(fromType, toType) {
     (fromType === "solution" && toType === "solution") ||
     (fromType === "solution" && toType === "standardPart") ||
     (fromType === "standardPart" && toType === "solution") ||
-    (fromType === "standardPart" && toType === "standardPart")
+    (fromType === "standardPart" && toType === "standardPart") ||
+    (fromType === "standardPart" && toType === "product") ||
+    (fromType === "product" && toType === "standardPart") ||
+    (fromType === "product" && toType === "product")
   );
 }
 
@@ -1730,6 +1841,10 @@ function handleTraceDrop(from, to) {
   if (from.type === "standardPart" && to.type === "standardPart") {
     changed = reorderFlowItems("standardParts", from.id, to.id);
     if (changed) logAction("trace:order", "standardPart", `Volgorde van standaardonderdelen gewijzigd`, from.id);
+  }
+  if (from.type === "product" && to.type === "product") {
+    changed = reorderFlowItems("products", from.id, to.id);
+    if (changed) logAction("trace:order", "product", "Volgorde van producten gewijzigd", from.id);
   }
   if (from.type === "requirement" && to.type === "outcome") {
     const outcome = state.outcomes.find((item) => item.id === to.id);
@@ -1776,6 +1891,12 @@ function handleTraceDrop(from, to) {
   if (from.type === "standardPart" && to.type === "solution") {
     changed = linkSolutionStandardPart(to.id, from.id) || changed;
   }
+  if (from.type === "standardPart" && to.type === "product") {
+    changed = linkStandardPartProduct(from.id, to.id) || changed;
+  }
+  if (from.type === "product" && to.type === "standardPart") {
+    changed = linkStandardPartProduct(to.id, from.id) || changed;
+  }
   if (!changed) return;
   autoSave();
   renderAll();
@@ -1799,6 +1920,15 @@ function linkSolutionStandardPart(solutionId, standardPartId) {
   if (!solution || !part) return false;
   part.solutionIds = addUnique(part.solutionIds || [], solution.id);
   logAction("trace:link", "standardPart", `Oplossing ${solution.id} gekoppeld aan standaardonderdeel`, part.id);
+  return true;
+}
+
+function linkStandardPartProduct(standardPartId, productId) {
+  const part = state.standardParts.find((item) => item.id === standardPartId);
+  const product = state.products.find((item) => item.id === productId);
+  if (!part || !product) return false;
+  product.standardPartIds = addUnique(product.standardPartIds || [], part.id);
+  logAction("trace:link", "product", `Standaardonderdeel ${part.id} gekoppeld aan product`, product.id);
   return true;
 }
 
@@ -1840,6 +1970,10 @@ function flowVisibleIds(collection) {
     const fromDom = Array.from(document.querySelectorAll("[data-trace-standard]")).map((node) => node.dataset.traceStandard);
     return fromDom.length ? fromDom : state.standardParts.map((part) => part.id);
   }
+  if (collection === "products") {
+    const fromDom = Array.from(document.querySelectorAll("[data-trace-product]")).map((node) => node.dataset.traceProduct);
+    return fromDom.length ? fromDom : state.products.map((product) => product.id);
+  }
   return [];
 }
 
@@ -1867,10 +2001,13 @@ function drawTraceLines() {
   const requirementOutcomePaths = groups.flatMap((group, groupIndex) => {
     const outcome = flow.querySelector(`[data-trace-outcome="${cssEscape(group.outcome.id)}"]`);
     if (!outcome) return [];
-    return group.requirements.map((req, requirementIndex) => {
+    const visibleRequirements = uniqueRequirements(group.requirements.map(topRequirement));
+    return visibleRequirements.map((req, requirementIndex) => {
       const requirementNode = flow.querySelector(`[data-trace-req-id="${cssEscape(req.id)}"]`);
       if (!requirementNode) return "";
-      const active = !selection || (selection.requirements.has(req.id) && selection.outcomes.has(group.outcome.id));
+      const requirementActive = selection?.requirements.has(req.id)
+        || descendantRequirements(req.id).some((child) => selection?.requirements.has(child.id));
+      const active = !selection || (requirementActive && selection.outcomes.has(group.outcome.id));
       return tracePath(requirementNode, outcome, rect, requirementColor(req), `arrowHead-requirement-outcome-${groupIndex}-${requirementIndex}`, markerColors, active);
     });
   }).join("");
@@ -1896,7 +2033,18 @@ function drawTraceLines() {
       return tracePath(solution, standard, rect, color, `arrowHead-standard-${partIndex}-${solutionIndex}`, markerColors, active);
     });
   }).join("");
-  const paths = requirementOutcomePaths + outcomeSolutionPaths + solutionStandardPaths;
+  const standardProductPaths = state.products.flatMap((product, productIndex) => {
+    const productNode = flow.querySelector(`[data-trace-product="${cssEscape(product.id)}"]`);
+    if (!productNode) return [];
+    const color = productColor(product);
+    return (product.standardPartIds || []).map((partId, partIndex) => {
+      const standard = flow.querySelector(`[data-trace-standard="${cssEscape(partId)}"]`);
+      if (!standard) return "";
+      const active = !selection || (selection.standardParts.has(partId) && selection.products.has(product.id));
+      return tracePath(standard, productNode, rect, color, `arrowHead-product-${productIndex}-${partIndex}`, markerColors, active);
+    });
+  }).join("");
+  const paths = requirementOutcomePaths + outcomeSolutionPaths + solutionStandardPaths + standardProductPaths;
   svg.innerHTML = `
       <defs>
         ${markerDefs(markerColors)}
@@ -1956,18 +2104,24 @@ function renderAnalysis() {
   const requirementsWithoutOutcome = state.requirements.filter((req) => !outcomesForRequirement(req.id).length);
   const outcomesWithoutSolution = state.outcomes.filter((outcome) => !(outcome.solutionIds || []).length);
   const solutionsWithoutStandard = state.solutions.filter((solution) => !state.standardParts.some((part) => (part.solutionIds || []).includes(solution.id)));
+  const standardsWithoutProduct = state.standardParts.filter((part) => !state.products.some((product) => (product.standardPartIds || []).includes(part.id)));
+  const productCoverage = state.products
+    .map((product) => ({ product, count: (product.standardPartIds || []).length }))
+    .sort((a, b) => b.count - a.count);
 
   els.analysisGrid.innerHTML = [
     analysisCard("Wenscategorieen", bars(byInputCategory, 8)),
     analysisCard("MoSCoW op uitwerkingen", bars(byPriority)),
     analysisCard("Traceerbaarheid", `
-      <p>${state.requirements.length} wensen/input, ${state.outcomes.length} uitwerkingen, ${state.solutions.length} oplossingen en ${state.standardParts.length} standaardonderdelen.</p>
+      <p>${state.requirements.length} wensen/input, ${state.outcomes.length} uitwerkingen, ${state.solutions.length} oplossingen, ${state.standardParts.length} standaardonderdelen en ${state.products.length} producten.</p>
       <p>${requirementsWithoutOutcome.length} wensen/input zonder uitwerking.</p>
       <p>${outcomesWithoutSolution.length} uitwerkingen zonder oplossing.</p>
       <p>${solutionsWithoutStandard.length} oplossingen zonder standaardonderdeel.</p>
+      <p>${standardsWithoutProduct.length} standaardonderdelen zonder uitgewerkt product.</p>
     `),
     analysisCard("Oplossingsdekking", solutionCoverage.slice(0, 10).map(({ solution, count }) => `<p><strong>${escapeHtml(solution.name)}</strong>: ${count} uitwerkingen</p>`).join("") || "<p>Nog geen oplossingen.</p>"),
     analysisCard("AV-standaard", standardCoverage.slice(0, 10).map(({ part, count }) => `<p><strong>${escapeHtml(part.id)} ${escapeHtml(part.name)}</strong>: ${escapeHtml(part.priority || "Should")} - ${count} oplossingen</p>`).join("") || "<p>Nog geen standaardonderdelen.</p>"),
+    analysisCard("Producten", productCoverage.slice(0, 10).map(({ product, count }) => `<p><strong>${escapeHtml(product.id)} ${escapeHtml(product.name)}</strong>: ${escapeHtml(product.status || "Concept")} - ${count} standaardonderdelen</p>`).join("") || "<p>Nog geen producten.</p>"),
     analysisCard("Open Must-uitwerkingen", mustUnlinked.slice(0, 10).map((outcome) => `<p><strong>${escapeHtml(outcome.id)}</strong> ${escapeHtml(outcome.name)}</p>`).join("") || "<p>Geen open Must-uitwerkingen.</p>"),
     analysisCard("Wijzigingen", `
       <p>${state.logs?.length || 0} acties gelogd.</p>
@@ -2023,6 +2177,23 @@ function fieldsFor(type, item) {
     return `
       ${field("Titel", "editTitle", item.title || "", "field-full")}
       ${textareaField("Omschrijving", "editDescription", item.description || "", "field-full")}
+    `;
+  }
+  if (type === "product") {
+    return `
+      ${field("Product ID", "editId", item.id)}
+      ${field("Naam", "editName", item.name)}
+      ${selectField("Type", "editType", ["Product", "Advies", "Prototype", "Platform", "Rapportage", "Implementatie"], item.type || "Product")}
+      ${selectField("Status", "editStatus", ["Concept", "Concept gereed", "Te toetsen", "Pilot", "Opgeleverd", "Vervallen"], item.status || "Concept")}
+      ${textareaField("Beschrijving", "editDescription", item.description || "", "field-full")}
+      ${field("Gekoppelde standaardonderdelen", "editStandardPartIds", (item.standardPartIds || []).join("; "), "field-full")}
+      ${field("Gekoppelde oplossingen", "editSolutionIds", (item.solutionIds || []).join("; "), "field-full")}
+      ${field("Gekoppelde uitwerkingen", "editOutcomeIds", (item.outcomeIds || []).join("; "), "field-full")}
+      ${field("Gekoppelde wensen/input", "editRequirementIds", (item.requirementIds || []).join("; "), "field-full")}
+      ${field("Productbestand", "editPath", item.path || "", "field-full")}
+      ${textareaField("Validatie / toetsing", "editValidation", item.validation || "", "field-full")}
+      ${textareaField("Vervolgstap", "editNextStep", item.nextStep || "", "field-full")}
+      ${textareaField("Notitie", "editNote", item.note || "", "field-full")}
     `;
   }
   if (type === "input") {
@@ -2169,6 +2340,25 @@ function readEditor(type) {
       order: existing?.order || state.inputs.length + 1
     };
   }
+  if (type === "product") {
+    const existing = findItem(type, editing.id);
+    return {
+      id: value("editId"),
+      name: value("editName"),
+      type: value("editType"),
+      status: value("editStatus"),
+      description: value("editDescription"),
+      standardPartIds: splitList(value("editStandardPartIds")),
+      solutionIds: splitList(value("editSolutionIds")),
+      outcomeIds: splitList(value("editOutcomeIds")),
+      requirementIds: splitList(value("editRequirementIds")),
+      path: value("editPath"),
+      validation: value("editValidation"),
+      nextStep: value("editNextStep"),
+      note: value("editNote"),
+      order: existing?.order || state.products.length + 1
+    };
+  }
   if (type === "point") {
     const existing = findItem(type, editing.id);
     return {
@@ -2242,6 +2432,25 @@ function readEditor(type) {
       order: existing?.order || state.standardParts.length + 1
     };
   }
+  if (type === "product") {
+    const existing = findItem(type, editing.id);
+    return {
+      id: value("editId"),
+      name: value("editName"),
+      type: value("editType"),
+      status: value("editStatus"),
+      description: value("editDescription"),
+      standardPartIds: splitList(value("editStandardPartIds")),
+      solutionIds: splitList(value("editSolutionIds")),
+      outcomeIds: splitList(value("editOutcomeIds")),
+      requirementIds: splitList(value("editRequirementIds")),
+      path: value("editPath"),
+      validation: value("editValidation"),
+      nextStep: value("editNextStep"),
+      note: value("editNote"),
+      order: existing?.order || state.products.length + 1
+    };
+  }
   if (type === "outcome") {
     return {
       id: value("editId"),
@@ -2310,6 +2519,11 @@ function deleteEditingItem() {
     });
     state.standardParts.forEach((part) => {
       part.solutionIds = (part.solutionIds || []).filter((solutionId) => solutionId !== id);
+    });
+  }
+  if (type === "standardPart") {
+    state.products.forEach((product) => {
+      product.standardPartIds = (product.standardPartIds || []).filter((partId) => partId !== id);
     });
   }
   logAction("delete", type, `${labelForType(type)} verwijderd`, id);
@@ -2548,7 +2762,7 @@ function exportSharePackage() {
 }
 
 function exportRequirementsCsv() {
-  const headers = ["Uitwerking", "Type", "MoSCoW", "Status", "Toelichting", "Wensen/input", "Oplossingen", "AV-standaardonderdelen"];
+  const headers = ["Uitwerking", "Type", "MoSCoW", "Status", "Toelichting", "Wensen/input", "Oplossingen", "AV-standaardonderdelen", "Producten"];
   const rows = state.outcomes.map((outcome) => [
     outcome.id,
     outcome.outcomeType,
@@ -2557,7 +2771,11 @@ function exportRequirementsCsv() {
     outcome.description,
     Array.from(coveredRequirementIdsForOutcome(outcome)).join("; "),
     solutionNames(outcome.solutionIds || []).join("; "),
-    standardPartNamesForSolutions(outcome.solutionIds || []).join("; ")
+    standardPartNamesForSolutions(outcome.solutionIds || []).join("; "),
+    state.products
+      .filter((product) => (product.outcomeIds || []).includes(outcome.id))
+      .map((product) => `${product.id} ${product.name}`)
+      .join("; ")
   ]);
   logAction("export:csv", "dashboard", "Uitwerkingen CSV geexporteerd");
   autoSave(false);
@@ -2758,6 +2976,24 @@ function blankItem(type) {
       order: state.standardParts.length + 1
     };
   }
+  if (type === "product") {
+    return {
+      id: nextId("PRD", state.products),
+      name: "",
+      type: "Product",
+      status: "Concept",
+      description: "",
+      standardPartIds: [],
+      solutionIds: [],
+      outcomeIds: [],
+      requirementIds: [],
+      path: "",
+      validation: "",
+      nextStep: "",
+      note: "",
+      order: state.products.length + 1
+    };
+  }
   if (type === "outcome") {
     return {
       id: nextId("UIT", state.outcomes),
@@ -2791,6 +3027,7 @@ function collectionFor(type) {
     wish: "wishes",
     solution: "solutions",
     standardPart: "standardParts",
+    product: "products",
     outcome: "outcomes",
     source: "sources"
   }[type];
@@ -2804,6 +3041,7 @@ function labelForType(type) {
     wish: "Wens",
     solution: "Oplossing",
     standardPart: "Standaardonderdeel",
+    product: "Product",
     outcome: "Uitwerking",
     source: "Bron",
     processText: "Procestekst"
@@ -2981,6 +3219,16 @@ function requirementById(requirementId) {
   return state.requirements.find((req) => req.id === requirementId);
 }
 
+function topRequirement(requirement) {
+  let current = requirement;
+  while (current?.parentId) {
+    const parent = requirementById(current.parentId);
+    if (!parent) break;
+    current = parent;
+  }
+  return current || requirement;
+}
+
 function updateReferencesAfterIdChange(type, oldId, newId) {
   if (!oldId || !newId || oldId === newId) return;
   if (type === "input") {
@@ -3022,6 +3270,11 @@ function updateReferencesAfterIdChange(type, oldId, newId) {
     });
     state.standardParts.forEach((part) => {
       part.solutionIds = replaceId(part.solutionIds, oldId, newId);
+    });
+  }
+  if (type === "standardPart") {
+    state.products.forEach((product) => {
+      product.standardPartIds = replaceId(product.standardPartIds, oldId, newId);
     });
   }
   if (type === "outcome") {
