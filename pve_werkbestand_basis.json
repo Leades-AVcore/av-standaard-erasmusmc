@@ -74,7 +74,8 @@
         "title": "De AV-standaard in drie stappen",
         "description": "Flow toont de volledige route van samengevatte eis naar uitwerking met oplossing en vervolgens naar een concreet product. Klik op een onderdeel om de verbonden route te zien en dubbelklik om de inhoud te bewerken."
       }
-    }
+    },
+    "productDocumentationUpdatedAt": "2026-06-18T13:25:38.125Z"
   },
   "sources": [
     {
@@ -1711,9 +1712,9 @@
         "UIT-006",
         "UIT-010"
       ],
-      "file": "Producten/AV-ruimtetypenboek/Handboek_AV-standaard_Erasmus_MC_concept_0.1.pdf",
-      "validation": "Concept 0.1 bevat de algemene AV-standaard, drie ruimteprofielen, acceptatieopzet, herleidbaarheid en een sjabloon voor toekomstige ruimtevarianten.",
-      "nextStep": "Ruimtevarianten, scherm- en audionormen, aansluitprofielen, MDO-kwaliteit en technische keuzes met gebruikers, beheer en technische stakeholders valideren.",
+      "file": "Producten/AV-ruimtetypenboek/Handboek_AV-standaard_Erasmus_MC_concept_0.2.pdf",
+      "validation": "Concept 0.2 bevat de ruimtestandaarden, beeld-, audio- en camerakaders, voorkeursmerken, basisprofielen, acceptatieopzet en validatiepunten.",
+      "nextStep": "Schermformaten, audio/camera-opstelling, netwerkbeheer en voorkeursmerken met Erasmus MC, AVO, IT en Schaay-AV valideren.",
       "requirementIds": [
         "EIS-006",
         "EIS-004",
@@ -1737,9 +1738,9 @@
         "UIT-002",
         "UIT-012"
       ],
-      "file": "Producten/Bedieningsconcept/Productkaart_Bedienings_en_automatiseringsconcept.pdf",
-      "validation": "Productvoorstel als korte productkaart uitgewerkt en gekoppeld aan opstart, gebruikerservaring en automatisch afsluiten.",
-      "nextStep": "Klikbaar bedieningsprototype maken en de start- en afsluitscenario's met gebruikers en technisch stakeholders toetsen.",
+      "file": "Producten/Bedieningsconcept/Bedienings_en_automatiseringsconcept_concept_0.1.pdf",
+      "validation": "Concept 0.1 beschrijft de uniforme Extron-bedienlogica, startscenario's, laptop/pc/Teams-routes, foutmelding, afsluiten en reset.",
+      "nextStep": "Screenshot van de ontwikkelde Extron-layout toevoegen en de scenario's met gebruikers en technisch stakeholders testen.",
       "requirementIds": [
         "EIS-001",
         "EIS-002",
@@ -1763,9 +1764,9 @@
         "UIT-010",
         "UIT-012"
       ],
-      "file": "Producten/Beheer_monitoring_lifecycle/Productkaart_Beheer_monitoring_lifecycleplan.pdf",
-      "validation": "Productvoorstel als korte productkaart uitgewerkt en gekoppeld aan beheer, governance, monitoring en veilige uitbreiding.",
-      "nextStep": "Minimale registratieset, rollenmatrix, dashboardopzet, rapportagecyclus en lifecycleplanning met AVO en IT-beheer uitwerken.",
+      "file": "Producten/Beheer_monitoring_lifecycle/Beheer_monitoring_lifecycleplan_concept_0.1.pdf",
+      "validation": "Concept 0.1 werkt assetregistratie, netwerkbeheer, Sony/Yealink/Extron-monitoring, incidentroute, rapportage en lifecycle uit.",
+      "nextStep": "Registratiebron, netwerkrechten, beheerplatformen, alarmopvolging, firmwarebeleid en privacy-afspraken met IT/AVO vastleggen.",
       "requirementIds": [
         "EIS-013",
         "EIS-014",
