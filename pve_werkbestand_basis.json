@@ -75,7 +75,7 @@
         "description": "Flow toont de volledige route van samengevatte eis naar uitwerking met oplossing en vervolgens naar een concreet product. Klik op een onderdeel om de verbonden route te zien en dubbelklik om de inhoud te bewerken."
       }
     },
-    "productDocumentationUpdatedAt": "2026-06-18T13:25:38.125Z"
+    "productDocumentationUpdatedAt": "2026-06-18T14:42:14.534Z"
   },
   "sources": [
     {
@@ -1712,9 +1712,9 @@
         "UIT-006",
         "UIT-010"
       ],
-      "file": "Producten/AV-ruimtetypenboek/Handboek_AV-standaard_Erasmus_MC_concept_0.2.pdf",
-      "validation": "Concept 0.2 bevat de ruimtestandaarden, beeld-, audio- en camerakaders, voorkeursmerken, basisprofielen, acceptatieopzet en validatiepunten.",
-      "nextStep": "Schermformaten, audio/camera-opstelling, netwerkbeheer en voorkeursmerken met Erasmus MC, AVO, IT en Schaay-AV valideren.",
+      "file": "Producten/AV-ruimtetypenboek/Handboek_AV-standaard_Erasmus_MC_concept_0.3.pdf",
+      "validation": "Concept 0.3 bevat de ruimtestandaarden, schermmaat op basis van afstand/diepte, minimum 55 inch, Teams-dualschermvoorkeur, camerakaders, voorkeursmerken, APA-7 bronnen en validatiepunten.",
+      "nextStep": "Schermformaten, herhaalschermen, camera-opstellingen en voorkeursmerken met Erasmus MC, AVO, IT en Schaay-AV valideren.",
       "requirementIds": [
         "EIS-006",
         "EIS-004",
@@ -1738,9 +1738,9 @@
         "UIT-002",
         "UIT-012"
       ],
-      "file": "Producten/Bedieningsconcept/Bedienings_en_automatiseringsconcept_concept_0.1.pdf",
-      "validation": "Concept 0.1 beschrijft de uniforme Extron-bedienlogica, startscenario's, laptop/pc/Teams-routes, foutmelding, afsluiten en reset.",
-      "nextStep": "Screenshot van de ontwikkelde Extron-layout toevoegen en de scenario's met gebruikers en technisch stakeholders testen.",
+      "file": "Producten/Bedieningsconcept/Bedienings_en_automatiseringsconcept_concept_0.2.pdf",
+      "validation": "Concept 0.2 bevat de Extron-bedienlayout-screenshot, scenarioknoppen, Teams/PC/HDMI-logica, dualscreen-schermlogica en reset/afsluitprincipes.",
+      "nextStep": "Prototype met gebruikers testen en knopteksten, schermroutes en standaard resetlogica definitief maken.",
       "requirementIds": [
         "EIS-001",
         "EIS-002",
@@ -1764,9 +1764,9 @@
         "UIT-010",
         "UIT-012"
       ],
-      "file": "Producten/Beheer_monitoring_lifecycle/Beheer_monitoring_lifecycleplan_concept_0.1.pdf",
-      "validation": "Concept 0.1 werkt assetregistratie, netwerkbeheer, Sony/Yealink/Extron-monitoring, incidentroute, rapportage en lifecycle uit.",
-      "nextStep": "Registratiebron, netwerkrechten, beheerplatformen, alarmopvolging, firmwarebeleid en privacy-afspraken met IT/AVO vastleggen.",
+      "file": "Producten/Beheer_monitoring_lifecycle/Beheer_monitoring_lifecycleplan_concept_0.2.pdf",
+      "validation": "Concept 0.2 bevat screenshotruimte voor beheer- en monitoringplatformen, netwerkadvies, beheerplatformen, incidentroute, rapportage en lifecycle.",
+      "nextStep": "Screenshots van Sony-, Yealink-, Teams-/beheerportalen en asset-/incidentdashboards verzamelen en toevoegen.",
       "requirementIds": [
         "EIS-013",
         "EIS-014",
